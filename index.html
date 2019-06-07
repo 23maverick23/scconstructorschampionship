@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<!-- Site Properties -->
+	<title>🏎️ SC Constructors Championship</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
+
+	<style type="text/css">
+
+		.hidden.menu {
+			display: none;
+		}
+
+		.masthead.segment {
+			min-height: 700px;
+			padding: 1em 0em;
+		}
+		.masthead .logo.item img {
+			margin-right: 1em;
+		}
+		.masthead .ui.menu .ui.button {
+			margin-left: 0.5em;
+		}
+		.masthead h1.ui.header {
+			margin-top: 3em;
+			margin-bottom: 0em;
+			font-size: 4em;
+			font-weight: normal;
+		}
+		.masthead h2 {
+			font-size: 1.7em;
+			font-weight: normal;
+		}
+
+		.ui.vertical.stripe {
+			padding: 8em 0em;
+		}
+		.ui.vertical.stripe h3 {
+			font-size: 2em;
+		}
+		.ui.vertical.stripe .button + h3,
+		.ui.vertical.stripe p + h3 {
+			margin-top: 3em;
+		}
+		.ui.vertical.stripe .floated.image {
+			clear: both;
+		}
+		.ui.vertical.stripe p {
+			font-size: 1.33em;
+		}
+		.ui.vertical.stripe .horizontal.divider {
+			margin: 3em 0em;
+		}
+
+		.quote.stripe.segment {
+			padding: 0em;
+		}
+		.quote.stripe.segment .grid .column {
+			padding-top: 5em;
+			padding-bottom: 5em;
+		}
+
+		.footer.segment {
+			padding: 5em 0em;
+		}
+
+		.secondary.pointing.menu .toc.item {
+			display: none;
+		}
+
+		@media only screen and (max-width: 700px) {
+			.ui.fixed.menu {
+				display: none !important;
+			}
+			.secondary.pointing.menu .item,
+			.secondary.pointing.menu .menu {
+				display: none;
+			}
+			.secondary.pointing.menu .toc.item {
+				display: block;
+			}
+			.masthead.segment {
+				min-height: 350px;
+			}
+			.masthead h1.ui.header {
+				font-size: 2em;
+				margin-top: 1.5em;
+			}
+			.masthead h2 {
+				margin-top: 0.5em;
+				font-size: 1.5em;
+			}
+		}
+
+
+	</style>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
+	<script>
+		/*
+			A simple, lightweight jQuery plugin for creating sortable tables.
+			https://github.com/kylefox/jquery-tablesort
+			Version 0.0.11
+		*/
+
+		(function($) {
+			$.tablesort = function ($table, settings) {
+				var self = this;
+				this.$table = $table;
+				this.$thead = this.$table.find('thead');
+				this.settings = $.extend({}, $.tablesort.defaults, settings);
+				this.$sortCells = this.$thead.length > 0 ? this.$thead.find('th:not(.no-sort)') : this.$table.find('th:not(.no-sort)');
+				this.$sortCells.on('click.tablesort', function() {
+					self.sort($(this));
+				});
+				this.index = null;
+				this.$th = null;
+				this.direction = null;
+			};
+
+			$.tablesort.prototype = {
+
+				sort: function(th, direction) {
+					var start = new Date(),
+						self = this,
+						table = this.$table,
+						rowsContainer = table.find('tbody').length > 0 ? table.find('tbody') : table,
+						rows = rowsContainer.find('tr').has('td, th'),
+						cells = rows.find(':nth-child(' + (th.index() + 1) + ')').filter('td, th'),
+						sortBy = th.data().sortBy,
+						sortedMap = [];
+
+					var unsortedValues = cells.map(function(idx, cell) {
+						if (sortBy)
+							return (typeof sortBy === 'function') ? sortBy($(th), $(cell), self) : sortBy;
+						return ($(this).data().sortValue != null ? $(this).data().sortValue : $(this).text());
+					});
+					if (unsortedValues.length === 0) return;
+
+					//click on a different column
+					if (this.index !== th.index()) {
+						this.direction = 'asc';
+						this.index = th.index();
+					}
+					else if (direction !== 'asc' && direction !== 'desc')
+						this.direction = this.direction === 'asc' ? 'desc' : 'asc';
+					else
+						this.direction = direction;
+
+					direction = this.direction == 'asc' ? 1 : -1;
+
+					self.$table.trigger('tablesort:start', [self]);
+					self.log("Sorting by " + this.index + ' ' + this.direction);
+
+					// Try to force a browser redraw
+					self.$table.css("display");
+					// Run sorting asynchronously on a timeout to force browser redraw after
+					// `tablesort:start` callback. Also avoids locking up the browser too much.
+					setTimeout(function() {
+						self.$sortCells.removeClass(self.settings.asc + ' ' + self.settings.desc);
+						for (var i = 0, length = unsortedValues.length; i < length; i++)
+						{
+							sortedMap.push({
+								index: i,
+								cell: cells[i],
+								row: rows[i],
+								value: unsortedValues[i]
+							});
+						}
+
+						sortedMap.sort(function(a, b) {
+							return self.settings.compare(a.value, b.value) * direction;
+						});
+
+						$.each(sortedMap, function(i, entry) {
+							rowsContainer.append(entry.row);
+						});
+
+						th.addClass(self.settings[self.direction]);
+
+						self.log('Sort finished in ' + ((new Date()).getTime() - start.getTime()) + 'ms');
+						self.$table.trigger('tablesort:complete', [self]);
+						//Try to force a browser redraw
+						self.$table.css("display");
+					}, unsortedValues.length > 2000 ? 200 : 10);
+				},
+
+				log: function(msg) {
+					if(($.tablesort.DEBUG || this.settings.debug) && console && console.log) {
+						console.log('[tablesort] ' + msg);
+					}
+				},
+
+				destroy: function() {
+					this.$sortCells.off('click.tablesort');
+					this.$table.data('tablesort', null);
+					return null;
+				}
+
+			};
+
+			$.tablesort.DEBUG = false;
+
+			$.tablesort.defaults = {
+				debug: $.tablesort.DEBUG,
+				asc: 'sorted ascending',
+				desc: 'sorted descending',
+				compare: function(a, b) {
+					if (a > b) {
+						return 1;
+					} else if (a < b) {
+						return -1;
+					} else {
+						return 0;
+					}
+				}
+			};
+
+			$.fn.tablesort = function(settings) {
+				var table, sortable, previous;
+				return this.each(function() {
+					table = $(this);
+					previous = table.data('tablesort');
+					if(previous) {
+						previous.destroy();
+					}
+					table.data('tablesort', new $.tablesort(table, settings));
+				});
+			};
+
+		})(window.Zepto || window.jQuery);
+	</script>
+	<script>
+	$(document)
+		.ready(function() {
+
+			// fix menu when passed
+			$('.masthead')
+				.visibility({
+					once: false,
+					onBottomPassed: function() {
+						$('.fixed.menu').transition('fade in');
+					},
+					onBottomPassedReverse: function() {
+						$('.fixed.menu').transition('fade out');
+					}
+				})
+			;
+
+			// create sidebar and attach to menu open
+			$('.ui.sidebar')
+				.sidebar('attach events', '.toc.item')
+			;
+
+			// make sortable tables sortable
+			$('.sortable')
+				.tablesort()
+			;
+
+		})
+	;
+	</script>
+</head>
+<body>
+
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+	<div class="ui container">
+		<a class="active item" href="#">FY2020</a>
+		<div class="right menu">
+			<div class="item">
+				<a class="ui button" href="https://www.thef1newsletter.com/podcast/">Premium Unleaded</a>
+			</div>
+			<div class="item">
+				<a class="ui primary button" href="https://system.netsuite.com/pages/customerlogin.jsp?country=US">NSCORP</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+	<a class="active item" href="#">FY2020</a>
+	<a class="item" href="https://www.thef1newsletter.com/podcast/">Premium Unleaded</a>
+	<a class="item" href="https://system.netsuite.com/pages/customerlogin.jsp?country=US">NSCORP</a>
+</div>
+
+
+<!-- Page Contents -->
+<div class="pusher">
+	<div class="ui inverted vertical masthead center aligned segment">
+
+		<div class="ui container">
+			<div class="ui large secondary inverted pointing menu">
+				<a class="toc item">
+					<i class="sidebar icon"></i>
+				</a>
+				<a class="active item" href="#">FY2020</a>
+				<div class="right inverted item">
+					<a class="ui button" href="https://www.thef1newsletter.com/podcast/">Premium Unleaded</a>
+					<a class="ui inverted button" href="https://system.netsuite.com/pages/customerlogin.jsp?country=US">NSCORP</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="ui text container">
+			<h1 class="ui inverted header">
+				SC Constructors' Championship
+			</h1>
+			<h2>Next generation team gamification, perfected.</h2>
+		</div>
+
+	</div>
+
+	<div class="ui vertical stripe segment">
+		<div class="ui middle aligned stackable grid container">
+			<div class="row">
+				<div class="six wide column centered">
+					<table class="ui celled padded table">
+						<thead>
+							<tr>
+								<th colspan="2">Monthly Point Rules</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Lead SC Logo</td>
+								<td>2 pts</td>
+							</tr>
+							<tr>
+								<td>Secondary SC Logo</td>
+								<td>1 pt</td>
+							</tr>
+							<tr>
+								<td>$25k ARR per deal</td>
+								<td>1 pt</td>
+							</tr>
+							<tr>
+								<td>#dmd recorded in CRM</td>
+								<td>1 pt</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="six wide column centered">
+					<table class="ui celled padded table">
+						<thead>
+							<tr>
+								<th colspan="2">Quarterly Point Rules</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Top Lead SC ARR</td>
+								<td>5 pts</td>
+							</tr>
+							<tr>
+								<td>Top Lead SC Logo</td>
+								<td>5 pts</td>
+							</tr>
+							<tr>
+								<td>Fastest Lap</td>
+								<td>1 pt</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="ui vertical stripe quote segment">
+		<div class="ui equal width stackable internally celled grid">
+			<div class="center aligned row">
+				<div class="column">
+					<h3>"Best. Team. Ever."</h3>
+					<p>That is what they all say about us</p>
+				</div>
+				<div class="column">
+					<h3>"I wish I was on Team Services."</h3>
+					<p>SCs not on Team Services</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui vertical stripe segment">
+		<div class="ui middle aligned stackable grid container">
+			<div class="row">
+				<div class="sixteen wide column centered">
+					<table class="ui sortable celled padded definition table">
+						<thead>
+							<tr>
+								<th></th>
+								<th class="right aligned">Jun</th>
+								<th class="right aligned">Jul</th>
+								<th class="right aligned">Aug</th>
+								<th class="right aligned">Q1</th>
+								<th class="right aligned">Sep</th>
+								<th class="right aligned">Oct</th>
+								<th class="right aligned">Nov</th>
+								<th class="right aligned">Q2</th>
+								<th class="right aligned">Dev</th>
+								<th class="right aligned">Jan</th>
+								<th class="right aligned">Feb</th>
+								<th class="right aligned">Q3</th>
+								<th class="right aligned">Mar</th>
+								<th class="right aligned">Apr</th>
+								<th class="right aligned">May</th>
+								<th class="right aligned">Q4</th>
+								<th class="right aligned">YTD</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Ryan</td>
+								<td class="right aligned">1</td>
+								<td class="right aligned">2</td>
+								<td class="right aligned">3</td>
+								<td class="right aligned">6</td>
+								<td class="right aligned">4</td>
+								<td class="right aligned">1</td>
+								<td class="right aligned">2</td>
+								<td class="right aligned">7</td>
+								<td class="right aligned">2</td>
+								<td class="right aligned">2</td>
+								<td class="right aligned">1</td>
+								<td class="right aligned">5</td>
+								<td class="right aligned">1</td>
+								<td class="right aligned">2</td>
+								<td class="right aligned">4</td>
+								<td class="right aligned">6</td>
+								<td class="right aligned">24</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>Total</th>
+								<th class="right aligned">1</th>
+								<th class="right aligned">2</th>
+								<th class="right aligned">3</th>
+								<th class="right aligned">6</th>
+								<th class="right aligned">4</th>
+								<th class="right aligned">1</th>
+								<th class="right aligned">2</th>
+								<th class="right aligned">7</th>
+								<th class="right aligned">2</th>
+								<th class="right aligned">2</th>
+								<th class="right aligned">1</th>
+								<th class="right aligned">5</th>
+								<th class="right aligned">1</th>
+								<th class="right aligned">2</th>
+								<th class="right aligned">4</th>
+								<th class="right aligned">6</th>
+								<th class="right aligned">24</th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="ui inverted vertical footer segment">
+		<div class="ui container">
+			<div class="ui stackable inverted divided equal height stackable grid">
+				<div class="three wide column">
+					<h4 class="ui inverted header">F1 Links</h4>
+					<div class="ui inverted link list">
+						<a href="https://www.bbc.com/sport/formula1/drivers-world-championship/standings" target="_blank" class="item">BBC Sport</a>
+						<a href="https://www.reddit.com/r/formula1/" target="_blank" class="item">r/formula1</a>
+					</div>
+				</div>
+				<div class="three wide column">
+					<h4 class="ui inverted header">F1 Podcasts</h4>
+					<div class="ui inverted link list">
+						<a href="https://podcasts.apple.com/us/podcast/f1-beyond-the-grid/id1405972616" target="_blank" class="item">Beyond the Grid</a>
+						<a href="https://podcasts.apple.com/us/podcast/wtf1-podcast/id1361259666" target="_blank" class="item">WTF1</a>
+					</div>
+				</div>
+				<div class="seven wide column">
+					<h4 class="ui inverted header">Freshness Guaranteed</h4>
+					<p>The data on this page was last upated on 06 Jun 2019.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>
