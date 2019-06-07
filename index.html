@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,11 +9,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 	<!-- Site Properties -->
-	<title>🏎️ SC Constructors Championship</title>
+	<title>{{ site.title }}</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
 
 	<style type="text/css">
-
 		.hidden.menu {
 			display: none;
 		}
@@ -97,7 +98,14 @@
 			}
 		}
 
-
+		.flip-text-h {
+			display: inline-block;
+			-moz-transform: scale(-1, 1);
+			-webkit-transform: scale(-1, 1);
+			-o-transform: scale(-1, 1);
+			-ms-transform: scale(-1, 1);
+			transform: scale(-1, 1);
+		}
 	</style>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -275,9 +283,6 @@
 		<a class="active item" href="#">FY2020</a>
 		<div class="right menu">
 			<div class="item">
-				<a class="ui button" href="https://www.thef1newsletter.com/podcast/">Premium Unleaded</a>
-			</div>
-			<div class="item">
 				<a class="ui primary button" href="https://system.netsuite.com/pages/customerlogin.jsp?country=US">NSCORP</a>
 			</div>
 		</div>
@@ -287,7 +292,6 @@
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
 	<a class="active item" href="#">FY2020</a>
-	<a class="item" href="https://www.thef1newsletter.com/podcast/">Premium Unleaded</a>
 	<a class="item" href="https://system.netsuite.com/pages/customerlogin.jsp?country=US">NSCORP</a>
 </div>
 
@@ -303,7 +307,6 @@
 				</a>
 				<a class="active item" href="#">FY2020</a>
 				<div class="right inverted item">
-					<a class="ui button" href="https://www.thef1newsletter.com/podcast/">Premium Unleaded</a>
 					<a class="ui inverted button" href="https://system.netsuite.com/pages/customerlogin.jsp?country=US">NSCORP</a>
 				</div>
 			</div>
@@ -311,9 +314,9 @@
 
 		<div class="ui text container">
 			<h1 class="ui inverted header">
-				SC Constructors' Championship
+				{{ site.title }}
 			</h1>
-			<h2>Next generation team gamification, perfected.</h2>
+			<h2>{{ site.description }}</h2>
 		</div>
 
 	</div>
@@ -376,16 +379,16 @@
 	</div>
 
 
-	<div class="ui vertical stripe quote segment">
+	<div class="ui inverted vertical stripe quote segment">
 		<div class="ui equal width stackable internally celled grid">
 			<div class="center aligned row">
 				<div class="column">
 					<h3>"Best. Team. Ever."</h3>
-					<p>That is what they all say about us</p>
+					<p>Everyone when asked about Team Services</p>
 				</div>
 				<div class="column">
 					<h3>"I wish I was on Team Services."</h3>
-					<p>SCs not on Team Services</p>
+					<p>Anyone not on Team Services</p>
 				</div>
 			</div>
 		</div>
@@ -395,7 +398,10 @@
 		<div class="ui middle aligned stackable grid container">
 			<div class="row">
 				<div class="sixteen wide column centered">
-					<table class="ui sortable celled padded definition table">
+					<h2 class="ui top attached center aligned header">
+					  🏎 Current Constructors Standings <span class="flip-text-h">🏎</span>
+					</h2>
+					<table class="ui sortable selectable celled padded attached table">
 						<thead>
 							<tr>
 								<th></th>
@@ -419,47 +425,98 @@
 							</tr>
 						</thead>
 						<tbody>
+							{% comment %}
+							Create variables for quarters and summary columns
+							{% endcomment %}
+
+
+							{% assign t_jun = 0 %}
+							{% assign t_jul = 0 %}
+							{% assign t_aug = 0 %}
+							{% assign t_sep = 0 %}
+							{% assign t_oct = 0 %}
+							{% assign t_nov = 0 %}
+							{% assign t_dec = 0 %}
+							{% assign t_jan = 0 %}
+							{% assign t_feb = 0 %}
+							{% assign t_mar = 0 %}
+							{% assign t_apr = 0 %}
+							{% assign t_may = 0 %}
+							{% assign t_q1 = 0 %}
+							{% assign t_q2 = 0 %}
+							{% assign t_q3 = 0 %}
+							{% assign t_q4 = 0 %}
+							{% assign t_ytd = 0 %}
+
+							{% for row in site.data.points %}
+
+							{% assign q1 = row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 %}
+							{% assign q2 = row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 %}
+							{% assign q3 = row.dec | plus: row.jan | plus: row.feb | plus: row.bonus_q3 %}
+							{% assign q4 = row.mar | plus: row.apr | plus: row.may | plus: row.bonus_q4 %}
+							{% assign ytd = q1 | plus: q2 | plus: q3 | plus: q4 %}
+
 							<tr>
-								<td>Ryan</td>
-								<td class="right aligned">1</td>
-								<td class="right aligned">2</td>
-								<td class="right aligned">3</td>
-								<td class="right aligned">6</td>
-								<td class="right aligned">4</td>
-								<td class="right aligned">1</td>
-								<td class="right aligned">2</td>
-								<td class="right aligned">7</td>
-								<td class="right aligned">2</td>
-								<td class="right aligned">2</td>
-								<td class="right aligned">1</td>
-								<td class="right aligned">5</td>
-								<td class="right aligned">1</td>
-								<td class="right aligned">2</td>
-								<td class="right aligned">4</td>
-								<td class="right aligned">6</td>
-								<td class="right aligned">24</td>
+								<td class="left aligned">{{ row.name | capitalize }}</td>
+								<td class="right aligned">{{ row.jun }}</td>
+								<td class="right aligned">{{ row.jul }}</td>
+								<td class="right aligned">{{ row.aug }}</td>
+								<td class="right aligned disabled">{{ q1 }}</td>
+								<td class="right aligned">{{ row.sep }}</td>
+								<td class="right aligned">{{ row.oct }}</td>
+								<td class="right aligned">{{ row.nov }}</td>
+								<td class="right aligned disabled">{{ q2 }}</td>
+								<td class="right aligned">{{ row.dec }}</td>
+								<td class="right aligned">{{ row.jan }}</td>
+								<td class="right aligned">{{ row.feb }}</td>
+								<td class="right aligned disabled">{{ q3 }}</td>
+								<td class="right aligned">{{ row.mar }}</td>
+								<td class="right aligned">{{ row.apr }}</td>
+								<td class="right aligned">{{ row.may }}</td>
+								<td class="right aligned disabled">{{ q4 }}</td>
+								<td class="right aligned"> {{ ytd }}</td>
 							</tr>
+
+							{% assign t_jun = t_jun | plus: row.jun %}
+							{% assign t_jul = t_jul | plus: row.jul %}
+							{% assign t_aug = t_aug | plus: row.aug %}
+							{% assign t_sep = t_sep | plus: row.sep %}
+							{% assign t_oct = t_oct | plus: row.oct %}
+							{% assign t_nov = t_nov | plus: row.nov %}
+							{% assign t_dec = t_dec | plus: row.dec %}
+							{% assign t_jan = t_jan | plus: row.jan %}
+							{% assign t_feb = t_feb | plus: row.feb %}
+							{% assign t_mar = t_mar | plus: row.mar %}
+							{% assign t_apr = t_apr | plus: row.apr %}
+							{% assign t_may = t_may | plus: row.may %}
+							{% assign t_q1 = t_q1 | plus: q1 %}
+							{% assign t_q2 = t_q2 | plus: q2 %}
+							{% assign t_q3 = t_q3 | plus: q3 %}
+							{% assign t_q4 = t_q4 | plus: q4 %}
+							{% assign t_ytd = t_ytd | plus: ytd %}
+
+							{% endfor %}
 						</tbody>
 						<tfoot>
 							<tr>
 								<th>Total</th>
-								<th class="right aligned">1</th>
-								<th class="right aligned">2</th>
-								<th class="right aligned">3</th>
-								<th class="right aligned">6</th>
-								<th class="right aligned">4</th>
-								<th class="right aligned">1</th>
-								<th class="right aligned">2</th>
-								<th class="right aligned">7</th>
-								<th class="right aligned">2</th>
-								<th class="right aligned">2</th>
-								<th class="right aligned">1</th>
-								<th class="right aligned">5</th>
-								<th class="right aligned">1</th>
-								<th class="right aligned">2</th>
-								<th class="right aligned">4</th>
-								<th class="right aligned">6</th>
-								<th class="right aligned">24</th>
+								<th class="right aligned">{{ t_jun }}</th>
+								<th class="right aligned">{{ t_jul }}</th>
+								<th class="right aligned">{{ t_aug }}</th>
+								<th class="right aligned disabled">{{ t_q1 }}</th>
+								<th class="right aligned">{{ t_sep }}</th>
+								<th class="right aligned">{{ t_oct }}</th>
+								<th class="right aligned">{{ t_nov }}</th>
+								<th class="right aligned disabled">{{ t_q2 }}</th>
+								<th class="right aligned">{{ t_dec }}</th>
+								<th class="right aligned">{{ t_jan }}</th>
+								<th class="right aligned">{{ t_feb }}</th>
+								<th class="right aligned disabled">{{ t_q3 }}</th>
+								<th class="right aligned">{{ t_mar }}</th>
+								<th class="right aligned">{{ t_apr }}</th>
+								<th class="right aligned">{{ t_may }}</th>
+								<th class="right aligned disabled">{{ t_q4 }}</th>
+								<th class="right aligned">{{ t_ytd }}</th>
 							</tr>
 						</tfoot>
 					</table>
@@ -475,15 +532,17 @@
 				<div class="three wide column">
 					<h4 class="ui inverted header">F1 Links</h4>
 					<div class="ui inverted link list">
-						<a href="https://www.bbc.com/sport/formula1/drivers-world-championship/standings" target="_blank" class="item">BBC Sport</a>
-						<a href="https://www.reddit.com/r/formula1/" target="_blank" class="item">r/formula1</a>
+						{% for link in site.data.links %}
+						<a href="{{ link.url }}" target="_blank" class="item">{{ link.name }}</a>
+						{% endfor %}
 					</div>
 				</div>
 				<div class="three wide column">
 					<h4 class="ui inverted header">F1 Podcasts</h4>
 					<div class="ui inverted link list">
-						<a href="https://podcasts.apple.com/us/podcast/f1-beyond-the-grid/id1405972616" target="_blank" class="item">Beyond the Grid</a>
-						<a href="https://podcasts.apple.com/us/podcast/wtf1-podcast/id1361259666" target="_blank" class="item">WTF1</a>
+						{% for podcast in site.data.podcasts %}
+						<a href="{{ podcast.url }}" target="_blank" class="item">{{ podcast.name }}</a>
+						{% endfor %}
 					</div>
 				</div>
 				<div class="seven wide column">
