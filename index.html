@@ -388,7 +388,7 @@
 				</div>
 				<div class="column">
 					<h3>"I wish I was on Team Services."</h3>
-					<p>Anyone not on Team Services</p>
+					<p>Someone not on Team Services</p>
 				</div>
 			</div>
 		</div>
@@ -397,14 +397,15 @@
 	<div class="ui vertical stripe segment">
 		<div class="ui middle aligned stackable grid container">
 			<div class="row">
-				<div class="sixteen wide column centered">
+				<!-- Computer only -->
+				<div class="sixteen wide column computer only centered">
 					<h2 class="ui top attached center aligned header">
 					  🏎 Current Constructors Standings <span class="flip-text-h">🏎</span>
 					</h2>
 					<table class="ui sortable selectable celled padded attached table">
 						<thead>
 							<tr>
-								<th></th>
+								<th>Name</th>
 								<th class="right aligned">Jun</th>
 								<th class="right aligned">Jul</th>
 								<th class="right aligned">Aug</th>
@@ -516,6 +517,83 @@
 								<th class="right aligned">{{ t_apr }}</th>
 								<th class="right aligned">{{ t_may }}</th>
 								<th class="right aligned disabled">{{ t_q4 }}</th>
+								<th class="right aligned">{{ t_ytd }}</th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<!-- Mobile only -->
+				<div class="sixteen wide column mobile only centered">
+					<h2 class="ui top attached center aligned header">
+					  🏎 Current Constructors Summary <span class="flip-text-h">🏎</span>
+					</h2>
+					<table class="ui sortable selectable unstackable celled padded attached table">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th class="right aligned">YTD</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% comment %}
+							Create variables for quarters and summary columns
+							{% endcomment %}
+
+
+							{% assign t_jun = 0 %}
+							{% assign t_jul = 0 %}
+							{% assign t_aug = 0 %}
+							{% assign t_sep = 0 %}
+							{% assign t_oct = 0 %}
+							{% assign t_nov = 0 %}
+							{% assign t_dec = 0 %}
+							{% assign t_jan = 0 %}
+							{% assign t_feb = 0 %}
+							{% assign t_mar = 0 %}
+							{% assign t_apr = 0 %}
+							{% assign t_may = 0 %}
+							{% assign t_q1 = 0 %}
+							{% assign t_q2 = 0 %}
+							{% assign t_q3 = 0 %}
+							{% assign t_q4 = 0 %}
+							{% assign t_ytd = 0 %}
+
+							{% for row in site.data.points %}
+
+							{% assign q1 = row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 %}
+							{% assign q2 = row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 %}
+							{% assign q3 = row.dec | plus: row.jan | plus: row.feb | plus: row.bonus_q3 %}
+							{% assign q4 = row.mar | plus: row.apr | plus: row.may | plus: row.bonus_q4 %}
+							{% assign ytd = q1 | plus: q2 | plus: q3 | plus: q4 %}
+
+							<tr>
+								<td class="left aligned">{{ row.name | capitalize }}</td>
+								<td class="right aligned"> {{ ytd }}</td>
+							</tr>
+
+							{% assign t_jun = t_jun | plus: row.jun %}
+							{% assign t_jul = t_jul | plus: row.jul %}
+							{% assign t_aug = t_aug | plus: row.aug %}
+							{% assign t_sep = t_sep | plus: row.sep %}
+							{% assign t_oct = t_oct | plus: row.oct %}
+							{% assign t_nov = t_nov | plus: row.nov %}
+							{% assign t_dec = t_dec | plus: row.dec %}
+							{% assign t_jan = t_jan | plus: row.jan %}
+							{% assign t_feb = t_feb | plus: row.feb %}
+							{% assign t_mar = t_mar | plus: row.mar %}
+							{% assign t_apr = t_apr | plus: row.apr %}
+							{% assign t_may = t_may | plus: row.may %}
+							{% assign t_q1 = t_q1 | plus: q1 %}
+							{% assign t_q2 = t_q2 | plus: q2 %}
+							{% assign t_q3 = t_q3 | plus: q3 %}
+							{% assign t_q4 = t_q4 | plus: q4 %}
+							{% assign t_ytd = t_ytd | plus: ytd %}
+
+							{% endfor %}
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>Total</th>
 								<th class="right aligned">{{ t_ytd }}</th>
 							</tr>
 						</tfoot>
