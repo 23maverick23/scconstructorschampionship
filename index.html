@@ -272,6 +272,18 @@
 				.tablesort()
 			;
 
+			$('a[href^="#"]')
+				.on('click', function(event) {
+					var target = $(this.getAttribute('href'));
+					if( target.length ) {
+						event.preventDefault();
+						$('html, body').stop().animate({
+							scrollTop: target.offset().top
+						}, 1000);
+					}
+				})
+			;
+
 		})
 	;
 	</script>
@@ -281,7 +293,10 @@
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
 	<div class="ui container">
-		<a class="active item" href="#">FY2020</a>
+		<a class="active item" href="#home">FY2020</a>
+		<a class="item" href="#rules">Rules</a>
+		<a class="item" href="#testimonials">Testimonials</a>
+		<a class="item" href="#standings">Standings</a>
 		<div class="right menu">
 			<div class="item">
 				<a class="ui primary button" href="https://system.netsuite.com/pages/customerlogin.jsp?country=US">NSCORP</a>
@@ -292,21 +307,27 @@
 
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
-	<a class="active item" href="#">FY2020</a>
+	<a class="active item" href="#home">FY2020</a>
+	<a class="item" href="#rules">Rules</a>
+	<a class="item" href="#testimonials">Testimonials</a>
+	<a class="item" href="#standings">Standings</a>
 	<a class="item" href="https://system.netsuite.com/pages/customerlogin.jsp?country=US">NSCORP</a>
 </div>
 
 
 <!-- Page Contents -->
 <div class="pusher">
-	<div class="ui inverted vertical masthead center aligned segment">
+	<div id="home" class="ui inverted vertical masthead center aligned segment">
 
 		<div class="ui container">
 			<div class="ui large secondary inverted pointing menu">
 				<a class="toc item">
 					<i class="sidebar icon"></i>
 				</a>
-				<a class="active item" href="#">FY2020</a>
+				<a class="active item" href="#home">FY2020</a>
+				<a class="item" href="#rules">Rules</a>
+				<a class="item" href="#testimonials">Testimonials</a>
+				<a class="item" href="#standings">Standings</a>
 				<div class="right inverted item">
 					<a class="ui inverted button" href="https://system.netsuite.com/pages/customerlogin.jsp?country=US">NSCORP</a>
 				</div>
@@ -325,6 +346,35 @@
 	<div class="ui vertical stripe segment">
 		<div class="ui middle aligned stackable grid container">
 			<div class="row">
+				<div class="eight wide column">
+					<h3 class="ui header">Some Formula One Trivia</h3>
+					<p>The formula in the name Formula One refers to a set of rules to which all participants and cars must comply and was originally and briefly known as Formula A The first official world championship race was held in 1950 at Silverstone.<sup><a href="#sources">[1]</a></sup></p>
+					<h3 class="ui header">Another Fun Fact to Know and Tell</h3>
+					<p>The oldest extant teams to have never changed names include Ferrari, McLaren, and Williams (the current Mercedes lineage actually dates back to Tyrrell, which rebranded a number of times as BAR, Honda, and Brawn).<sup><a href="#sources">[2]</a></sup></p>
+				</div>
+				<div class="six wide right floated column">
+					<img src="assets/images/formula1_prost.jpg" class="ui large bordered rounded image">
+				</div>
+			</div>
+			<div class="row">
+				<div class="center aligned column">
+					<a href="https://www.netflix.com/title/80204890" target="_blank" class="ui huge inverted red button">Watch "Drive to Survive" on Netflix</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="rules" class="ui vertical stripe segment">
+		<div class="ui middle aligned stackable grid container">
+			<div class="row">
+				<div class="twelve wide column centered">
+					<h1 class="ui centered header">
+						Points
+						<div class="sub header">How Are They Awarded?</div>
+					</h1>
+				</div>
+			</div>
+			<div class="row">
 				<div class="six wide column centered">
 					<table class="ui celled padded table">
 						<thead>
@@ -334,19 +384,19 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>Lead SC Logo</td>
+								<td>Logo as Lead SC</td>
 								<td>2 pts</td>
 							</tr>
 							<tr>
-								<td>Secondary SC Logo</td>
+								<td>Logo as Secondary SC</td>
 								<td>1 pt</td>
 							</tr>
 							<tr>
-								<td>$25k ARR per deal</td>
+								<td>$25k ARR per Deal</td>
 								<td>1 pt</td>
 							</tr>
 							<tr>
-								<td>#dmd recorded in CRM</td>
+								<td>SC Request with #dmd</td>
 								<td>1 pt</td>
 							</tr>
 						</tbody>
@@ -361,11 +411,11 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>Top Lead SC ARR</td>
+								<td>Top Lead SC ARR*</td>
 								<td>5 pts</td>
 							</tr>
 							<tr>
-								<td>Top Lead SC Logo</td>
+								<td>Top Lead SC Logos*</td>
 								<td>5 pts</td>
 							</tr>
 							<tr>
@@ -373,6 +423,11 @@
 								<td>1 pt</td>
 							</tr>
 						</tbody>
+						<tfoot>
+							<tr>
+								<th colspan="2"><em>* QTD actuals for both ARR and Logos, not monthly points total</em></th>
+							</tr>
+						</tfoot>
 					</table>
 				</div>
 			</div>
@@ -380,7 +435,7 @@
 	</div>
 
 
-	<div class="ui inverted vertical stripe quote segment">
+	<div id="testimonials" class="ui inverted vertical stripe quote segment">
 		<div class="ui equal width stackable internally celled grid">
 			<div class="center aligned row">
 				<div class="column">
@@ -395,7 +450,7 @@
 		</div>
 	</div>
 
-	<div class="ui vertical stripe segment">
+	<div id="standings" class="ui vertical stripe segment">
 		<div class="ui middle aligned stackable grid container">
 			<div class="row">
 				<!-- Computer only -->
@@ -605,7 +660,7 @@
 	</div>
 
 
-	<div class="ui inverted vertical footer segment">
+	<div id="sources" class="ui inverted vertical footer segment">
 		<div class="ui container">
 			<div class="ui stackable inverted divided equal height stackable grid">
 				<div class="three wide column">
@@ -622,6 +677,13 @@
 						{% for podcast in site.data.podcasts %}
 						<a href="{{ podcast.url }}" target="_blank" class="item">{{ podcast.name }}</a>
 						{% endfor %}
+					</div>
+				</div>
+				<div class="three wide column">
+					<h4 class="ui inverted header">Trivia Sources</h4>
+					<div class="ui inverted link list">
+						<a href="http://en.espn.co.uk/f1/motorsport/story/3831.html" target="_blank" class="item">[1] en.espn.co.uk</a>
+						<a href="https://www.thedrive.com/start-finish/10911/60-years-of-the-f1-world-constructors-championship-a-guide" target="_blank" class="item">[2] www.thedrive.com</a>
 					</div>
 				</div>
 				<div class="seven wide column">
