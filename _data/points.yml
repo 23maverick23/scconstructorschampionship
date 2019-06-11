@@ -1,11 +1,11 @@
 - name: john
-  jun: 0
-  jul:
+  jun: 
+  jul: 
   aug:
-  sep:
-  oct:
-  nov:
-  dec:
+  sep: 
+  oct: 
+  nov: 
+  dec: 
   jan:
   feb:
   mar:
@@ -17,7 +17,7 @@
   bonus_q4:
 
 - name: trevor
-  jun: 1
+  jun: 
   jul:
   aug:
   sep:
@@ -35,7 +35,7 @@
   bonus_q4:
 
 - name: laura
-  jun: 0
+  jun: 
   jul:
   aug:
   sep:
@@ -53,7 +53,7 @@
   bonus_q4:
 
 - name: hellen
-  jun: 0
+  jun: 
   jul:
   aug:
   sep:
@@ -71,7 +71,7 @@
   bonus_q4:
 
 - name: murph
-  jun: 1
+  jun: 
   jul:
   aug:
   sep:
@@ -89,7 +89,7 @@
   bonus_q4:
 
 - name: dean
-  jun: 0
+  jun: 
   jul:
   aug:
   sep:
@@ -107,7 +107,7 @@
   bonus_q4:
 
 - name: bobby
-  jun: 0
+  jun: 
   jul:
   aug:
   sep:
@@ -125,7 +125,7 @@
   bonus_q4:
 
 - name: danielle
-  jun: 1
+  jun: 
   jul:
   aug:
   sep:

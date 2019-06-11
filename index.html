@@ -12,6 +12,7 @@
 	<title>{{ site.title }}</title>
 	<link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/racing-car_1f3ce.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
 
 	<style type="text/css">
 		.hidden.menu {
@@ -111,6 +112,7 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
 	<script>
 		/*
 			A simple, lightweight jQuery plugin for creating sortable tables.
@@ -284,6 +286,90 @@
 				})
 			;
 
+			var chartLabels = [
+				{% for row in site.data.points %}
+				"{{ row.name | capitalize }}"{% if forloop.last == true %}{% else %},{% endif %}
+				{% endfor %}
+			];
+
+			var chartData = [
+				{% for row in site.data.points %}
+				{% assign q1 = row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 %}
+				{% assign q2 = row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 %}
+				{% assign q3 = row.dec | plus: row.jan | plus: row.feb | plus: row.bonus_q3 %}
+				{% assign q4 = row.mar | plus: row.apr | plus: row.may | plus: row.bonus_q4 %}
+				{% assign ytd = q1 | plus: q2 | plus: q3 | plus: q4 %}
+				{{ ytd }}{% if forloop.last == true %}{% else %},{% endif %}
+				{% endfor %}
+			];
+
+			var sortedData = chartData.slice().sort(function(a, b) {return b-a});
+			var rankedData = chartData.slice().map(function(v) { return sortedData.indexOf(v) });
+			var backgroundColors = rankedData.slice();
+
+			console.log(chartData, rankedData);
+
+			for (var i = 0; i < rankedData.length; i++) {
+				switch (rankedData[i]) {
+					case 0:
+						backgroundColors[i] = "rgb(214, 175, 54)";
+						break;
+					case 1:
+						backgroundColors[i] = "rgb(167, 167, 173)";
+						break;
+					case 2:
+						backgroundColors[i] = "rgb(167, 112, 68)";
+						break;
+					default:
+						backgroundColors[i] = "rgb(236, 240, 241)";
+				}
+			};
+
+			var barChartData = {
+				labels: chartLabels,
+				datasets: [{
+					label: "Total Points",
+					backgroundColor: backgroundColors,
+					data: chartData
+				}]
+			};
+
+			var ctx = document.getElementById('pointsChart').getContext('2d');
+			window.myBar = new Chart(ctx, {
+				type: 'horizontalBar',
+				data: barChartData,
+				options: {
+					title: {
+						display: false,
+						text: "Constructors' Championship Medal Outlook"
+					},
+					tooltips: {
+						mode: 'index',
+						intersect: false
+					},
+					legend: {
+						display: false
+					},
+					responsive: true,
+					scales: {
+						xAxes: [{
+							display: true,
+							scaleLabel: {
+								display: true,
+								labelString: 'Points to Date'
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								min: 0,
+								suggestedMax: 150,
+			                    beginAtZero: true
+			                }
+						}]
+					}
+				}
+			});
+
 		})
 	;
 	</script>
@@ -297,11 +383,6 @@
 		<a class="item" href="#rules">Rules</a>
 		<a class="item" href="#testimonials">Testimonials</a>
 		<a class="item" href="#standings">Standings</a>
-		<div class="right menu">
-			<div class="item">
-				<a class="ui primary button" href="https://system.netsuite.com/pages/customerlogin.jsp?country=US">NSCORP</a>
-			</div>
-		</div>
 	</div>
 </div>
 
@@ -311,7 +392,6 @@
 	<a class="item" href="#rules">Rules</a>
 	<a class="item" href="#testimonials">Testimonials</a>
 	<a class="item" href="#standings">Standings</a>
-	<a class="item" href="https://system.netsuite.com/pages/customerlogin.jsp?country=US">NSCORP</a>
 </div>
 
 
@@ -328,9 +408,6 @@
 				<a class="item" href="#rules">Rules</a>
 				<a class="item" href="#testimonials">Testimonials</a>
 				<a class="item" href="#standings">Standings</a>
-				<div class="right inverted item">
-					<a class="ui inverted button" href="https://system.netsuite.com/pages/customerlogin.jsp?country=US">NSCORP</a>
-				</div>
 			</div>
 		</div>
 
@@ -659,6 +736,15 @@
 		</div>
 	</div>
 
+	<div class="ui vertical stripe segment">
+		<div class="ui middle aligned stackable grid container">
+			<div class="row">
+				<div class="sixteen wide column centered">
+					<canvas id="pointsChart"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div id="sources" class="ui inverted vertical footer segment">
 		<div class="ui container">
