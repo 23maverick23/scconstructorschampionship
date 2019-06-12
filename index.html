@@ -381,17 +381,17 @@
 	<div class="ui container">
 		<a class="active item" href="#home">FY2020</a>
 		<a class="item" href="#rules">Rules</a>
-		<a class="item" href="#testimonials">Testimonials</a>
 		<a class="item" href="#standings">Standings</a>
+		<a class="item" href="#drivers">Drivers</a>
 	</div>
 </div>
 
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
 	<a class="active item" href="#home">FY2020</a>
-	<a class="item" href="#rules">Rules</a>
-	<a class="item" href="#testimonials">Testimonials</a>
+	<a class="item" href="#rules">Rules</a
 	<a class="item" href="#standings">Standings</a>
+	<a class="item" href="#drivers">Drivers</a>
 </div>
 
 
@@ -406,8 +406,9 @@
 				</a>
 				<a class="active item" href="#home">FY2020</a>
 				<a class="item" href="#rules">Rules</a>
-				<a class="item" href="#testimonials">Testimonials</a>
+	
 				<a class="item" href="#standings">Standings</a>
+				<a class="item" href="#drivers">Drivers</a>
 			</div>
 		</div>
 
@@ -512,7 +513,7 @@
 	</div>
 
 
-	<div id="testimonials" class="ui inverted vertical stripe quote segment">
+	<div class="ui inverted vertical stripe quote segment">
 		<div class="ui equal width stackable internally celled grid">
 			<div class="center aligned row">
 				<div class="column">
@@ -746,6 +747,44 @@
 		</div>
 	</div>
 
+	<div class="ui inverted vertical stripe quote segment">
+		<div class="ui equal width stackable internally celled grid">
+			<div class="center aligned row">
+				<div class="column">
+					<h3>"Where's Bobby?"</h3>
+					<p>The start of every team call</p>
+				</div>
+				<div class="column">
+					<h3>"Please reply in threads."</h3>
+					<p>Favorite team Slack emoji</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="drivers" class="ui vertical stripe segment">
+		<div class="ui middle aligned stackable grid container">
+			<div class="row">
+				<div class="sixteen wide column centered">
+					<h2 class="ui center aligned header">
+					  Meet Your FY2020 Drivers
+					</h2>
+					<div class="ui eight doubling cards">
+						{% for driver in site.data.drivers %}
+						<div class="card">
+							<div class="content">
+								<i class="right floated {{ driver.flag }} flag"></i>
+								<div class="header">{{ driver.name }}</div>
+								<div class="meta">Team {{ driver.team }}</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="sources" class="ui inverted vertical footer segment">
 		<div class="ui container">
 			<div class="ui stackable inverted divided equal height stackable grid">
@@ -774,7 +813,7 @@
 				</div>
 				<div class="seven wide column">
 					<h4 class="ui inverted header">Freshness Guaranteed</h4>
-					<p>The data on this page was last upated on 06 Jun 2019.</p>
+					<p>The data on this page was last upated {{ site.time | date: "%-d %b %Y"}}.</p>
 				</div>
 			</div>
 		</div>
