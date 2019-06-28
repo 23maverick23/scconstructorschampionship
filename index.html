@@ -303,26 +303,38 @@
 				{% endfor %}
 			];
 
+			// Sort total points, highest to lowest
 			var sortedData = chartData.slice().sort(function(a, b) {return b-a});
-			var rankedData = chartData.slice().map(function(v) { return sortedData.indexOf(v) });
+			// Give points an overall ranking
+			var ranks = $.grep(sortedData, function(item, idx) {
+			    return item != sortedData[idx - 1];
+			});
+			// Create new array with rank "score" of total points which should
+			// also allow for multiple of the same rank (e.g. ties)
+			var rankedData = [];
+			$.each(chartData, function(idx, item) {
+			    var rank = $.inArray(item, ranks) + 1;   
+			    rankedData.push(rank)
+			});
+
 			var backgroundColors = rankedData.slice();
 
 			console.log(chartData, rankedData);
 
 			for (var i = 0; i < rankedData.length; i++) {
-				switch (rankedData[i]) {
-					case 0:
-						backgroundColors[i] = "rgb(214, 175, 54)";
-						break;
-					case 1:
-						backgroundColors[i] = "rgb(167, 167, 173)";
-						break;
-					case 2:
-						backgroundColors[i] = "rgb(167, 112, 68)";
-						break;
-					default:
-						backgroundColors[i] = "rgb(236, 240, 241)";
-				}
+			    switch (rankedData[i]) {
+				case 0:
+				    backgroundColors[i] = "rgb(214, 175, 54)";
+				    break;
+				case 1:
+				    backgroundColors[i] = "rgb(167, 167, 173)";
+				    break;
+				case 2:
+				    backgroundColors[i] = "rgb(167, 112, 68)";
+				    break;
+				default:
+				    backgroundColors[i] = "rgb(236, 240, 241)";
+			    }
 			};
 
 			var barChartData = {
