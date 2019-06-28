@@ -313,7 +313,7 @@
 			// also allow for multiple of the same rank (e.g. ties)
 			var rankedData = [];
 			$.each(chartData, function(idx, item) {
-			    var rank = $.inArray(item, ranks) + 1;   
+			    var rank = $.inArray(item, ranks);   
 			    rankedData.push(rank)
 			});
 
