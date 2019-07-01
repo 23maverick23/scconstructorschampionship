@@ -1,5 +1,5 @@
 - name: john
-  jun: 1
+  jun: 9
   jul: 
   aug:
   sep: 
@@ -17,7 +17,7 @@
   bonus_q4:
 
 - name: trevor
-  jun: 2
+  jun: 7
   jul:
   aug:
   sep:
@@ -53,7 +53,7 @@
   bonus_q4:
 
 - name: hellen
-  jun: 3
+  jun: 8
   jul:
   aug:
   sep:
@@ -71,7 +71,7 @@
   bonus_q4:
 
 - name: murph
-  jun: 1
+  jun: 5
   jul:
   aug:
   sep:
@@ -89,7 +89,7 @@
   bonus_q4:
 
 - name: dean
-  jun: 1
+  jun: 3
   jul:
   aug:
   sep:
@@ -107,7 +107,7 @@
   bonus_q4:
 
 - name: bobby
-  jun: 0
+  jun: 1
   jul:
   aug:
   sep:
