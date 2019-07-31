@@ -1,6 +1,6 @@
 - name: john
   jun: 9
-  jul: 1
+  jul: 3
   aug:
   sep: 
   oct: 
@@ -36,7 +36,7 @@
 
 - name: laura
   jun: 3
-  jul:
+  jul: 0
   aug:
   sep:
   oct:
@@ -54,7 +54,7 @@
 
 - name: hellen
   jun: 8
-  jul:
+  jul: 0
   aug:
   sep:
   oct:
@@ -72,7 +72,7 @@
 
 - name: murph
   jun: 5
-  jul:
+  jul: 0
   aug:
   sep:
   oct:
@@ -90,7 +90,7 @@
 
 - name: dean
   jun: 3
-  jul:
+  jul: 1
   aug:
   sep:
   oct:
@@ -108,7 +108,7 @@
 
 - name: bobby
   jun: 1
-  jul:
+  jul: 0
   aug:
   sep:
   oct:
