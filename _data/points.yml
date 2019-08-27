@@ -1,7 +1,7 @@
 - name: john
   jun: 9
   jul: 3
-  aug:
+  aug: 6
   sep: 
   oct: 
   nov: 
@@ -19,7 +19,7 @@
 - name: trevor
   jun: 7
   jul: 3
-  aug:
+  aug: 0
   sep:
   oct:
   nov:
@@ -37,7 +37,7 @@
 - name: laura
   jun: 3
   jul: 2
-  aug:
+  aug: 0
   sep:
   oct:
   nov:
@@ -55,7 +55,7 @@
 - name: hellen
   jun: 8
   jul: 0
-  aug:
+  aug: 1
   sep:
   oct:
   nov:
@@ -73,7 +73,7 @@
 - name: murph
   jun: 5
   jul: 0
-  aug:
+  aug: 1
   sep:
   oct:
   nov:
@@ -91,7 +91,7 @@
 - name: dean
   jun: 3
   jul: 8
-  aug:
+  aug: 1
   sep:
   oct:
   nov:
@@ -109,7 +109,7 @@
 - name: bobby
   jun: 1
   jul: 0
-  aug:
+  aug: 0
   sep:
   oct:
   nov:
@@ -127,7 +127,7 @@
 - name: danielle
   jun: 3
   jul: 1
-  aug:
+  aug: 1
   sep:
   oct:
   nov:
@@ -145,7 +145,7 @@
 - name: kim
   jun: 0
   jul: 2
-  aug:
+  aug: 0
   sep: 
   oct: 
   nov: 
