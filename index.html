@@ -340,7 +340,7 @@
 			var barChartData = {
 				labels: chartLabels,
 				datasets: [{
-					label: "Total Points",
+					label: "Championship Points",
 					backgroundColor: backgroundColors,
 					data: chartData
 				}]
@@ -352,7 +352,7 @@
 				data: barChartData,
 				options: {
 					title: {
-						display: false,
+						display: true,
 						text: "Constructors' Championship Medal Outlook"
 					},
 					tooltips: {
@@ -548,13 +548,13 @@
 			<div class="row">
 				<!-- Computer only -->
 				<div class="sixteen wide column computer only centered">
-					<h2 class="ui top attached center aligned header">
+					<h2 class="ui top  center aligned header">
 					  🏎 Current Constructors Standings <span class="flip-text-h">🏎</span>
 					</h2>
 					<table class="ui sortable selectable celled padded attached table">
 						<thead>
 							<tr>
-								<th>Name</th>
+								<th class="left aligned">Name</th>
 								<th class="right aligned">Jun</th>
 								<th class="right aligned">Jul</th>
 								<th class="right aligned">Aug</th>
@@ -571,7 +571,8 @@
 								<th class="right aligned">Apr</th>
 								<th class="right aligned">May</th>
 								<th class="right aligned">Q4</th>
-								<th class="right aligned">YTD</th>
+								<th class="right aligned" title="Bonus Points">👑</th>
+								<th class="right aligned" title="Total Points">🏁</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -596,6 +597,7 @@
 							{% assign t_q2 = 0 %}
 							{% assign t_q3 = 0 %}
 							{% assign t_q4 = 0 %}
+							{% assign t_btd = 0 %}
 							{% assign t_ytd = 0 %}
 
 							{% for row in site.data.points %}
@@ -604,6 +606,7 @@
 							{% assign q2 = row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 %}
 							{% assign q3 = row.dec | plus: row.jan | plus: row.feb | plus: row.bonus_q3 %}
 							{% assign q4 = row.mar | plus: row.apr | plus: row.may | plus: row.bonus_q4 %}
+							{% assign btd = row.bonus_q1 | plus: row.bonus_q2 | plus: row.bonus_q3 | plus: row.bonus_q4 %}
 							{% assign ytd = q1 | plus: q2 | plus: q3 | plus: q4 %}
 
 							<tr>
@@ -624,6 +627,7 @@
 								<td class="right aligned">{{ row.apr }}</td>
 								<td class="right aligned">{{ row.may }}</td>
 								<td class="right aligned disabled">{{ q4 }}</td>
+								<td class="right aligned">{{ btd }}</td>
 								<td class="right aligned"> {{ ytd }}</td>
 							</tr>
 
@@ -639,17 +643,22 @@
 							{% assign t_mar = t_mar | plus: row.mar %}
 							{% assign t_apr = t_apr | plus: row.apr %}
 							{% assign t_may = t_may | plus: row.may %}
+							{% assign t_b1 = t_b1 | plus: row.bonus_q1 %}
+							{% assign t_b2 = t_b2 | plus: row.bonus_q2 %}
+							{% assign t_b3 = t_b3 | plus: row.bonus_q3 %}
+							{% assign t_b4 = t_b4 | plus: row.bonus_q4 %}
 							{% assign t_q1 = t_q1 | plus: q1 %}
 							{% assign t_q2 = t_q2 | plus: q2 %}
 							{% assign t_q3 = t_q3 | plus: q3 %}
 							{% assign t_q4 = t_q4 | plus: q4 %}
+							{% assign t_btd = t_btd | plus: btd %}
 							{% assign t_ytd = t_ytd | plus: ytd %}
 
 							{% endfor %}
 						</tbody>
 						<tfoot>
 							<tr>
-								<th>Total</th>
+								<th class="left aligned">Total</th>
 								<th class="right aligned">{{ t_jun }}</th>
 								<th class="right aligned">{{ t_jul }}</th>
 								<th class="right aligned">{{ t_aug }}</th>
@@ -666,6 +675,7 @@
 								<th class="right aligned">{{ t_apr }}</th>
 								<th class="right aligned">{{ t_may }}</th>
 								<th class="right aligned disabled">{{ t_q4 }}</th>
+								<th class="right aligned">{{ t_btd }}</th>
 								<th class="right aligned">{{ t_ytd }}</th>
 							</tr>
 						</tfoot>
@@ -674,13 +684,13 @@
 				<!-- Mobile only -->
 				<div class="sixteen wide column mobile only centered">
 					<h2 class="ui top attached center aligned header">
-					  🏎 Current Constructors Summary <span class="flip-text-h">🏎</span>
+					  🏎 Current Constructors' Summary <span class="flip-text-h">🏎</span>
 					</h2>
 					<table class="ui sortable selectable unstackable celled padded attached table">
 						<thead>
 							<tr>
-								<th>Name</th>
-								<th class="right aligned">YTD</th>
+								<th class="left aligned">Name</th>
+								<th class="right aligned">🏁</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -742,7 +752,7 @@
 						</tbody>
 						<tfoot>
 							<tr>
-								<th>Total</th>
+								<th class="left aligned">Total</th>
 								<th class="right aligned">{{ t_ytd }}</th>
 							</tr>
 						</tfoot>
@@ -780,11 +790,11 @@
 	<div id="drivers" class="ui vertical stripe segment">
 		<div class="ui middle aligned stackable grid container">
 			<div class="row">
-				<div class="sixteen wide column centered">
+				<div class="nine wide column centered">
 					<h2 class="ui center aligned header">
 					  Meet Your FY2020 Drivers
 					</h2>
-					<div class="ui eight doubling cards">
+					<div class="ui three doubling cards">
 						{% for driver in site.data.drivers %}
 						<div class="card">
 							<div class="content">

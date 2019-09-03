@@ -16,10 +16,10 @@
   bonus_q3:
   bonus_q4:
 
-- name: trevor
-  jun: 7
-  jul: 3
-  aug: 5
+- name: laura
+  jun: 3
+  jul: 2
+  aug: 8
   sep:
   oct:
   nov:
@@ -34,10 +34,28 @@
   bonus_q3:
   bonus_q4:
 
-- name: laura
-  jun: 3
-  jul: 2
-  aug: 8
+- name: murph
+  jun: 5
+  jul: 0
+  aug: 1
+  sep:
+  oct:
+  nov:
+  dec:
+  jan:
+  feb:
+  mar:
+  apr:
+  may:
+  bonus_q1:
+  bonus_q2:
+  bonus_q3:
+  bonus_q4:
+
+- name: trevor
+  jun: 7
+  jul: 3
+  aug: 5
   sep:
   oct:
   nov:
@@ -70,10 +88,10 @@
   bonus_q3:
   bonus_q4:
 
-- name: murph
-  jun: 5
-  jul: 0
-  aug: 1
+- name: dean
+  jun: 3
+  jul: 8
+  aug: 5
   sep:
   oct:
   nov:
@@ -88,14 +106,14 @@
   bonus_q3:
   bonus_q4:
 
-- name: dean
-  jun: 3
-  jul: 8
-  aug: 5
-  sep:
-  oct:
-  nov:
-  dec:
+- name: kim
+  jun: 0
+  jul: 2
+  aug: 3
+  sep: 
+  oct: 
+  nov: 
+  dec: 
   jan:
   feb:
   mar:
@@ -138,24 +156,6 @@
   apr:
   may:
   bonus_q1: 1
-  bonus_q2:
-  bonus_q3:
-  bonus_q4:
-
-- name: kim
-  jun: 0
-  jul: 2
-  aug: 3
-  sep: 
-  oct: 
-  nov: 
-  dec: 
-  jan:
-  feb:
-  mar:
-  apr:
-  may:
-  bonus_q1:
   bonus_q2:
   bonus_q3:
   bonus_q4:

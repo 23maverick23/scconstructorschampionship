@@ -2,25 +2,29 @@
   team: Red Bull
   flag: gb wls
 
-- name: Trevor
-  team: Ferrari
-  flag: gb sct
-
 - name: Laura
   team: Danny Ric
   flag: de
-
-- name: Hellen
-  team: Swahili
-  flag: tz
 
 - name: Murph
   team: Improv
   flag: ie
 
+- name: Trevor
+  team: Ferrari
+  flag: gb sct
+
+- name: Hellen
+  team: Swahili
+  flag: tz
+
 - name: Dean
   team: Canada, Eh
   flag: ca
+
+- name: Kim
+  team: Wonder Bread
+  flag: gr
 
 - name: Bobby
   team: Rebel Alliance
@@ -29,7 +33,3 @@
 - name: Danielle
   team: Ranger
   flag: nl
- 
-- name: Kim
-  team: Wonder Bread
-  flag: gr
