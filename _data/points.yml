@@ -1,7 +1,7 @@
 - name: john
-  jun: 9
-  jul: 3
-  aug: 8
+  jun: 9 #1,8
+  jul: 3 #2,1
+  aug: 8 #1,7
   sep: 
   oct: 
   nov: 
@@ -17,9 +17,9 @@
   bonus_q4:
 
 - name: laura
-  jun: 3
-  jul: 2
-  aug: 8
+  jun: 4 #2,2
+  jul: 2 #0,2
+  aug: 8 #0,8
   sep:
   oct:
   nov:
@@ -35,9 +35,9 @@
   bonus_q4:
 
 - name: murph
-  jun: 5
-  jul: 0
-  aug: 1
+  jun: 5 #1,4
+  jul: 0 #0,0
+  aug: 1 #1,0
   sep:
   oct:
   nov:
@@ -53,9 +53,9 @@
   bonus_q4:
 
 - name: trevor
-  jun: 7
-  jul: 3
-  aug: 5
+  jun: 10 #5,5
+  jul: 3 #0,3
+  aug: 5 #0,5
   sep:
   oct:
   nov:
@@ -71,9 +71,9 @@
   bonus_q4:
 
 - name: hellen
-  jun: 8
-  jul: 0
-  aug: 1
+  jun: 8 #0,8
+  jul: 0 #0,0
+  aug: 1 #1,0
   sep:
   oct:
   nov:
@@ -89,9 +89,9 @@
   bonus_q4:
 
 - name: dean
-  jun: 3
-  jul: 8
-  aug: 5
+  jun: 3 #1,2
+  jul: 8 #0,8
+  aug: 5 #1,4
   sep:
   oct:
   nov:
@@ -107,9 +107,9 @@
   bonus_q4:
 
 - name: kim
-  jun: 0
-  jul: 2
-  aug: 3
+  jun: 0 #0,0
+  jul: 2 #0,2
+  aug: 3 #0,3
   sep: 
   oct: 
   nov: 
@@ -125,9 +125,9 @@
   bonus_q4:
 
 - name: bobby
-  jun: 1
-  jul: 0
-  aug: 1
+  jun: 3 #2,1
+  jul: 1 #1,0 
+  aug: 1 #0,1
   sep:
   oct:
   nov:
@@ -143,9 +143,9 @@
   bonus_q4:
 
 - name: danielle
-  jun: 3
-  jul: 1
-  aug: 4
+  jun: 3 #1,2
+  jul: 3 #3,0
+  aug: 2 #1,1
   sep:
   oct:
   nov:
