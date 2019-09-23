@@ -56,7 +56,7 @@
   jun: 10 #5,5
   jul: 3 #0,3
   aug: 5 #0,5
-  sep:
+  sep: 1 #1,0
   oct:
   nov:
   dec:
@@ -92,7 +92,7 @@
   jun: 3 #1,2
   jul: 8 #0,8
   aug: 5 #1,4
-  sep:
+  sep: 1 #1,0
   oct:
   nov:
   dec:
@@ -146,7 +146,7 @@
   jun: 3 #1,2
   jul: 3 #3,0
   aug: 2 #1,1
-  sep: 1 #1
+  sep: 1 #1,0
   oct:
   nov:
   dec:
