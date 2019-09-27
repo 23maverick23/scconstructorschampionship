@@ -11,8 +11,8 @@
   mar:
   apr:
   may:
-  bonus_q1: 10
-  bonus_q2:
+  bonus_q1: 10 #rev,logo
+  bonus_q2: 2 #saw
   bonus_q3:
   bonus_q4:
 
@@ -29,8 +29,8 @@
   mar:
   apr:
   may:
-  bonus_q1: 5
-  bonus_q2:
+  bonus_q1: 5 #logo
+  bonus_q2: 5 #saw
   bonus_q3:
   bonus_q4:
 
@@ -47,8 +47,8 @@
   mar:
   apr:
   may:
-  bonus_q1:
-  bonus_q2:
+  bonus_q1: 0
+  bonus_q2: 0
   bonus_q3:
   bonus_q4:
 
@@ -65,8 +65,8 @@
   mar:
   apr:
   may:
-  bonus_q1: 5
-  bonus_q2:
+  bonus_q1: 5 #logo
+  bonus_q2: 2 #saw
   bonus_q3:
   bonus_q4:
 
@@ -83,8 +83,8 @@
   mar:
   apr:
   may:
-  bonus_q1:
-  bonus_q2:
+  bonus_q1: 0
+  bonus_q2: 2 #saw
   bonus_q3:
   bonus_q4:
 
@@ -101,8 +101,8 @@
   mar:
   apr:
   may:
-  bonus_q1:
-  bonus_q2:
+  bonus_q1: 0
+  bonus_q2: -5 #saw
   bonus_q3:
   bonus_q4:
 
@@ -119,8 +119,8 @@
   mar:
   apr:
   may:
-  bonus_q1:
-  bonus_q2:
+  bonus_q1: 0
+  bonus_q2: 5 #saw
   bonus_q3:
   bonus_q4:
 
@@ -137,8 +137,8 @@
   mar:
   apr:
   may:
-  bonus_q1:
-  bonus_q2:
+  bonus_q1: 0
+  bonus_q2: 0
   bonus_q3:
   bonus_q4:
 
@@ -155,7 +155,7 @@
   mar:
   apr:
   may:
-  bonus_q1: 1
-  bonus_q2:
+  bonus_q1: 1 #fast
+  bonus_q2: 0
   bonus_q3:
   bonus_q4:
