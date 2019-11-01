@@ -128,8 +128,8 @@
   jun: 3 #2,1
   jul: 1 #1,0 
   aug: 1 #0,1
-  sep: 3 #0,3
-  oct:
+  sep: 0 #0,0
+  oct: 3 #0,3
   nov:
   dec:
   jan:
@@ -146,8 +146,8 @@
   jun: 3 #1,2
   jul: 3 #3,0
   aug: 2 #1,1
-  sep: 2 #2,0
-  oct:
+  sep: 0 #0,0
+  oct: 2 #2,0
   nov:
   dec:
   jan:
