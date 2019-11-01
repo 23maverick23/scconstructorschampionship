@@ -3,7 +3,7 @@
   jul: 3 #2,1
   aug: 8 #1,7
   sep: 3 #0,3
-  oct: 
+  oct: 0 #0,0
   nov: 
   dec: 
   jan:
@@ -21,7 +21,7 @@
   jul: 2 #0,2
   aug: 8 #0,8
   sep: 0 #0,0
-  oct:
+  oct: 3 #0,3
   nov:
   dec:
   jan:
@@ -39,7 +39,7 @@
   jul: 0 #0,0
   aug: 1 #1,0
   sep: 0 #0,0
-  oct:
+  oct: 0 #0,0
   nov:
   dec:
   jan:
@@ -57,7 +57,7 @@
   jul: 3 #0,3
   aug: 5 #0,5
   sep: 1 #1,0
-  oct: 1 #1,0
+  oct: 2 #2,0
   nov:
   dec:
   jan:
@@ -75,7 +75,7 @@
   jul: 0 #0,0
   aug: 1 #1,0
   sep: 0 #0,0
-  oct:
+  oct: 0 #0,0
   nov:
   dec:
   jan:
@@ -93,7 +93,7 @@
   jul: 8 #0,8
   aug: 5 #1,4
   sep: 5 #1,4
-  oct:
+  oct: 1 #0,1
   nov:
   dec:
   jan:
@@ -111,7 +111,7 @@
   jul: 2 #0,2
   aug: 3 #0,3
   sep: 3 #0,3
-  oct: 10 #0,10
+  oct: 15 #0,15
   nov: 
   dec: 
   jan:
