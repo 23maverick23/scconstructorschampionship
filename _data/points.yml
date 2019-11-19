@@ -58,7 +58,7 @@
   aug: 5 #0,5
   sep: 1 #1,0
   oct: 2 #2,0
-  nov:
+  nov: 9 #0,9
   dec:
   jan:
   feb:
@@ -130,7 +130,7 @@
   aug: 1 #0,1
   sep: 0 #0,0
   oct: 3 #0,3
-  nov:
+  nov: 1 #1,0
   dec:
   jan:
   feb:
