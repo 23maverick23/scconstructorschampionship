@@ -22,7 +22,7 @@
   aug: 8 #0,8
   sep: 0 #0,0
   oct: 3 #0,3
-  nov:
+  nov: 0 #
   dec:
   jan:
   feb:
@@ -40,15 +40,15 @@
   aug: 1 #1,0
   sep: 0 #0,0
   oct: 0 #0,0
-  nov:
+  nov: 0 #
   dec:
   jan:
   feb:
   mar:
   apr:
   may:
-  bonus_q1: 0
-  bonus_q2: 0
+  bonus_q1: 0 #
+  bonus_q2: 0 #
   bonus_q3:
   bonus_q4:
 
@@ -76,14 +76,14 @@
   aug: 1 #1,0
   sep: 0 #0,0
   oct: 0 #0,0
-  nov:
+  nov: 0 #
   dec:
   jan:
   feb:
   mar:
   apr:
   may:
-  bonus_q1: 0
+  bonus_q1: 0 #
   bonus_q2: 2 #saw
   bonus_q3:
   bonus_q4:
@@ -101,8 +101,8 @@
   mar:
   apr:
   may:
-  bonus_q1: 0
-  bonus_q2: -5 #saw
+  bonus_q1: 0 #
+  bonus_q2: 0 # saw -5, recordings +5
   bonus_q3:
   bonus_q4:
 
@@ -119,7 +119,7 @@
   mar:
   apr:
   may:
-  bonus_q1: 0
+  bonus_q1: 0 #
   bonus_q2: 5 #saw
   bonus_q3:
   bonus_q4:
@@ -137,8 +137,8 @@
   mar:
   apr:
   may:
-  bonus_q1: 0
-  bonus_q2: 0
+  bonus_q1: 0 #
+  bonus_q2: 0 #
   bonus_q3:
   bonus_q4:
 
@@ -148,7 +148,7 @@
   aug: 2 #1,1
   sep: 0 #0,0
   oct: 2 #2,0
-  nov:
+  nov: 3 #0,3
   dec:
   jan:
   feb:
@@ -156,6 +156,6 @@
   apr:
   may:
   bonus_q1: 1 #fast
-  bonus_q2: 0
+  bonus_q2: 0 #
   bonus_q3:
   bonus_q4:
