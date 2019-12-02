@@ -12,7 +12,7 @@
   apr:
   may:
   bonus_q1: 10 #rev,logo
-  bonus_q2: 2 #saw
+  bonus_q2: 2 #saw +2
   bonus_q3:
   bonus_q4:
 
@@ -58,7 +58,7 @@
   aug: 5 #0,5
   sep: 1 #1,0
   oct: 2 #2,0
-  nov: 12 #0,12
+  nov: 17 #0,17
   dec:
   jan:
   feb:
@@ -66,7 +66,7 @@
   apr:
   may:
   bonus_q1: 5 #logo
-  bonus_q2: 2 #saw
+  bonus_q2: 7 #saw +2, +5
   bonus_q3:
   bonus_q4:
 
@@ -76,7 +76,7 @@
   aug: 1 #1,0
   sep: 0 #0,0
   oct: 0 #0,0
-  nov: 0 #
+  nov: 0 # 0,0
   dec:
   jan:
   feb:
@@ -84,7 +84,7 @@
   apr:
   may:
   bonus_q1: 0 #
-  bonus_q2: 2 #saw
+  bonus_q2: 2 #saw +2
   bonus_q3:
   bonus_q4:
 
@@ -94,7 +94,7 @@
   aug: 5 #1,4
   sep: 5 #1,4
   oct: 1 #0,1
-  nov: 5 #0,5
+  nov: 11 #0,11
   dec:
   jan:
   feb:
@@ -120,7 +120,7 @@
   apr:
   may:
   bonus_q1: 0 #
-  bonus_q2: 16 # saw +5, 11
+  bonus_q2: 16 # saw +5, 6
   bonus_q3:
   bonus_q4:
 
