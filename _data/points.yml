@@ -124,6 +124,24 @@
   bonus_q3:
   bonus_q4:
 
+- name: vince
+  jun: 0 #0,0
+  jul: 0 #0,0
+  aug: 0 #0,0
+  sep: 0 #0,0
+  oct: 0 #0,0
+  nov: 0 #0,0
+  dec: 
+  jan:
+  feb:
+  mar:
+  apr:
+  may:
+  bonus_q1: 0 #0
+  bonus_q2: 0 #0
+  bonus_q3:
+  bonus_q4:
+
 - name: bobby
   jun: 3 #2,1
   jul: 1 #1,0 
