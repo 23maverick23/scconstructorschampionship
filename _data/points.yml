@@ -5,7 +5,7 @@
   sep: 3 #0,3
   oct: 0 #0,0
   nov: 3 #0,3
-  dec: 
+  dec: 2 #1,1
   jan:
   feb:
   mar:
@@ -41,7 +41,7 @@
   sep: 0 #0,0
   oct: 0 #0,0
   nov: 7 #0,7
-  dec:
+  dec: 4 #0,4
   jan:
   feb:
   mar:
