@@ -31,7 +31,7 @@
   may:
   bonus_q1: 5 #logo
   bonus_q2: 5 #saw
-  bonus_q3:
+  bonus_q3: 5 #recordings +5
   bonus_q4:
 
 - name: murph
