@@ -42,7 +42,7 @@
   oct: 0 #0,0
   nov: 7 #0,7
   dec: 8 #0,8
-  jan:
+  jan: 0 #0,0
   feb:
   mar:
   apr:
@@ -60,7 +60,7 @@
   oct: 2 #2,0
   nov: 17 #0,17
   dec: 4 #0,4
-  jan: 3 #0,3
+  jan: 4 #0,4
   feb:
   mar:
   apr:
@@ -114,7 +114,7 @@
   oct: 10 #0,10
   nov: 7 #0,7
   dec: 2 #0,2
-  jan:
+  jan: 0 #0,0
   feb:
   mar:
   apr:
@@ -132,7 +132,7 @@
   oct: 0 #0,0
   nov: 0 #0,0
   dec: 0 #0,0
-  jan:
+  jan: 0 #0,0
   feb:
   mar:
   apr:
@@ -150,7 +150,7 @@
   oct: 3 #0,3
   nov: 1 #1,0
   dec: 0 #0,0
-  jan:
+  jan: 0 #0,0
   feb:
   mar:
   apr:
