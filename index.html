@@ -114,138 +114,284 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
 	<script>
-		/*
-			A simple, lightweight jQuery plugin for creating sortable tables.
-			https://github.com/kylefox/jquery-tablesort
-			Version 0.0.11
-		*/
-
+		// Stupid jQuery table plugin.
 		(function($) {
-			$.tablesort = function ($table, settings) {
-				var self = this;
-				this.$table = $table;
-				this.$thead = this.$table.find('thead');
-				this.settings = $.extend({}, $.tablesort.defaults, settings);
-				this.$sortCells = this.$thead.length > 0 ? this.$thead.find('th:not(.no-sort)') : this.$table.find('th:not(.no-sort)');
-				this.$sortCells.on('click.tablesort', function() {
-					self.sort($(this));
-				});
-				this.index = null;
-				this.$th = null;
-				this.direction = null;
-			};
+		  $.fn.stupidtable = function(sortFns) {
+		    return this.each(function() {
+		      var $table = $(this);
+		      sortFns = sortFns || {};
+		      sortFns = $.extend({}, $.fn.stupidtable.default_sort_fns, sortFns);
+		      $table.data('sortFns', sortFns);
+		      $table.stupidtable_build();
 
-			$.tablesort.prototype = {
+		      $table.on("click.stupidtable", "thead th", function() {
+		          $(this).stupidsort();
+		      });
 
-				sort: function(th, direction) {
-					var start = new Date(),
-						self = this,
-						table = this.$table,
-						rowsContainer = table.find('tbody').length > 0 ? table.find('tbody') : table,
-						rows = rowsContainer.find('tr').has('td, th'),
-						cells = rows.find(':nth-child(' + (th.index() + 1) + ')').filter('td, th'),
-						sortBy = th.data().sortBy,
-						sortedMap = [];
+		      // Sort th immediately if data-sort-onload="yes" is specified. Limit to
+		      // the first one found - only one default sort column makes sense anyway.
+		      var $th_onload_sort = $table.find("th[data-sort-onload=yes]").eq(0);
+		      $th_onload_sort.stupidsort();
+		    });
+		  };
 
-					var unsortedValues = cells.map(function(idx, cell) {
-						if (sortBy)
-							return (typeof sortBy === 'function') ? sortBy($(th), $(cell), self) : sortBy;
-						return ($(this).data().sortValue != null ? $(this).data().sortValue : $(this).text());
-					});
-					if (unsortedValues.length === 0) return;
+		  // ------------------------------------------------------------------
+		  // Default settings
+		  // ------------------------------------------------------------------
+		  $.fn.stupidtable.default_settings = {
+		    should_redraw: function(sort_info){
+		      return true;
+		    },
+		    will_manually_build_table: false
+		  };
+		  $.fn.stupidtable.dir = {ASC: "asc", DESC: "desc"};
+		  $.fn.stupidtable.default_sort_fns = {
+		    "int": function(a, b) {
+		      return parseInt(a, 10) - parseInt(b, 10);
+		    },
+		    "float": function(a, b) {
+		      return parseFloat(a) - parseFloat(b);
+		    },
+		    "string": function(a, b) {
+		      return a.toString().localeCompare(b.toString());
+		    },
+		    "string-ins": function(a, b) {
+		      a = a.toString().toLocaleLowerCase();
+		      b = b.toString().toLocaleLowerCase();
+		      return a.localeCompare(b);
+		    }
+		  };
 
-					//click on a different column
-					if (this.index !== th.index()) {
-						this.direction = 'asc';
-						this.index = th.index();
-					}
-					else if (direction !== 'asc' && direction !== 'desc')
-						this.direction = this.direction === 'asc' ? 'desc' : 'asc';
-					else
-						this.direction = direction;
+		  // Allow specification of settings on a per-table basis. Call on a table
+		  // jquery object. Call *before* calling .stuidtable();
+		  $.fn.stupidtable_settings = function(settings) {
+		    return this.each(function() {
+		      var $table = $(this);
+		      var final_settings = $.extend({}, $.fn.stupidtable.default_settings, settings);
+		      $table.stupidtable.settings = final_settings;
+		    });
+		  };
 
-					direction = this.direction == 'asc' ? 1 : -1;
 
-					self.$table.trigger('tablesort:start', [self]);
-					self.log("Sorting by " + this.index + ' ' + this.direction);
+		  // Expects $("#mytable").stupidtable() to have already been called.
+		  // Call on a table header.
+		  $.fn.stupidsort = function(force_direction){
+		    var $this_th = $(this);
+		    var datatype = $this_th.data("sort") || null;
 
-					// Try to force a browser redraw
-					self.$table.css("display");
-					// Run sorting asynchronously on a timeout to force browser redraw after
-					// `tablesort:start` callback. Also avoids locking up the browser too much.
-					setTimeout(function() {
-						self.$sortCells.removeClass(self.settings.asc + ' ' + self.settings.desc);
-						for (var i = 0, length = unsortedValues.length; i < length; i++)
-						{
-							sortedMap.push({
-								index: i,
-								cell: cells[i],
-								row: rows[i],
-								value: unsortedValues[i]
-							});
-						}
+		    // No datatype? Nothing to do.
+		    if (datatype === null) {
+		      return;
+		    }
 
-						sortedMap.sort(function(a, b) {
-							return self.settings.compare(a.value, b.value) * direction;
-						});
+		    var $table = $this_th.closest("table");
 
-						$.each(sortedMap, function(i, entry) {
-							rowsContainer.append(entry.row);
-						});
+		    var sort_info = {
+		        $th: $this_th,
+		        $table: $table,
+		        datatype: datatype
+		    };
 
-						th.addClass(self.settings[self.direction]);
 
-						self.log('Sort finished in ' + ((new Date()).getTime() - start.getTime()) + 'ms');
-						self.$table.trigger('tablesort:complete', [self]);
-						//Try to force a browser redraw
-						self.$table.css("display");
-					}, unsortedValues.length > 2000 ? 200 : 10);
-				},
+		    // Bring in default settings if none provided
+		    if(!$table.stupidtable.settings){
+		        $table.stupidtable.settings = $.extend({}, $.fn.stupidtable.default_settings);
+		    }
 
-				log: function(msg) {
-					if(($.tablesort.DEBUG || this.settings.debug) && console && console.log) {
-						console.log('[tablesort] ' + msg);
-					}
-				},
+		    sort_info.compare_fn = $table.data('sortFns')[datatype];
+		    sort_info.th_index = calculateTHIndex(sort_info);
+		    sort_info.sort_dir = calculateSortDir(force_direction, sort_info);
 
-				destroy: function() {
-					this.$sortCells.off('click.tablesort');
-					this.$table.data('tablesort', null);
-					return null;
-				}
+		    $this_th.data("sort-dir", sort_info.sort_dir);
+		    $table.trigger("beforetablesort", {column: sort_info.th_index, direction: sort_info.sort_dir, $th: $this_th});
 
-			};
+		    // More reliable method of forcing a redraw
+		    $table.css("display");
 
-			$.tablesort.DEBUG = false;
+		    // Run sorting asynchronously on a timout to force browser redraw after
+		    // `beforetablesort` callback. Also avoids locking up the browser too much.
+		    setTimeout(function() {
+		      if(!$table.stupidtable.settings.will_manually_build_table){
+		        $table.stupidtable_build();
+		      }
+		      var table_structure = sortTable(sort_info);
+		      var trs = getTableRowsFromTableStructure(table_structure, sort_info);
 
-			$.tablesort.defaults = {
-				debug: $.tablesort.DEBUG,
-				asc: 'sorted ascending',
-				desc: 'sorted descending',
-				compare: function(a, b) {
-					if (a > b) {
-						return 1;
-					} else if (a < b) {
-						return -1;
-					} else {
-						return 0;
-					}
-				}
-			};
+		      if(!$table.stupidtable.settings.should_redraw(sort_info)){
+		        return;
+		      }
+		      $table.children("tbody").append(trs);
 
-			$.fn.tablesort = function(settings) {
-				var table, sortable, previous;
-				return this.each(function() {
-					table = $(this);
-					previous = table.data('tablesort');
-					if(previous) {
-						previous.destroy();
-					}
-					table.data('tablesort', new $.tablesort(table, settings));
-				});
-			};
+		      updateElementData(sort_info);
+		      $table.trigger("aftertablesort", {column: sort_info.th_index, direction: sort_info.sort_dir, $th: $this_th});
+		      $table.css("display");
 
-		})(window.Zepto || window.jQuery);
+		    }, 10);
+		    return $this_th;
+		  };
+
+		  // Call on a sortable td to update its value in the sort. This should be the
+		  // only mechanism used to update a cell's sort value. If your display value is
+		  // different from your sort value, use jQuery's .text() or .html() to update
+		  // the td contents, Assumes stupidtable has already been called for the table.
+		  $.fn.updateSortVal = function(new_sort_val){
+		  var $this_td = $(this);
+		    if($this_td.is('[data-sort-value]')){
+		      // For visual consistency with the .data cache
+		      $this_td.attr('data-sort-value', new_sort_val);
+		    }
+		    $this_td.data("sort-value", new_sort_val);
+		    return $this_td;
+		  };
+
+
+		  $.fn.stupidtable_build = function(){
+		    return this.each(function() {
+		      var $table = $(this);
+		      var table_structure = [];
+		      var trs = $table.children("tbody").children("tr");
+		      trs.each(function(index,tr) {
+
+		        // ====================================================================
+		        // Transfer to using internal table structure
+		        // ====================================================================
+		        var ele = {
+		            $tr: $(tr),
+		            columns: [],
+		            index: index
+		        };
+
+		        $(tr).children('td').each(function(idx, td){
+		            var sort_val = $(td).data("sort-value");
+
+		            // Store and read from the .data cache for display text only sorts
+		            // instead of looking through the DOM every time
+		            if(typeof(sort_val) === "undefined"){
+		              var txt = $(td).text();
+		              $(td).data('sort-value', txt);
+		              sort_val = txt;
+		            }
+		            ele.columns.push(sort_val);
+		        });
+		        table_structure.push(ele);
+		      });
+		      $table.data('stupidsort_internaltable', table_structure);
+		    });
+		  };
+
+		  // ====================================================================
+		  // Private functions
+		  // ====================================================================
+		  var sortTable = function(sort_info){
+		    var table_structure = sort_info.$table.data('stupidsort_internaltable');
+		    var th_index = sort_info.th_index;
+		    var $th = sort_info.$th;
+
+		    var multicolumn_target_str = $th.data('sort-multicolumn');
+		    var multicolumn_targets;
+		    if(multicolumn_target_str){
+		        multicolumn_targets = multicolumn_target_str.split(',');
+		    }
+		    else{
+		        multicolumn_targets = [];
+		    }
+		    var multicolumn_th_targets = $.map(multicolumn_targets, function(identifier, i){
+		        return get_th(sort_info.$table, identifier);
+		    });
+
+		    table_structure.sort(function(e1, e2){
+		      var multicolumns = multicolumn_th_targets.slice(0); // shallow copy
+		      var diff = sort_info.compare_fn(e1.columns[th_index], e2.columns[th_index]);
+		      while(diff === 0 && multicolumns.length){
+		          var multicolumn = multicolumns[0];
+		          var datatype = multicolumn.$e.data("sort");
+		          var multiCloumnSortMethod = sort_info.$table.data('sortFns')[datatype];
+		          diff = multiCloumnSortMethod(e1.columns[multicolumn.index], e2.columns[multicolumn.index]);
+		          multicolumns.shift();
+		      }
+		      // Sort by position in the table if values are the same. This enforces a
+		      // stable sort across all browsers. See https://bugs.chromium.org/p/v8/issues/detail?id=90
+		      if (diff === 0)
+		        return e1.index - e2.index;
+		      else
+		        return diff;
+
+		    });
+
+		    if (sort_info.sort_dir != $.fn.stupidtable.dir.ASC){
+		      table_structure.reverse();
+		    }
+		      return table_structure;
+		  };
+
+		  var get_th = function($table, identifier){
+		      // identifier can be a th id or a th index number;
+		      var $table_ths = $table.find('th');
+		      var index = parseInt(identifier, 10);
+		      var $th;
+		      if(!index && index !== 0){
+		          $th = $table_ths.siblings('#' + identifier);
+		          index = $table_ths.index($th);
+		      }
+		      else{
+		          $th = $table_ths.eq(index);
+		      }
+		      return {index: index, $e: $th};
+		  };
+
+		  var getTableRowsFromTableStructure = function(table_structure, sort_info){
+		    // Gather individual column for callbacks
+		    var column = $.map(table_structure, function(ele, i){
+		        return [[ele.columns[sort_info.th_index], ele.$tr, i]];
+		    });
+
+		    /* Side effect */
+		    sort_info.column = column;
+
+		    // Replace the content of tbody with the sorted rows. Strangely
+		    // enough, .append accomplishes this for us.
+		    return $.map(table_structure, function(ele) { return ele.$tr; });
+
+		  };
+
+		  var updateElementData = function(sort_info){
+		    var $table = sort_info.$table;
+		    var $this_th = sort_info.$th;
+		    var sort_dir = $this_th.data('sort-dir');
+
+
+		    // Reset siblings
+		    $table.find("th").data("sort-dir", null).removeClass("sorting-desc sorting-asc");
+		    $this_th.data("sort-dir", sort_dir).addClass("sorting-"+sort_dir);
+		  };
+
+		  var calculateSortDir = function(force_direction, sort_info){
+		    var sort_dir;
+		    var $this_th = sort_info.$th;
+		    var dir = $.fn.stupidtable.dir;
+
+		    if(force_direction){
+		        sort_dir = force_direction;
+		    }
+		    else{
+		        sort_dir = force_direction || $this_th.data("sort-default") || dir.ASC;
+		        if ($this_th.data("sort-dir"))
+		           sort_dir = $this_th.data("sort-dir") === dir.ASC ? dir.DESC : dir.ASC;
+		    }
+		    return sort_dir;
+		  };
+
+		  var calculateTHIndex = function(sort_info){
+		    var th_index = 0;
+		    var base_index = sort_info.$th.index();
+		    sort_info.$th.parents("tr").find("th").slice(0, base_index).each(function() {
+		      var cols = $(this).attr("colspan") || 1;
+		      th_index += parseInt(cols,10);
+		    });
+		    return th_index;
+		  };
+
+		})(window.jQuery);
 	</script>
 	<script>
 	$(document)
@@ -271,7 +417,7 @@
 
 			// make sortable tables sortable
 			$('.sortable')
-				.tablesort()
+				.stupidtable();
 			;
 
 			$('a[href^="#"]')
@@ -557,25 +703,25 @@
 					<table class="ui sortable selectable celled padded attached table">
 						<thead>
 							<tr>
-								<th class="left aligned">Name</th>
-								<th class="right aligned">Jun</th>
-								<th class="right aligned">Jul</th>
-								<th class="right aligned">Aug</th>
-								<th class="right aligned"><i class="battery quarter icon"></i></th>
-								<th class="right aligned">Sep</th>
-								<th class="right aligned">Oct</th>
-								<th class="right aligned">Nov</th>
-								<th class="right aligned"><i class="battery half icon"></i></th>
-								<th class="right aligned">Dec</th>
-								<th class="right aligned">Jan</th>
-								<th class="right aligned">Feb</th>
-								<th class="right aligned"><i class="battery three quarters icon"></i></th>
-								<th class="right aligned">Mar</th>
-								<th class="right aligned">Apr</th>
-								<th class="right aligned">May</th>
-								<th class="right aligned"><i class="battery full icon"></i></th>
-								<th class="right aligned" title="Bonus Points">👑</th>
-								<th class="right aligned" title="Total Points">🏁</th>
+								<th data-sort="string" class="left aligned">Name</th>
+								<th data-sort="int" class="right aligned">Jun</th>
+								<th data-sort="int" class="right aligned">Jul</th>
+								<th data-sort="int" class="right aligned">Aug</th>
+								<th data-sort="int" class="right aligned"><i class="battery quarter icon"></i></th>
+								<th data-sort="int" class="right aligned">Sep</th>
+								<th data-sort="int" class="right aligned">Oct</th>
+								<th data-sort="int" class="right aligned">Nov</th>
+								<th data-sort="int" class="right aligned"><i class="battery half icon"></i></th>
+								<th data-sort="int" class="right aligned">Dec</th>
+								<th data-sort="int" class="right aligned">Jan</th>
+								<th data-sort="int" class="right aligned">Feb</th>
+								<th data-sort="int" class="right aligned"><i class="battery three quarters icon"></i></th>
+								<th data-sort="int" class="right aligned">Mar</th>
+								<th data-sort="int" class="right aligned">Apr</th>
+								<th data-sort="int" class="right aligned">May</th>
+								<th data-sort="int" class="right aligned"><i class="battery full icon"></i></th>
+								<th data-sort="int" class="right aligned" title="Bonus Points">👑</th>
+								<th data-sort="int" data-sort-onload="yes" class="right aligned" title="Total Points">🏁</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -756,7 +902,7 @@
 						<tfoot>
 							<tr>
 								<th class="left aligned">Total</th>
-								<th class="right aligned">{{ t_ytd }}</th>
+								<th data-sort="int" class="right aligned">{{ t_ytd }}</th>
 							</tr>
 						</tfoot>
 					</table>
