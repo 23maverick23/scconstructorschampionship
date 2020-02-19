@@ -857,7 +857,44 @@
 							</tr>
 						</tfoot>
 					</table>
+
+					{% assign current_month = site.time | date: '%m' %}
+					{% assign percent_complete = "0" %}
+					{% case current_month %}
+						{% when "06" %}
+							{% assign percent_complete = "8" %}
+						{% when "07" %}
+							{% assign percent_complete = "17" %}
+						{% when "08" %}
+							{% assign percent_complete = "25" %}
+						{% when "09" %}
+							{% assign percent_complete = "33" %}
+						{% when "10" %}
+							{% assign percent_complete = "42" %}
+						{% when "11" %}
+							{% assign percent_complete = "50" %}
+						{% when "12" %}
+							{% assign percent_complete = "58" %}
+						{% when "01" %}
+							{% assign percent_complete = "67" %}
+						{% when "02" %}
+							{% assign percent_complete = "75" %}
+						{% when "03" %}
+							{% assign percent_complete = "83" %}
+						{% when "04" %}
+							{% assign percent_complete = "92" %}
+						{% when "05" %}
+							{% assign percent_complete = "100" %}
+					{% endcase %}
+					<div class="ui bottom attached inverted segment">
+						<div data-percent="{{ percent_complete }}" class="ui large grey active inverted progress" style="margin-bottom:0;">
+							<div class="bar" style="transition-duration: 300ms; width: {{ percent_complete }}%;">
+								<div class="progress flip-text-h" style="font-size:2.2em;">🏎</div>
+							</div>
+						</div>
+					</div>
 				</div>
+
 				<!-- Mobile only -->
 				<div class="sixteen wide column mobile only centered">
 					<h2 class="ui top attached center aligned header">
