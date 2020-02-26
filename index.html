@@ -8,6 +8,26 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
+	<!-- Twitter Card Meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{{ site.title }}" />
+	<meta name="twitter:description" content="{{ site.description }}" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="https://ryancmorrissey.com/scconstructorschampionship/" />
+
+	{% assign meta_ytd = 0 %}
+	{% assign meta_id = 0 %}
+
+	{% for row in site.data.points %}
+
+	{% assign meta_id = meta_id | plus: 1 %}
+	{% assign meta_ytd = row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 | plus: row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 | plus: row.dec | plus: row.jan | plus: row.feb | plus: row.bonus_q3 | plus: row.mar | plus: row.apr | plus: row.may | plus: row.bonus_q4 %}
+
+	<meta name="twitter:label{{ meta_id }}" content="{{ row.name | capitalize }}" />
+	<meta name="twitter:data{{ meta_id }}" content="{{ meta_ytd }} pts" />
+
+	{% endfor %}
+
 	<!-- Site Properties -->
 	<title>{{ site.title }}</title>
 	<link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/racing-car_1f3ce.png">
@@ -493,46 +513,56 @@
 				}]
 			};
 
+			function done() {
+				var url = myBar.toBase64Image();
+				document.querySelector('meta[name="twitter:image"]').setAttribute("content", url);
+			}
+
+			var options = {
+				title: {
+					display: true,
+					text: "Constructors' Championship Medal Outlook"
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false
+				},
+				legend: {
+					display: false
+				},
+				responsive: true,
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: false
+						},
+						ticks: {
+							beginAtZero: true
+						}
+					}],
+					yAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Points to Date'
+						},
+						ticks: {
+							min: 0,
+							suggestedMax: 100,
+		                    			beginAtZero: true
+		                		}
+					}]
+				},
+				animation: {
+					onComplete: done
+				}
+			};
+
 			var ctx = document.getElementById('pointsChart').getContext('2d');
-			window.myBar = new Chart(ctx, {
+			var myBar = new Chart(ctx, {
 				type: 'bar',
 				data: barChartData,
-				options: {
-					title: {
-						display: true,
-						text: "Constructors' Championship Medal Outlook"
-					},
-					tooltips: {
-						mode: 'index',
-						intersect: false
-					},
-					legend: {
-						display: false
-					},
-					responsive: true,
-					scales: {
-						xAxes: [{
-							display: true,
-							scaleLabel: {
-								display: false
-							},
-							ticks: {
-								beginAtZero: true
-							}
-						}],
-						yAxes: [{
-							scaleLabel: {
-								display: true,
-								labelString: 'Points to Date'
-							},
-							ticks: {
-								min: 0,
-								suggestedMax: 100,
-			                    			beginAtZero: true
-			                		}
-						}]
-					}
-				}
+				options: options
 			});
 
 		})
