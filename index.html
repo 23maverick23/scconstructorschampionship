@@ -559,7 +559,7 @@
 			};
 
 			var ctx = document.getElementById('pointsChart').getContext('2d');
-			var myBar = new Chart(ctx, {
+			window.myBar = new Chart(ctx, {
 				type: 'bar',
 				data: barChartData,
 				options: options
