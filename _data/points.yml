@@ -9,13 +9,13 @@
   nov: 3 #0,3
   dec: 3 #2,1
   jan: 1 #1,0
-  feb: 9 #1,0 | 3,2,2,1
+  feb: 9 #1,0 | 3,2,3,1
   mar:
   apr:
   may:
   bonus_q1: 10 #rev,logo
   bonus_q2: 2 #saw +2
-  bonus_q3:
+  bonus_q3: 0 #
   bonus_q4:
 
 - name: laura
@@ -27,12 +27,12 @@
   nov: 8 #0,8
   dec: 3 #0,3
   jan: 5 #0,5
-  feb: 13 #0,8 | 2,2,0,1
+  feb: 13 #0,8 | 2,4,1,1
   mar:
   apr:
   may:
-  bonus_q1: 5 #logo
-  bonus_q2: 5 #saw
+  bonus_q1: 5 # logo
+  bonus_q2: 5 saw
   bonus_q3: 5 #recordings +5
   bonus_q4:
 
@@ -45,13 +45,13 @@
   nov: 7 #0,7
   dec: 8 #0,8
   jan: 0 #0,0
-  feb: 1 #0,0 | 1,0,0,0
+  feb: 3 #0,0 | 3,0,0,0
   mar:
   apr:
   may:
   bonus_q1: 0 #
   bonus_q2: 0 #
-  bonus_q3:
+  bonus_q3: 0 #
   bonus_q4:
 
 - name: trevor
@@ -63,13 +63,13 @@
   nov: 17 #0,17
   dec: 4 #0,4
   jan: 4 #0,4
-  feb: 2 #0,0 | 1,0,1,0
+  feb: 2 #0,0 | 0,0,2,0
   mar:
   apr:
   may:
   bonus_q1: 5 #logo
   bonus_q2: 7 #saw +2, +5
-  bonus_q3:
+  bonus_q3: 0 #
   bonus_q4:
 
 - name: hellen
@@ -81,13 +81,13 @@
   nov: 0 #0,0
   dec: 0 #0,0
   jan: 1 #1,0
-  feb: 11 #0,0 | 4,6,1,0
+  feb: 13 #0,0 | 3,6,1,0
   mar:
   apr:
   may:
   bonus_q1: 0 #
   bonus_q2: 2 #saw +2
-  bonus_q3:
+  bonus_q3: 3 #ppt +3
   bonus_q4:
 
 - name: dean
@@ -99,13 +99,13 @@
   nov: 11 #0,11
   dec: 7 #0,7
   jan: 4 #0,4
-  feb: 12 #0,3 | 6,0,3,0
+  feb: 14 #0,3 | 5,0,3,0
   mar:
   apr:
   may:
   bonus_q1: 0 #
-  bonus_q2: 0 # saw -5, recordings +5
-  bonus_q3:
+  bonus_q2: 0 #saw -5, recordings +5
+  bonus_q3: 3 #blog +3
   bonus_q4:
 
 - name: kim
@@ -117,13 +117,13 @@
   nov: 7 #0,7
   dec: 2 #0,2
   jan: 0 #0,0
-  feb: 14 #0,9 | 2,2,1,0
+  feb: 15 #0,9 | 2,2,2,0
   mar:
   apr:
   may:
   bonus_q1: 0 #
   bonus_q2: 16 # saw +5, 6
-  bonus_q3:
+  bonus_q3: 0 #
   bonus_q4:
 
 - name: vince
@@ -135,13 +135,13 @@
   nov: 0 #0,0
   dec: 0 #0,0
   jan: 0 #0,0
-  feb: 6 #0,0 | 3,0,3,0
+  feb: 7 #0,0 | 1,0,3,0
   mar:
   apr:
   may:
   bonus_q1: 0 #0
   bonus_q2: 0 #0
-  bonus_q3:
+  bonus_q3: 3 #ppt +3
   bonus_q4:
 
 - name: bobby
@@ -159,7 +159,7 @@
   may:
   bonus_q1: 0 #
   bonus_q2: 0 #
-  bonus_q3:
+  bonus_q3: 0 #
   bonus_q4:
 
 - name: danielle
@@ -177,5 +177,5 @@
   may:
   bonus_q1: 1 #fast
   bonus_q2: 0 #
-  bonus_q3:
+  bonus_q3: 0 #
   bonus_q4:
