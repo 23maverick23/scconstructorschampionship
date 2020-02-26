@@ -15,17 +15,29 @@
 	<meta name="twitter:url" content="https://ryancmorrissey.com/scconstructorschampionship/" />
 
 	{% assign meta_ytd = 0 %}
-	{% assign meta_id = 0 %}
+	{% assign odd_data = "" %}
+	{% assign even_data = "" %}
 
 	{% for row in site.data.points %}
+	{% capture row_name %}{{ row.name | capitalize }}{% endcapture %}
 
-	{% assign meta_id = meta_id | plus: 1 %}
 	{% assign meta_ytd = row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 | plus: row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 | plus: row.dec | plus: row.jan | plus: row.feb | plus: row.bonus_q3 | plus: row.mar | plus: row.apr | plus: row.may | plus: row.bonus_q4 %}
 
-	<meta name="twitter:label{{ meta_id }}" content="{{ row.name | capitalize }}" />
-	<meta name="twitter:data{{ meta_id }}" content="{{ meta_ytd }} pts" />
+		{% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 
+		{% if thecycle == 'odd' %}
+		{% assign odd_data = odd_data | append: row_name | append: '-' | append: meta_ytd | append: 'pts ' %}
+		{% endif %}
+
+		{% if thecycle == 'even' %}
+		{% assign even_data = even_data | append: row_name | append: '-' | append: meta_ytd | append: 'pts ' %}
+		{% endif %}
 	{% endfor %}
+
+	<meta name="twitter:label1" content="Current Points" />
+	<meta name="twitter:data1" content="{{ odd_data }}" />
+	<meta name="twitter:label2" content="Current Points" />
+	<meta name="twitter:data2" content="{{ even_data }}" />
 
 	<!-- Site Properties -->
 	<title>{{ site.title }}</title>
