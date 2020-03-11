@@ -153,8 +153,8 @@
   nov: 1 #1,0
   dec: 0 #0,0
   jan: 0 #0,0
-  feb: 14 #0,7 | 2,2,4,0 | #time -1
-  mar:
+  feb: 14 #0,7 | 2,2,4,0
+  mar: -2 #0,0 | #time -2
   apr:
   may:
   bonus_q1: 0 #
