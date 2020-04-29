@@ -587,6 +587,92 @@
 				options: options
 			});
 
+			var lineColors = [
+				'#cd84f1',
+				'#ffcccc',
+				'#ff4d4d',
+				'#ffaf40',
+				'#fffa65',
+				'#32ff7e',
+				'#7efff5',
+				'#18dcff',
+				'#7d5fff',
+				'#4b4b4b'
+			];
+
+			var config2 = {
+				type: 'line',
+				data: {
+					labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May'],
+					datasets: [
+					{% assign cnt = 0 %}
+					{% for row in site.data.points %}
+					{
+						label: '{{ row.name | capitalize }}',
+						backgroundColor: lineColors[{{ cnt }}],
+						borderColor: lineColors[{{ cnt }}],
+						steppedLine: false,
+						data: [
+							{{ row.jun }},
+							{{ row.jun | plus: row.jul }},
+							{{ row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 }},
+							{{ row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 | plus: row.sep }},
+							{{ row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 | plus: row.sep | plus: row.oct }},
+							{{ row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 | plus: row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 }},
+							{{ row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 | plus: row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 | plus: row.dec }},
+							{{ row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 | plus: row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 | plus: row.dec | plus: row.jan }},
+							{{ row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 | plus: row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 | plus: row.dec | plus: row.jan | plus: row.feb | plus: row.bonus_q3 }},
+							{{ row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 | plus: row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 | plus: row.dec | plus: row.jan | plus: row.feb | plus: row.bonus_q3 | plus: row.mar }},
+							{{ row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 | plus: row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 | plus: row.dec | plus: row.jan | plus: row.feb | plus: row.bonus_q3 | plus: row.mar | plus: row.apr }},
+							{{ row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 | plus: row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 | plus: row.dec | plus: row.jan | plus: row.feb | plus: row.bonus_q3 | plus: row.mar | plus: row.apr | plus: row.may | plus: row.bonus_q4 }},
+						],
+						fill: false,
+					},
+					{% assign cnt = cnt | plus:1 %}
+					{% endfor %}
+					]
+				},
+				options: {
+					responsive: true,
+					elements: {
+						point: {
+							pointStyle: 'rectRot'
+						}
+					},
+					title: {
+						display: true,
+						text: 'Constructors\' Championship Points Trend'
+					},
+					tooltips: {
+						mode: 'index',
+						intersect: false,
+					},
+					hover: {
+						mode: 'nearest',
+						intersect: true
+					},
+					scales: {
+						xAxes: [{
+							display: true,
+							scaleLabel: {
+								display: false,
+								labelString: 'Fiscal Month'
+							}
+						}],
+						yAxes: [{
+							display: true,
+							scaleLabel: {
+								display: true,
+								labelString: 'Championship Points'
+							}
+						}]
+					}
+				}
+			};
+
+
+			var ctx2 = document.getElementById('trendChart').getContext('2d');
+			window.myLine = new Chart(ctx2, config2);
 		})
 	;
 	</script>
@@ -1037,6 +1123,16 @@
 			<div class="row">
 				<div class="sixteen wide column centered">
 					<canvas id="pointsChart"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui vertical stripe segment">
+		<div class="ui middle aligned stackable grid container">
+			<div class="row">
+				<div class="sixteen wide column centered">
+					<canvas id="trendChart"></canvas>
 				</div>
 			</div>
 		</div>

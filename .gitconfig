@@ -14,11 +14,11 @@
     decorate = false
 
 [http]
-    proxy = http://www-proxy-hqdc.us.oracle.com:80
+    # proxy = http://www-proxy-hqdc.us.oracle.com:80
     sslverify = false
 
 [https]
-    proxy = https://www-proxy-hqdc.us.oracle.com:80
+    # proxy = https://www-proxy-hqdc.us.oracle.com:80
     sslverify = false
 
 [url "https://"]
