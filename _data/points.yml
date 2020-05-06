@@ -16,7 +16,7 @@
   bonus_q1: 10 #rev +5, logo +5
   bonus_q2: 2 #saw +2
   bonus_q3: 0 #
-  bonus_q4:
+  bonus_q4: 3 #cash ppt
 
 - name: laura
   jun: 4 #2,2
@@ -34,7 +34,7 @@
   bonus_q1: 5 #logo +5
   bonus_q2: 5 #saw +5
   bonus_q3: 5 #recordings +5
-  bonus_q4:
+  bonus_q4: 3 #cash ppt
 
 - name: murph
   jun: 5 #1,4
