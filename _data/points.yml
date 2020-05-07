@@ -178,4 +178,4 @@
   bonus_q1: 1 #fast +1
   bonus_q2: 0 #
   bonus_q3: 1 #fast +1
-  bonus_q4:
+  bonus_q4: 3 #2x rookie
