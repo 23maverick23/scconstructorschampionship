@@ -52,7 +52,7 @@
   bonus_q1: 0 #
   bonus_q2: 0 #
   bonus_q3: 0 #
-  bonus_q4: 0 #
+  bonus_q4: 10 #rev +5, logo +5
 
 - name: trevor
   jun: 10 #5,5
