@@ -12,7 +12,7 @@
   feb: 10 #1,0 | 3,2,3,1
   mar: 9 #0,6 | 3,0,0,0
   apr: 4 #1,0 | 3,0,0,0
-  may: 18 #0,18 | 0,0,0,0
+  may: 36 #0,18 | 0,0,0,0 #2xteam 18
   bonus_q1: 10 #rev +5, logo +5
   bonus_q2: 2 #saw +2
   bonus_q3: 0 #
@@ -30,7 +30,7 @@
   feb: 17 #0,9 | 2,4,1,1
   mar: 18 #1,5 | 4,0,2,6
   apr: 9 #0,5 | 2,1,0,1
-  may: 25 #0,22 | 1,0,2,1 #time -1
+  may: 47 #0,22 | 1,0,2,1 #time -1 #2xteam 22
   bonus_q1: 5 #logo +5
   bonus_q2: 5 #saw +5
   bonus_q3: 5 #recordings +5
@@ -156,7 +156,7 @@
   feb: 14 #0,7 | 2,2,4,0
   mar: 3 #0,3 | 3,0,1,0 #time -4
   apr: 2 #0,0 | 1,0,1,0
-  may: 14 #0,8 | 0,0,2,0 #2x rookie +4
+  may: 22 #0,8 | 0,0,2,0 #2x rookie +4 #2xteam 8
   bonus_q1: 0 #
   bonus_q2: 0 #
   bonus_q3: 0 #
