@@ -1,0 +1,36 @@
+<!-- Standard Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<!-- Twitter Card Meta -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ site.title }}" />
+<meta name="twitter:image" content="" />
+<meta name="twitter:description" content="{{ site.description }}" />
+<meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}" />
+
+{% assign meta_ytd = 0 %}
+{% assign odd_data = "" %}
+{% assign even_data = "" %}
+
+{% for row in site.data.current_points %}
+{% capture row_name %}{{ row.name | capitalize }}{% endcapture %}
+
+{% assign meta_ytd = row.jun | plus: row.jul | plus: row.aug | plus: row.bonus_q1 | plus: row.sep | plus: row.oct | plus: row.nov | plus: row.bonus_q2 | plus: row.dec | plus: row.jan | plus: row.feb | plus: row.bonus_q3 | plus: row.mar | plus: row.apr | plus: row.may | plus: row.bonus_q4 %}
+
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+
+    {% if thecycle == 'odd' %}
+    {% assign odd_data = odd_data | append: row_name | append: '-' | append: meta_ytd | append: 'pts ' %}
+    {% endif %}
+
+    {% if thecycle == 'even' %}
+    {% assign even_data = even_data | append: row_name | append: '-' | append: meta_ytd | append: 'pts ' %}
+    {% endif %}
+{% endfor %}
+
+<meta name="twitter:label1" content="Current Points" />
+<meta name="twitter:data1" content="{{ odd_data }}" />
+<meta name="twitter:label2" content="Current Points" />
+<meta name="twitter:data2" content="{{ even_data }}" />

@@ -1,0 +1,33 @@
+<div id="sources" class="ui inverted vertical footer segment">
+    <div class="ui container">
+        <div class="ui stackable inverted divided equal height stackable grid">
+            <div class="three wide column">
+                <h4 class="ui inverted header">F1 Links</h4>
+                <div class="ui inverted link list">
+                    {% for link in site.data.links %}
+                    <a href="{{ link.url }}" target="_blank" class="item">{{ link.name }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">F1 Podcasts</h4>
+                <div class="ui inverted link list">
+                    {% for podcast in site.data.podcasts %}
+                    <a href="{{ podcast.url }}" target="_blank" class="item">{{ podcast.name }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">Trivia Sources</h4>
+                <div class="ui inverted link list">
+                    <a href="http://en.espn.co.uk/f1/motorsport/story/3831.html" target="_blank" class="item">[1] en.espn.co.uk</a>
+                    <a href="https://www.thedrive.com/start-finish/10911/60-years-of-the-f1-world-constructors-championship-a-guide" target="_blank" class="item">[2] www.thedrive.com</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header">Freshness Guaranteed</h4>
+                <p>The data on this page was last upated {{ site.time | date: "%-d %b %Y"}}.</p>
+            </div>
+        </div>
+    </div>
+</div>

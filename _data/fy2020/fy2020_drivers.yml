@@ -1,0 +1,39 @@
+- name: John
+  team: Red Bull
+  flag: gb wls
+
+- name: Laura
+  team: Danny Ric
+  flag: de
+
+- name: Murph
+  team: Improv
+  flag: ie
+
+- name: Trevor
+  team: Ferrari
+  flag: gb sct
+
+- name: Hellen
+  team: Swahili
+  flag: tz
+
+- name: Dean
+  team: Canada, Eh
+  flag: ca
+
+- name: Kim
+  team: Wonder Bread
+  flag: gr
+
+- name: Vince
+  team: Toro Rosso
+  flag: cl
+
+- name: Bobby
+  team: Rebel Alliance
+  flag: us
+
+- name: Danielle
+  team: Ranger
+  flag: nl

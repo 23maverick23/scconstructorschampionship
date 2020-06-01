@@ -1,0 +1,22 @@
+<div id="drivers" class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+        <div class="row">
+            <div class="nine wide column centered">
+                <h2 class="ui center aligned header">
+                  Meet Your {{ site.current_fiscal }} Drivers
+                </h2>
+                <div class="ui three doubling cards">
+                    {% for driver in site.data.current_drivers %}
+                    <div class="card">
+                        <div class="content">
+                            <i class="right floated {{ driver.flag }} flag"></i>
+                            <div class="header">{{ driver.name }}</div>
+                            <div class="meta">Team {{ driver.team }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
