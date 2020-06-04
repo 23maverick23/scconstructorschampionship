@@ -5,13 +5,78 @@
                 <h2 class="ui center aligned header">
                   Meet Your {{ site.current_fiscal }} Drivers
                 </h2>
-                <div class="ui three doubling cards">
+                <div class="ui special cards">
                     {% for driver in site.data.current_drivers %}
                     <div class="card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <a class="ui primary button" href="{{ driver.ln }}" target="_blank"><i class="linkedin icon"></i> Connect</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="{{ driver.image }}">
+                        </div>
                         <div class="content">
-                            <i class="right floated {{ driver.flag }} flag"></i>
                             <div class="header">{{ driver.name }}</div>
-                            <div class="meta">Team {{ driver.team }}</div>
+                            <div class="meta">
+                                <a>Team {{ driver.team }}</a>
+                            </div>
+                        </div>
+                        {% if driver.archive %}
+                        <div class="extra content">
+                            <div class="description">
+                                <div class="ui relaxed divided list">
+                                    {% for archive in driver.archive %}
+                                    <div class="item">
+                                        {% if archive.color %}<i class="{{ archive.color }} trophy icon"></i>{% endif %}
+                                        <div class="content">
+                                            <div class="header">{{ archive.year }}: {{ archive.place }} Place</div>
+                                            <div class="description">{{ archive.points }} Points</div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        <div class="extra content">
+
+                            {% assign total_points = 0 %}
+                            {% for row in site.data.current_points %}
+
+                            {% assign r_jun = row.jun.logo | plus: row.jun.arr | plus: row.jun.bonus %}
+                            {% assign r_jul = row.jul.logo | plus: row.jul.arr | plus: row.jul.bonus %}
+                            {% assign r_aug = row.aug.logo | plus: row.aug.arr | plus: row.aug.bonus %}
+                            {% assign r_sep = row.sep.logo | plus: row.sep.arr | plus: row.sep.bonus %}
+                            {% assign r_oct = row.oct.logo | plus: row.oct.arr | plus: row.oct.bonus %}
+                            {% assign r_nov = row.nov.logo | plus: row.nov.arr | plus: row.nov.bonus %}
+                            {% assign r_dec = row.dec.logo | plus: row.dec.arr | plus: row.dec.bonus %}
+                            {% assign r_jan = row.jan.logo | plus: row.jan.arr | plus: row.jan.bonus %}
+                            {% assign r_feb = row.feb.logo | plus: row.feb.arr | plus: row.feb.bonus %}
+                            {% assign r_mar = row.mar.logo | plus: row.mar.arr | plus: row.mar.bonus %}
+                            {% assign r_apr = row.apr.logo | plus: row.apr.arr | plus: row.apr.bonus %}
+                            {% assign r_may = row.may.logo | plus: row.may.arr | plus: row.may.bonus %}
+
+                            {% assign q1 = r_jun | plus: r_jul | plus: r_aug | plus: row.bonus_q1 %}
+                            {% assign q2 = r_sep | plus: r_oct | plus: r_nov | plus: row.bonus_q2 %}
+                            {% assign q3 = r_dec | plus: r_jan | plus: r_feb | plus: row.bonus_q3 %}
+                            {% assign q4 = r_mar | plus: r_apr | plus: r_may | plus: row.bonus_q4 %}
+
+                            {% assign ytd = q1 | plus: q2 | plus: q3 | plus: q4 %}
+
+                            {% if driver.name == row.name %}
+                            {% assign total_points = ytd %}
+                            {% endif %}
+                            {% endfor %}
+
+                            <span class="right floated">
+                                <i class="{{ driver.flag }} flag"></i>
+                            </span>
+                            <span>
+                                {{ total_points }} Points
+                            </span>
                         </div>
                     </div>
                     {% endfor %}

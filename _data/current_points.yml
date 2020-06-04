@@ -1,181 +1,627 @@
-# Q4: DMD,Logo/ARR | Eng,CV,BD,Slack
-
-- name: john
+#### JOHN ####
+- name: John
   jun: 
+    logo: 4
+    arr: 6
+    bonus: 1
   jul: 
+    logo: 2
+    arr: 1
+    bonus: 3
   aug: 
+    logo: 6
+    arr: 2
+    bonus: 1
+
+  bonus_q1: 0
+  
   sep: 
+    logo: 2
+    arr: 2
+    bonus: 1
   oct: 
+    logo: 6
+    arr: 8
+    bonus: 5
   nov: 
+    logo: 2
+    arr: 4
+    bonus: 1
+  
+  bonus_q2: 5
+
   dec: 
+    logo:
+    arr:
+    bonus:
   jan: 
+    logo:
+    arr:
+    bonus:
   feb: 
-  mar: 
-  apr: 
-  may: 
-  bonus_q1: 
-  bonus_q2: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q3: 
+
+  mar: 
+    logo:
+    arr:
+    bonus:
+  apr: 
+    logo:
+    arr:
+    bonus:
+  may: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q4: 
 
-- name: laura
+#### LAURA ####
+- name: Laura
   jun: 
+    logo: 8
+    arr: 6
+    bonus: 2
   jul: 
+    logo: 3
+    arr: 1
+    bonus: 3
   aug: 
+    logo: 6
+    arr: 2
+    bonus: 1
+
+  bonus_q1: 0
+  
   sep: 
+    logo: 6
+    arr: 2
+    bonus: 1
   oct: 
+    logo: 6
+    arr: 2
+    bonus: 5
   nov: 
+    logo: 6
+    arr: 4
+    bonus: 1
+  
+  bonus_q2: 5
+
   dec: 
+    logo:
+    arr:
+    bonus:
   jan: 
+    logo:
+    arr:
+    bonus:
   feb: 
-  mar: 
-  apr: 
-  may: 
-  bonus_q1: 
-  bonus_q2: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q3: 
+
+  mar: 
+    logo:
+    arr:
+    bonus:
+  apr: 
+    logo:
+    arr:
+    bonus:
+  may: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q4: 
 
-- name: murph
+#### TREVOR ####
+
+- name: Trevor
   jun: 
+    logo: 8
+    arr: 6
+    bonus: 1
   jul: 
+    logo: 6
+    arr: 1
+    bonus: 6
   aug: 
+    logo: 6
+    arr: 1
+    bonus: 1
+
+  bonus_q1: 0
+  
   sep: 
+    logo: 6
+    arr: 1
+    bonus: 1
   oct: 
+    logo: 6
+    arr: 1
+    bonus: 5
   nov: 
+    logo: 6
+    arr: 4
+    bonus: 1
+  
+  bonus_q2: 5
+
   dec: 
+    logo:
+    arr:
+    bonus:
   jan: 
+    logo:
+    arr:
+    bonus:
   feb: 
-  mar: 
-  apr: 
-  may: 
-  bonus_q1: 
-  bonus_q2: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q3: 
+
+  mar: 
+    logo:
+    arr:
+    bonus:
+  apr: 
+    logo:
+    arr:
+    bonus:
+  may: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q4: 
 
-- name: trevor
+#### MURPH ####
+
+- name: Murph
   jun: 
+    logo: 8
+    arr: 2
+    bonus: 2
   jul: 
+    logo: 3
+    arr: 1
+    bonus: 3
   aug: 
+    logo: 2
+    arr: 2
+    bonus: 1
+
+  bonus_q1: 0
+  
   sep: 
+    logo: 2
+    arr: 2
+    bonus: 1
   oct: 
+    logo: 2
+    arr: 2
+    bonus: 5
   nov: 
+    logo: 2
+    arr: 4
+    bonus: 1
+  
+  bonus_q2: 5
+
   dec: 
+    logo:
+    arr:
+    bonus:
   jan: 
+    logo:
+    arr:
+    bonus:
   feb: 
-  mar: 
-  apr: 
-  may: 
-  bonus_q1: 
-  bonus_q2: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q3: 
+
+  mar: 
+    logo:
+    arr:
+    bonus:
+  apr: 
+    logo:
+    arr:
+    bonus:
+  may: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q4: 
 
-- name: hellen
+#### HELLEN ####
+
+- name: Hellen
   jun: 
+    logo: 8
+    arr: 2
+    bonus: 2
   jul: 
+    logo: 3
+    arr: 1
+    bonus: 3
   aug: 
+    logo: 2
+    arr: 2
+    bonus: 1
+
+  bonus_q1: 0
+  
   sep: 
+    logo: 2
+    arr: 2
+    bonus: 1
   oct: 
+    logo: 2
+    arr: 2
+    bonus: 5
   nov: 
+    logo: 2
+    arr: 4
+    bonus: 1
+  
+  bonus_q2: 5
+
   dec: 
+    logo:
+    arr:
+    bonus:
   jan: 
+    logo:
+    arr:
+    bonus:
   feb: 
-  mar: 
-  apr: 
-  may: 
-  bonus_q1: 
-  bonus_q2: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q3: 
+
+  mar: 
+    logo:
+    arr:
+    bonus:
+  apr: 
+    logo:
+    arr:
+    bonus:
+  may: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q4: 
 
-- name: dean
+#### Dean ####
+
+- name: Dean
   jun: 
+    logo: 8
+    arr: 2
+    bonus: 2
   jul: 
+    logo: 3
+    arr: 1
+    bonus: 3
   aug: 
+    logo: 2
+    arr: 2
+    bonus: 1
+
+  bonus_q1: 0
+  
   sep: 
+    logo: 2
+    arr: 2
+    bonus: 1
   oct: 
+    logo: 2
+    arr: 2
+    bonus: 5
   nov: 
+    logo: 2
+    arr: 4
+    bonus: 1
+  
+  bonus_q2: 5
+
   dec: 
+    logo:
+    arr:
+    bonus:
   jan: 
+    logo:
+    arr:
+    bonus:
   feb: 
-  mar: 
-  apr: 
-  may: 
-  bonus_q1: 
-  bonus_q2: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q3: 
+
+  mar: 
+    logo:
+    arr:
+    bonus:
+  apr: 
+    logo:
+    arr:
+    bonus:
+  may: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q4: 
 
-- name: kim
+#### KIM ####
+
+- name: Kim
   jun: 
+    logo: 8
+    arr: 2
+    bonus: 2
   jul: 
+    logo: 3
+    arr: 1
+    bonus: 3
   aug: 
+    logo: 2
+    arr: 2
+    bonus: 1
+
+  bonus_q1: 0
+  
   sep: 
+    logo: 2
+    arr: 2
+    bonus: 1
   oct: 
+    logo: 2
+    arr: 2
+    bonus: 5
   nov: 
+    logo: 2
+    arr: 4
+    bonus: 1
+  
+  bonus_q2: 5
+
   dec: 
+    logo:
+    arr:
+    bonus:
   jan: 
+    logo:
+    arr:
+    bonus:
   feb: 
-  mar: 
-  apr: 
-  may: 
-  bonus_q1: 
-  bonus_q2: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q3: 
+
+  mar: 
+    logo:
+    arr:
+    bonus:
+  apr: 
+    logo:
+    arr:
+    bonus:
+  may: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q4: 
 
-- name: vince
+#### VINCE ####
+
+- name: Vince
   jun: 
+    logo: 8
+    arr: 2
+    bonus: 2
   jul: 
+    logo: 3
+    arr: 1
+    bonus: 3
   aug: 
+    logo: 2
+    arr: 2
+    bonus: 1
+
+  bonus_q1: 0
+  
   sep: 
+    logo: 2
+    arr: 2
+    bonus: 1
   oct: 
+    logo: 2
+    arr: 2
+    bonus: 5
   nov: 
+    logo: 2
+    arr: 4
+    bonus: 1
+  
+  bonus_q2: 5
+
   dec: 
+    logo:
+    arr:
+    bonus:
   jan: 
+    logo:
+    arr:
+    bonus:
   feb: 
-  mar: 
-  apr: 
-  may: 
-  bonus_q1: 
-  bonus_q2: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q3: 
+
+  mar: 
+    logo:
+    arr:
+    bonus:
+  apr: 
+    logo:
+    arr:
+    bonus:
+  may: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q4: 
 
-- name: bobby
+#### BOBBY ####
+
+- name: Bobby
   jun: 
+    logo: 8
+    arr: 2
+    bonus: 2
   jul: 
+    logo: 3
+    arr: 1
+    bonus: 3
   aug: 
+    logo: 2
+    arr: 2
+    bonus: 1
+
+  bonus_q1: 0
+  
   sep: 
+    logo: 2
+    arr: 2
+    bonus: 1
   oct: 
+    logo: 2
+    arr: 2
+    bonus: 5
   nov: 
+    logo: 2
+    arr: 4
+    bonus: 1
+  
+  bonus_q2: 5
+
   dec: 
+    logo:
+    arr:
+    bonus:
   jan: 
+    logo:
+    arr:
+    bonus:
   feb: 
-  mar: 
-  apr: 
-  may: 
-  bonus_q1: 
-  bonus_q2: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q3: 
+
+  mar: 
+    logo:
+    arr:
+    bonus:
+  apr: 
+    logo:
+    arr:
+    bonus:
+  may: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q4: 
 
-- name: danielle
+#### DANIELLE ####
+
+- name: Danielle
   jun: 
+    logo: 8
+    arr: 2
+    bonus: 2
   jul: 
+    logo: 3
+    arr: 1
+    bonus: 3
   aug: 
+    logo: 2
+    arr: 2
+    bonus: 1
+
+  bonus_q1: 0
+  
   sep: 
+    logo: 2
+    arr: 2
+    bonus: 1
   oct: 
+    logo: 2
+    arr: 2
+    bonus: 5
   nov: 
+    logo: 2
+    arr: 4
+    bonus: 1
+  
+  bonus_q2: 5
+
   dec: 
+    logo:
+    arr:
+    bonus:
   jan: 
+    logo:
+    arr:
+    bonus:
   feb: 
-  mar: 
-  apr: 
-  may: 
-  bonus_q1: 
-  bonus_q2: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q3: 
+
+  mar: 
+    logo:
+    arr:
+    bonus:
+  apr: 
+    logo:
+    arr:
+    bonus:
+  may: 
+    logo:
+    arr:
+    bonus:
+  
   bonus_q4: 

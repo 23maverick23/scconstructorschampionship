@@ -1,0 +1,9 @@
+.ui.inverted.segment {
+    &.bgimage {
+        background-image: url(#{$baseurl}/assets/images/racetrack.png) !important;
+        background-position: center center fixed;
+        background-size: auto;
+        background-repeat: no-repeat;
+        min-height: 800px;
+    }
+}

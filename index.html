@@ -20,39 +20,37 @@
 
 <!-- Page Contents -->
 <div class="pusher">
-	<div id="home" class="ui inverted vertical masthead center aligned segment">
+	{% include home.html %}
 
-		<div class="ui container">
-			<div class="ui large secondary inverted pointing menu">
-				<a class="toc item">
-					<i class="sidebar icon"></i>
-				</a>
-				{% include menu.html %}
-			</div>
-		</div>
-
-		<div class="ui text container">
-			<h1 class="ui inverted header">
-				{{ site.title }}
-			</h1>
-			<h2>{{ site.description }}</h2>
-		</div>
-
-	</div>
-
+	{% comment %}
 	{% include trivia.html %}
+	{% endcomment %}
+
+	{% comment %}
+	{% include landscape.html %}
+	{% endcomment %}
 
 	{% include rules.html %}
 
-	{% include quotes_one.html %}
+	{% include dashboard.html %}
 
 	{% include standings.html %}
 
-	{% include quotes_two.html %}
+	{% include quotes_one.html %}
+
+	{% comment %}
+	{% include charts.html %}
+	{% endcomment %}
 
 	{% include drivers.html %}
 
+	{% include quotes_two.html %}
+
+	{% comment %}
 	{% include archive.html %}
+	{% endcomment %}
+
+	{% include landscape.html %}
 
 	{% include footer.html %}
 </div>

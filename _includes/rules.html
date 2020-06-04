@@ -1,99 +1,62 @@
-<div id="rules" class="ui vertical stripe segment">
+<div class="ui vertical stripe segment" style="border-bottom: none;" id="rules">
     <div class="ui middle aligned stackable grid container">
         <div class="row">
-            <div class="twelve wide column centered">
+            <div class="two wide column">
                 <h1 class="ui centered header">
                     Points
                     <div class="sub header">How Are They Awarded?</div>
                 </h1>
             </div>
-        </div>
-        <div class="row">
-            <div class="four wide column centered" style="padding-left:0 !important;padding-right:0 !important;align-self:normal !important;">
-                <table class="ui celled padded table">
-                    <thead>
-                        <tr>
-                            <th colspan="2">Monthly Point Rules</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Logo as Lead SC</td>
-                            <td>2 pts</td>
-                        </tr>
-                        <tr>
-                            <td>Logo as Secondary SC</td>
-                            <td>1 pt</td>
-                        </tr>
-                        <tr>
-                            <td>$25k ARR per Deal</td>
-                            <td>1 pt</td>
-                        </tr>
-                        <tr>
-                            <td>SC Request with #dmd</td>
-                            <td>1 pt</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="four wide column centered" style="padding-left:0 !important;padding-right:0 !important;align-self:normal !important;">
-                <table class="ui celled padded table">
-                    <thead>
-                        <tr>
-                            <th colspan="2">Quarterly Point Rules</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Top Lead SC ARR*</td>
-                            <td>5 pts</td>
-                        </tr>
-                        <tr>
-                            <td>Top Lead SC Logos*</td>
-                            <td>5 pts</td>
-                        </tr>
-                        <tr>
-                            <td>Fastest Lap</td>
-                            <td>1 pt</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th colspan="2"><em>* QTD actuals for both ARR and Logos, not monthly points total</em></th>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-            <div class="four wide column centered" style="padding-left:0 !important;padding-right:0 !important;align-self:normal !important;">
-                <table class="ui celled padded table">
-                    <thead>
-                        <tr>
-                            <th colspan="2">Q4 Bonus Rules 🔥</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Engagement as Lead/Secondary</td>
-                            <td>1 pt</td>
-                        </tr>
-                        <tr>
-                            <td>Cross-Vertical as Lead/Secondary</td>
-                            <td>2 pts</td>
-                        </tr>
-                        <tr>
-                            <td>BD Call (Pre-Opp)</td>
-                            <td>1 pt</td>
-                        </tr>
-                        <tr>
-                            <td>Sales Slack Channel Response</td>
-                            <td>1 pt</td>
-                        </tr>
-                        <tr>
-                            <td>Late Timesheet Notification</td>
-                            <td>-1 pt</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="fourteen wide right floated column">
+                <div class="ui top attached tabular menu">
+                    <a class="active item" data-tab="overall">Overall</a>
+                    {% if site.data.rules %}
+                    {% for tab in site.data.rules %}
+                    <a class="item" data-tab="{{ tab.id }}">{{ tab.name }}</a>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                
+                <div class="ui bottom attached active tab segment" data-tab="overall">
+                    <div class="ui relaxed list">
+                        <div class="item">
+                            <img class="ui avatar image" src="{{ site.baseurl }}/assets/images/point.png">
+                            <div class="content">
+                                <div class="header">Lead SC ARR</div>
+                                <div class="description">
+                                    <b>1 pt</b> for every $20k in ARR, per deal.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img class="ui avatar image" src="{{ site.baseurl }}/assets/images/point.png">
+                            <div class="content">
+                                <div class="header">Closed Won Logos</div>
+                                <div class="description">
+                                    <b>2 pts</b> for every lead SC logo; <b>1 pt</b> for every secondary SC logo.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% if site.data.rules %}
+                {% for tab in site.data.rules %}
+                <div class="ui bottom attached tab segment" data-tab="{{ tab.id }}">
+                    <div class="ui relaxed list">
+                        {% for rule in tab.rules %}
+                        <div class="item">
+                            <img class="ui avatar image" src="{{ site.baseurl }}/assets/images/{{ rule.image }}.png">
+                            <div class="content">
+                                <div class="header">{{ rule.title }}</div>
+                                <div class="description">{{ rule.description }}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>

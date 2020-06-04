@@ -1,0 +1,351 @@
+<script>
+$(document)
+    .ready(function() {
+
+        var chartLabels = [
+            {% for row in site.data.current_points %}
+            "{{ row.name | capitalize }}"{% if forloop.last == true %}{% else %},{% endif %}
+            {% endfor %}
+        ];
+
+        var chartData = [
+            {% for row in site.data.current_points %}
+
+            {% assign r_jun = row.jun.logo | plus: row.jun.arr | plus: row.jun.bonus %}
+            {% assign r_jul = row.jul.logo | plus: row.jul.arr | plus: row.jul.bonus %}
+            {% assign r_aug = row.aug.logo | plus: row.aug.arr | plus: row.aug.bonus %}
+            {% assign r_sep = row.sep.logo | plus: row.sep.arr | plus: row.sep.bonus %}
+            {% assign r_oct = row.oct.logo | plus: row.oct.arr | plus: row.oct.bonus %}
+            {% assign r_nov = row.nov.logo | plus: row.nov.arr | plus: row.nov.bonus %}
+            {% assign r_dec = row.dec.logo | plus: row.dec.arr | plus: row.dec.bonus %}
+            {% assign r_jan = row.jan.logo | plus: row.jan.arr | plus: row.jan.bonus %}
+            {% assign r_feb = row.feb.logo | plus: row.feb.arr | plus: row.feb.bonus %}
+            {% assign r_mar = row.mar.logo | plus: row.mar.arr | plus: row.mar.bonus %}
+            {% assign r_apr = row.apr.logo | plus: row.apr.arr | plus: row.apr.bonus %}
+            {% assign r_may = row.may.logo | plus: row.may.arr | plus: row.may.bonus %}
+
+            {% assign logo_q1 = row.jun.logo | plus: row.jul.logo | plus: row.aug.logo %}
+            {% assign logo_q2 = row.sep.logo | plus: row.oct.logo | plus: row.nov.logo %}
+            {% assign logo_q3 = row.dec.logo | plus: row.jan.logo | plus: row.feb.logo %}
+            {% assign logo_q4 = row.mar.logo | plus: row.apr.logo | plus: row.may.logo %}
+            {% assign logo_ytd = logo_q1 | plus: logo_q2 | plus: logo_q3 | plus: logo_q4 %}
+
+            {% assign rev_q1 = row.jun.arr | plus: row.jul.arr | plus: row.aug.arr %}
+            {% assign rev_q2 = row.sep.arr | plus: row.oct.arr | plus: row.nov.arr %}
+            {% assign rev_q3 = row.dec.arr | plus: row.jan.arr | plus: row.feb.arr %}
+            {% assign rev_q4 = row.mar.arr | plus: row.apr.arr | plus: row.may.arr %}
+            {% assign rev_ytd = rev_q1 | plus: rev_q2 | plus: rev_q3 | plus: rev_q4 %}
+
+            {% assign bon_q1 = row.jun.bonus | plus: row.jul.bonus | plus: row.aug.bonus %}
+            {% assign bon_q2 = row.sep.bonus | plus: row.oct.bonus | plus: row.nov.bonus %}
+            {% assign bon_q3 = row.dec.bonus | plus: row.jan.bonus | plus: row.feb.bonus %}
+            {% assign bon_q4 = row.mar.bonus | plus: row.apr.bonus | plus: row.may.bonus %}
+            {% assign bon_ytd = bon_q1 | plus: bon_q2 | plus: bon_q3 | plus: bon_q4 %}
+
+            {% assign b1 = row.bonus_q1 %}
+            {% assign b2 = row.bonus_q2 %}
+            {% assign b3 = row.bonus_q3 %}
+            {% assign b4 = row.bonus_q4 %}
+
+            {% assign q1 = logo_q1 | plus: rev_q1 | plus: bon_q1 | plus: b1 %}
+            {% assign q2 = logo_q2 | plus: rev_q2 | plus: bon_q2 | plus: b2 %}
+            {% assign q3 = logo_q3 | plus: rev_q3 | plus: bon_q3 | plus: b3 %}
+            {% assign q4 = logo_q4 | plus: rev_q4 | plus: bon_q4 | plus: b4 %}
+
+            {% assign btd = b1 | plus: b2 | plus: b3 | plus: b4 %}
+            {% assign ytd = q1 | plus: q2 | plus: q3 | plus: q4 %}
+            
+            {{ ytd }}{% unless forloop.last %},{% endunless %}
+            
+            {% endfor %}
+        ];
+
+        var lineData = [
+            {% for row in site.data.current_points %}
+
+            {% assign r_jun = row.jun.logo | plus: row.jun.arr | plus: row.jun.bonus %}
+            {% assign r_jul = row.jul.logo | plus: row.jul.arr | plus: row.jul.bonus %}
+            {% assign r_aug = row.aug.logo | plus: row.aug.arr | plus: row.aug.bonus %}
+
+            {% assign r_sep = row.sep.logo | plus: row.sep.arr | plus: row.sep.bonus %}
+            {% assign r_oct = row.oct.logo | plus: row.oct.arr | plus: row.oct.bonus %}
+            {% assign r_nov = row.nov.logo | plus: row.nov.arr | plus: row.nov.bonus %}
+
+            {% assign r_dec = row.dec.logo | plus: row.dec.arr | plus: row.dec.bonus %}
+            {% assign r_jan = row.jan.logo | plus: row.jan.arr | plus: row.jan.bonus %}
+            {% assign r_feb = row.feb.logo | plus: row.feb.arr | plus: row.feb.bonus %}
+
+            {% assign r_mar = row.mar.logo | plus: row.mar.arr | plus: row.mar.bonus %}
+            {% assign r_apr = row.apr.logo | plus: row.apr.arr | plus: row.apr.bonus %}
+            {% assign r_may = row.may.logo | plus: row.may.arr | plus: row.may.bonus %}
+
+            {% assign b1 = row.bonus_q1 %}
+            {% assign b2 = row.bonus_q2 %}
+            {% assign b3 = row.bonus_q3 %}
+            {% assign b4 = row.bonus_q4 %}
+
+            {
+                name: "{{ row.name | capitalize }}",
+                data: [
+                    {{ r_jun }},
+                    {{ r_jun | plus: r_jul }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan | plus: r_feb | plus: b3 }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan | plus: r_feb | plus: b3 | plus: r_mar }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan | plus: r_feb | plus: b3 | plus: r_mar | plus: r_apr }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan | plus: r_feb | plus: b3 | plus: r_mar | plus: r_apr | plus: r_may | plus: b4 }}
+                ]
+            }{% unless forloop.last %},{% endunless %}
+            
+            {% endfor %}
+        ];
+
+        var chartDataSum = 0;
+        for (var i in chartData) {
+            chartDataSum += chartData[i];
+        }
+
+        var chartDataMax = Math.max.apply(Math, chartData);
+        console.log(chartDataMax);
+
+        var chartDataPer = [];
+        for (var i in chartData) {
+            chartDataPer.push(Math.round(chartData[i]/chartDataMax*100));
+        }
+
+        // Sort total points, highest to lowest
+        var sortedData = chartData.slice().sort(function(a, b) {return b-a});
+        // Give points an overall ranking
+        var ranks = $.grep(sortedData, function(item, idx) {
+            return item != sortedData[idx - 1];
+        });
+        // Create new array with rank "score" of total points which should
+        // also allow for multiple of the same rank (e.g. ties)
+        var rankedData = [];
+        $.each(chartData, function(idx, item) {
+            var rank = $.inArray(item, ranks);   
+            rankedData.push(rank)
+        });
+
+        var backgroundColors = rankedData.slice();
+
+        // console.log(chartData, rankedData);
+
+        for (var i = 0; i < rankedData.length; i++) {
+            switch (rankedData[i]) {
+            case 0:
+                backgroundColors[i] = "rgba(214, 175, 54, 0.9)";
+                break;
+            case 1:
+                backgroundColors[i] = "rgba(167, 167, 173, 0.9)";
+                break;
+            case 2:
+                backgroundColors[i] = "rgba(167, 112, 68, 0.9)";
+                break;
+            default:
+                backgroundColors[i] = "rgba(236, 240, 241, 0.9)";
+            }
+        };
+
+        function reDraw() {
+          setTimeout(function() {
+            $.each(charts, function(i, chart) {
+              chart.updateOptions({});  
+            });
+          }, 200);
+        }
+
+        $('.stage').on('click', function() {
+          var $this = $(this);
+          
+          $this.addClass('active');
+          $this.children('i').addClass('transition hidden');
+
+          $this.siblings().each(function(el) {
+            $(this).removeClass('active');
+            $(this).children('i').removeClass('transition hidden');
+          });
+
+          reDraw();
+        });
+
+        
+        // APEX DEMO
+        var colors = [
+            "#db2828", // red
+            "#f2711c", // orange
+            "#fbbd08", // yellow
+            "#b5cc18", // olive
+            "#21ba45", // green
+            "#00b5ad", // teal
+            "#2185d0", // blue
+            "#6435c9", // violet
+            "#a333c8", // purple
+            "#e03997" // pink
+        ];
+        var options = {
+              series: [{
+                name: "Points",
+                data: chartData
+            }],
+            chart: {
+              height: 250,
+              type: 'bar',
+              events: {
+                click: function(chart, w, e) {
+                  // console.log(chart, w, e)
+                }
+              },
+              toolbar: {
+                show: true,
+                tools: {
+                  download: true
+                }
+              }
+            },
+            colors: backgroundColors,
+            plotOptions: {
+              bar: {
+                columnWidth: '45%',
+                distributed: true
+              }
+            },
+            dataLabels: {
+              enabled: false
+            },
+            legend: {
+              show: false
+            },
+            yaxis: {
+                labels: {
+                    style: {
+                        colors: "#ffffff"
+                    }
+                }
+            },
+            xaxis: {
+              categories: chartLabels,
+              labels: {
+                style: {
+                  colors: "#ffffff",
+                  fontSize: '16px'
+                }
+              }
+            }
+        };
+
+        var chart_bar = new ApexCharts(document.querySelector("#chart-bar"), options);
+        chart_bar.render();
+
+        /** ANOTHER CHART */
+
+        var options2 = {
+          series: chartDataPer,
+          colors: colors,
+          legend: {
+            show: true,
+            position: 'bottom',
+            fontSize: '16px',
+            labels: {
+                colors: '#ffffff'
+            }
+          },
+          chart: {
+          height: 500,
+          type: 'radialBar',
+          toolbar: {
+            show: true
+          }
+        },
+        plotOptions: {
+          radialBar: {
+            track: {
+              show: true,
+              background: '#333333',
+              opacity: 1
+            },
+            dataLabels: {
+              style: {
+                colors: '#ffffff'
+              },
+              name: {
+                fontSize: '36px',
+                offset: -15
+              },
+              value: {
+                fontSize: '36px'
+              },
+              total: {
+                show: true,
+                label: 'Leader Points',
+                color: '#ffffff',
+                formatter: function (w) {
+                  // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+                  return chartDataMax;
+                }
+              }
+            }
+          }
+        },
+        stroke: {
+            lineCap: "round"
+          },
+        labels: chartLabels,
+        };
+
+        var chart_radial = new ApexCharts(document.querySelector("#chart-radial"), options2);
+        chart_radial.render();
+
+        var charts = [
+                chart_bar
+        ];
+
+        /** FANCY CHART */
+
+        var options3 = {
+          series: lineData,
+          colors: colors,
+          legend: {
+            show: true,
+            showForSingleSeries: true,
+            position: 'bottom',
+            fontSize: '16px',
+            labels: {
+                colors: '#ffffff'
+            }
+          },
+          chart: {
+          height: 500,
+          type: 'line',
+          toolbar: {
+            show: true
+          },
+          zoom: {
+            enabled: false
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        markers: {
+            size: 1
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        xaxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        }
+        };
+
+        var chart_fancy = new ApexCharts(document.querySelector("#chart-fancy-2"), options3);
+        chart_fancy.render();
+
+    })
+;
+</script>
