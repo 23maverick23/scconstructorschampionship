@@ -1,0 +1,36 @@
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.g_tag }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ site.g_tag }}');
+    </script>
+
+    {% include meta.html %}
+
+    <!-- Site Properties -->
+    <title>{{ site.title }}</title>
+    <link rel="icon" href="{{ site.icon }}">
+    
+    <link rel="stylesheet" href="{{ site.cdn.semantic-css }}" />
+    <link rel="stylesheet" href="{{ site.cdn.chart-css }}" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+
+    <script src="{{ site.cdn.jquery }}"></script>
+    <script src="{{ site.cdn.semantic-js }}"></script>
+    <script src="{{ site.cdn.chart-js }}"></script>
+    <script src="{{ site.cdn.apex-js }}"></script>
+    
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+
+    {% include js_tableplugin.html %}
+
+    {% comment %}
+    {% include js_chartdata.html %}
+    {% endcomment %}
+    
+    {% include js_apexchartdata.html %}
+</head>

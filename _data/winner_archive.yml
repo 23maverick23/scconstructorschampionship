@@ -1,0 +1,23 @@
+- name: Laura
+  year: 2020
+  place: 1st
+  points: 123
+  picture: https://media-exp1.licdn.com/dms/image/C4E03AQEjFltMV4nMBg/profile-displayphoto-shrink_800_800/0?e=1596067200&v=beta&t=JBb7hNF6ayrljQP5eCAT2jYIzE6oBXKiCSp-BP9CjmM
+  comments: >
+    To be added...
+
+- name: Trevor
+  year: 2020
+  place: 2nd
+  points: 123
+  picture: https://media-exp1.licdn.com/dms/image/C5603AQHGbbfRPzNFDg/profile-displayphoto-shrink_800_800/0?e=1596067200&v=beta&t=9JrETH2PPDsBS77pGn9ALJJ_Uwp2aXaPaGQW1JRoFQo
+  comments: >
+    To be added...
+
+- name: Dean
+  year: 2020
+  place: 3rd
+  points: 123
+  picture: https://media-exp1.licdn.com/dms/image/C4E03AQF2onXrqC6Ecg/profile-displayphoto-shrink_800_800/0?e=1596067200&v=beta&t=I97P9oGCZ5G12d71QiKp04iWedPejrSfTV9vMeuQpK4
+  comments: >
+    To be added...

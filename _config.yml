@@ -16,11 +16,14 @@
 title: SC Constructors' Championship
 email: rmorrissey@netsuite.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Next generation team gamification, perfected.
+  Just like "Drive to Survive" - we're back for Season 2.
 baseurl: "/scconstructorschampionship" # the subpath of your site, e.g. /blog
 url: "https://ryancmorrissey.com" # the base hostname & protocol for your site, e.g. http://example.com
+current_fiscal: FY2021
+icon: https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/racing-car_1f3ce.png
 github_username:  23maverick23
 g_tag: G-1L9JFVQSP5
+
 
 # Build settings
 markdown: kramdown
@@ -28,6 +31,18 @@ theme: minima
 plugins:
   - jekyll-feed
   - github-pages
+
+sass:
+  sass_dir: _scss
+  style: compressed
+
+cdn:
+  semantic-css: https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css
+  semantic-js: https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js
+  chart-css: https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.css
+  chart-js: https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js
+  apex-js: https://cdn.jsdelivr.net/npm/apexcharts@3.19.2/dist/apexcharts.min.js
+  jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -40,3 +55,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude:
+  - scconstructorschampionship.sublime-project
