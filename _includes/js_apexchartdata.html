@@ -196,6 +196,19 @@ $(document)
             chart: {
               height: 250,
               type: 'bar',
+              animations: {
+                enabled: true,
+                easing: 'easeinout',
+                speed: 400,
+                animateGradually: {
+                    enabled: true,
+                    delay: 350
+                },
+                dynamicAnimation: {
+                    enabled: true,
+                    speed: 800
+                }
+              },
               events: {
                 click: function(chart, w, e) {
                   // console.log(chart, w, e)
@@ -224,7 +237,7 @@ $(document)
             yaxis: {
                 labels: {
                     style: {
-                        colors: "#ffffff"
+                        colors: "#bdc3c7"
                     }
                 }
             },
@@ -232,7 +245,7 @@ $(document)
               categories: chartLabels,
               labels: {
                 style: {
-                  colors: "#ffffff",
+                  colors: "#bdc3c7",
                   fontSize: '16px'
                 }
               }
@@ -252,7 +265,7 @@ $(document)
             position: 'bottom',
             fontSize: '16px',
             labels: {
-                colors: '#ffffff'
+                colors: '#bdc3c7'
             }
           },
           chart: {
@@ -271,7 +284,7 @@ $(document)
             },
             dataLabels: {
               style: {
-                colors: '#ffffff'
+                colors: '#bdc3c7'
               },
               name: {
                 fontSize: '36px',
@@ -283,7 +296,7 @@ $(document)
               total: {
                 show: true,
                 label: 'Leader Points',
-                color: '#ffffff',
+                color: '#bdc3c7',
                 formatter: function (w) {
                   // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
                   return chartDataMax;
@@ -316,7 +329,7 @@ $(document)
             position: 'bottom',
             fontSize: '16px',
             labels: {
-                colors: '#ffffff'
+                colors: '#bdc3c7'
             }
           },
           chart: {

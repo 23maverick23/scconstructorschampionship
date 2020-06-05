@@ -5,9 +5,9 @@
   image: https://media-exp1.licdn.com/dms/image/C4E03AQEIDpdKiyz2Ew/profile-displayphoto-shrink_400_400/0?e=1596672000&v=beta&t=Euu1cmRGY_qwz6T1XWsmFmIk-wjgrKaF_6jccL2wZdk
   archive:
     - year: 2020
-      place: 1st
+      place: 2nd
       color: gray
-      points: 123
+      points: 125
 
 - name: Laura
   team: Danny Ric
@@ -18,7 +18,7 @@
     - year: 2020
       place: 1st
       color: yellow
-      points: 123
+      points: 142
 
 - name: Murph
   team: Improv
@@ -27,9 +27,9 @@
   image: https://media-exp1.licdn.com/dms/image/C4E03AQGmhIsG2iYwag/profile-displayphoto-shrink_400_400/0?e=1596672000&v=beta&t=6w2RDvbKFAnheBljdFs-1o6u7rIzQFe6FUktwl5VGHQ
   archive:
     - year: 2020
-      place: 1st
+      place: 7th
       color: 
-      points: 123
+      points: 74
 
 - name: Trevor
   team: Ferrari
@@ -38,15 +38,20 @@
   image: https://media-exp1.licdn.com/dms/image/C5603AQHGbbfRPzNFDg/profile-displayphoto-shrink_800_800/0?e=1596672000&v=beta&t=IAYPoqh8RN4KLtnVarJk6M16Gs9uPzj8fmqW1CatXW8
   archive:
     - year: 2020
-      place: 1st
+      place: 3rd
       color: brown
-      points: 123
+      points: 120
 
 - name: Hellen
   team: Swahili
   flag: tz
   ln: https://www.linkedin.com/in/hellen-mwangoka-netsuiteexpert/
   image: https://media-exp1.licdn.com/dms/image/C5603AQEJA6XVhF0DSQ/profile-displayphoto-shrink_800_800/0?e=1596672000&v=beta&t=Ugf-lnX2sAOkCTivwwYZP6cRwrmhiaQcRIgPXC6FGQ8
+  archive:
+    - year: 2020
+      place: 9th
+      color:
+      points: 41
 
 - name: Dean
   team: Canada, Eh
@@ -55,9 +60,9 @@
   image: https://media-exp1.licdn.com/dms/image/C4E03AQF2onXrqC6Ecg/profile-displayphoto-shrink_400_400/0?e=1596672000&v=beta&t=qoiBprhEOaVsZ_e-BpGbWsz_H6tjpjwZJ1GyavrV_0M
   archive:
     - year: 2020
-      place: 1st
+      place: 4th
       color: 
-      points: 123
+      points: 107
 
 - name: Kim
   team: Wonder Bread
@@ -66,9 +71,9 @@
   image: https://media-exp1.licdn.com/dms/image/C4E03AQF1hZFPGtVOaw/profile-displayphoto-shrink_400_400/0?e=1596672000&v=beta&t=4iUqASqMH3Ojl-lsw9rwI1xnSjfiP3yil5jkLwMUxuc
   archive:
     - year: 2020
-      place: 1st
+      place: 5th
       color: 
-      points: 123
+      points: 99
 
 - name: Vince
   team: Toro Rosso
@@ -77,9 +82,9 @@
   image: https://media-exp1.licdn.com/dms/image/C4E03AQGROYsJvcvwZQ/profile-displayphoto-shrink_400_400/0?e=1596672000&v=beta&t=Z4Qw9BlCTcJpHCOjjPzUh9F2_fFqLrGiuIQb3pAmLrc
   archive:
     - year: 2020
-      place: 1st
+      place: 10th
       color: 
-      points: 123
+      points: 32
 
 - name: Bobby
   team: Rebel Alliance
@@ -88,9 +93,9 @@
   image: https://media-exp1.licdn.com/dms/image/C4D03AQHpXZZAbIDRYg/profile-displayphoto-shrink_400_400/0?e=1596672000&v=beta&t=jP7P26XcbZuP5e_NF_bg8fMnGYtprAb7zbZBS7oBm4w
   archive:
     - year: 2020
-      place: 1st
+      place: 8th
       color: 
-      points: 123
+      points: 54
 
 - name: Danielle
   team: Ranger
@@ -99,6 +104,6 @@
   image: https://media-exp1.licdn.com/dms/image/C4E03AQGgThJ1-aPu3w/profile-displayphoto-shrink_800_800/0?e=1596672000&v=beta&t=Xzl_gdnwM1iYzol_Wb-VrObQgNz_xb-FMc4wxZBGetU
   archive:
     - year: 2020
-      place: 1st
+      place: 6th
       color: 
-      points: 123
+      points: 88

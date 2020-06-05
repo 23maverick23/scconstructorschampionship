@@ -1,3 +1,14 @@
+- name: Achievement Bonus
+  id: achievement
+  rules:
+    - title: Logo Achievement
+      image: new
+      description: <b>5 pts</b> for reaching 5 logos; <b>10 pts</b> for reaching 10 logos; <b>15 pts</b> for reaching 15 logos.
+
+    - title: Revenue Achivement
+      image: bonus
+      description: <b>5 pts</b> for reaching $250k ARR; <b>10 pts</b> for reaching $500k ARR; <b>15 pts</b> for reaching $1M ARR.
+
 - name: Q1 Bonus
   id: q1
   rules:

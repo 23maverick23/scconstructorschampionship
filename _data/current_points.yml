@@ -253,16 +253,16 @@
 - name: Hellen
   jun: 
     logo: 8
-    arr: 2
-    bonus: 2
+    arr: 8
+    bonus: 8
   jul: 
     logo: 3
-    arr: 1
+    arr: 4
     bonus: 3
   aug: 
-    logo: 2
-    arr: 2
-    bonus: 1
+    logo: 8
+    arr: 8
+    bonus: 4
 
   bonus_q1: 0
   
@@ -271,11 +271,11 @@
     arr: 2
     bonus: 1
   oct: 
-    logo: 2
-    arr: 2
+    logo: 0
+    arr: 0
     bonus: 5
   nov: 
-    logo: 2
+    logo: 0
     arr: 4
     bonus: 1
   
@@ -316,29 +316,29 @@
 - name: Dean
   jun: 
     logo: 8
-    arr: 2
-    bonus: 2
+    arr: 4
+    bonus: 4
   jul: 
     logo: 3
     arr: 1
     bonus: 3
   aug: 
-    logo: 2
-    arr: 2
+    logo: 4
+    arr: 4
     bonus: 1
 
   bonus_q1: 0
   
   sep: 
-    logo: 2
-    arr: 2
+    logo: 1
+    arr: 1
     bonus: 1
   oct: 
-    logo: 2
-    arr: 2
+    logo: 1
+    arr: 1
     bonus: 5
   nov: 
-    logo: 2
+    logo: 1
     arr: 4
     bonus: 1
   
@@ -379,26 +379,26 @@
 - name: Kim
   jun: 
     logo: 8
-    arr: 2
-    bonus: 2
+    arr: 3
+    bonus: 3
   jul: 
     logo: 3
     arr: 1
     bonus: 3
   aug: 
-    logo: 2
-    arr: 2
+    logo: 3
+    arr: 3
     bonus: 1
 
   bonus_q1: 0
   
   sep: 
-    logo: 2
-    arr: 2
+    logo: 3
+    arr: 3
     bonus: 1
   oct: 
-    logo: 2
-    arr: 2
+    logo: 3
+    arr: 3
     bonus: 5
   nov: 
     logo: 2
@@ -445,9 +445,9 @@
     arr: 2
     bonus: 2
   jul: 
-    logo: 3
+    logo: 6
     arr: 1
-    bonus: 3
+    bonus: 6
   aug: 
     logo: 2
     arr: 2
@@ -504,7 +504,7 @@
 
 - name: Bobby
   jun: 
-    logo: 8
+    logo: 6
     arr: 2
     bonus: 2
   jul: 
@@ -528,7 +528,7 @@
     bonus: 5
   nov: 
     logo: 2
-    arr: 4
+    arr: 6
     bonus: 1
   
   bonus_q2: 5
@@ -568,21 +568,21 @@
 - name: Danielle
   jun: 
     logo: 8
-    arr: 2
-    bonus: 2
+    arr: 5
+    bonus: 5
   jul: 
     logo: 3
     arr: 1
     bonus: 3
   aug: 
-    logo: 2
-    arr: 2
+    logo: 5
+    arr: 5
     bonus: 1
 
   bonus_q1: 0
   
   sep: 
-    logo: 2
+    logo: 5
     arr: 2
     bonus: 1
   oct: 
