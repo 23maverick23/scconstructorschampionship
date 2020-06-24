@@ -34,11 +34,11 @@
     {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 
     {% if thecycle == 'odd' %}
-    {% assign odd_data = odd_data | append: row_name | append: '-' | append: meta_ytd | append: 'pts ' %}
+    {% assign odd_data = odd_data | append: row_name | append: '⮕' | append: meta_ytd | append: 'pts ' %}
     {% endif %}
 
     {% if thecycle == 'even' %}
-    {% assign even_data = even_data | append: row_name | append: '-' | append: meta_ytd | append: 'pts ' %}
+    {% assign even_data = even_data | append: row_name | append: '⮕' | append: meta_ytd | append: 'pts ' %}
     {% endif %}
 {% endfor %}
 
