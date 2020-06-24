@@ -78,32 +78,32 @@
 	{% assign q3 = q3 | plus: logo_q3 | plus: rev_q3 | plus: bon_q3 | plus: row.bonus_q3 %}
 	{% assign q4 = q4 | plus: logo_q4 | plus: rev_q4 | plus: bon_q4 | plus: row.bonus_q4 %}
 
-	{% assign btd = btd | plus: row.bonus_q1 | plus: row.bonus_q2 | plus: row.bonus_q3 | plus: row.bonus_q4 %}
+	{% assign btd = row.bonus_q1 | plus: row.bonus_q2 | plus: row.bonus_q3 | plus: row.bonus_q4 %}
 	
-	{% assign ytd = ytd | plus: q1 | plus: q2 | plus: q3 | plus: q4 %}
+	{% assign ytd = q1 | plus: q2 | plus: q3 | plus: q4 %}
 
-	{% assign t_jun = t_jun | plus: r_jun %}
-	{% assign t_jul = t_jul | plus: r_jul %}
-	{% assign t_aug = t_aug | plus: r_aug %}
-	{% assign t_sep = t_sep | plus: r_sep %}
-	{% assign t_oct = t_oct | plus: r_oct %}
-	{% assign t_nov = t_nov | plus: r_nov %}
-	{% assign t_dec = t_dec | plus: r_dec %}
-	{% assign t_jan = t_jan | plus: r_jan %}
-	{% assign t_feb = t_feb | plus: r_feb %}
-	{% assign t_mar = t_mar | plus: r_mar %}
-	{% assign t_apr = t_apr | plus: r_apr %}
-	{% assign t_may = t_may | plus: r_may %}
-	{% assign t_b1 = bon_q1 | plus: row.bonus_q1 %}
-	{% assign t_b2 = bon_q2 | plus: row.bonus_q2 %}
-	{% assign t_b3 = bon_q3 | plus: row.bonus_q3 %}
-	{% assign t_b4 = bon_q4 | plus: row.bonus_q4 %}
-	{% assign t_q1 = t_q1 | plus: q1 %}
-	{% assign t_q2 = t_q2 | plus: q2 %}
-	{% assign t_q3 = t_q3 | plus: q3 %}
-	{% assign t_q4 = t_q4 | plus: q4 %}
-	{% assign t_btd = t_btd | plus: btd %}
-	{% assign t_ytd = t_ytd | plus: ytd %}
+	{% assign t_jun = r_jun %}
+	{% assign t_jul = r_jul %}
+	{% assign t_aug = r_aug %}
+	{% assign t_sep = r_sep %}
+	{% assign t_oct = r_oct %}
+	{% assign t_nov = r_nov %}
+	{% assign t_dec = r_dec %}
+	{% assign t_jan = r_jan %}
+	{% assign t_feb = r_feb %}
+	{% assign t_mar = r_mar %}
+	{% assign t_apr = r_apr %}
+	{% assign t_may = r_may %}
+	{% assign t_b1 = row.bonus_q1 %}
+	{% assign t_b2 = row.bonus_q2 %}
+	{% assign t_b3 = row.bonus_q3 %}
+	{% assign t_b4 = row.bonus_q4 %}
+	{% assign t_q1 = q1 %}
+	{% assign t_q2 = q2 %}
+	{% assign t_q3 = q3 %}
+	{% assign t_q4 = q4 %}
+	{% assign t_btd = btd %}
+	{% assign t_ytd = ytd %}
 
 	{% assign diff_q2 = t_q2 | minus: t_q1 | times: 1.0 %}
 	{% if t_q1 > 0 and t_q2 > 0 %}
