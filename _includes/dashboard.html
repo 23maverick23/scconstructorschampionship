@@ -55,7 +55,7 @@
 	{% assign r_apr = row.apr.logo | plus: row.apr.arr | plus: row.apr.bonus %}
 	{% assign r_may = row.may.logo | plus: row.may.arr | plus: row.may.bonus %}
 
-	{% assign logo_q1 = row.jun.logo | plus: row.jul.logo | plus: row.aug.logo %}
+	{% assign logo_q1 = logo_q1 | plus: row.jun.logo | plus: row.jul.logo | plus: row.aug.logo %}
 	{% assign logo_q2 = row.sep.logo | plus: row.oct.logo | plus: row.nov.logo %}
 	{% assign logo_q3 = row.dec.logo | plus: row.jan.logo | plus: row.feb.logo %}
 	{% assign logo_q4 = row.mar.logo | plus: row.apr.logo | plus: row.may.logo %}
