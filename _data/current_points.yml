@@ -443,7 +443,7 @@
   jun: 
     logo: 
     arr: 
-    bonus: 
+    bonus: -2 # time
   jul: 
     logo: 
     arr: 
@@ -504,9 +504,9 @@
 
 - name: Bobby
   jun: 
-    logo: 
+    logo: 2
     arr: 
-    bonus: 
+    bonus: -3 # time
   jul: 
     logo: 
     arr: 
@@ -569,7 +569,7 @@
   jun: 
     logo: 
     arr: 
-    bonus: 
+    bonus: -1 # time
   jul: 
     logo: 
     arr: 
