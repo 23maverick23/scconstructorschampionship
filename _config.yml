@@ -16,7 +16,7 @@
 title: SC Constructors' Championship
 email: rmorrissey@netsuite.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Just like "Drive to Survive" - we're back for Season 2.
+  Just like 'Drive to Survive' - we're back for Season 2.
 baseurl: "/scconstructorschampionship" # the subpath of your site, e.g. /blog
 url: "https://ryancmorrissey.com" # the base hostname & protocol for your site, e.g. http://example.com
 current_fiscal: FY2021

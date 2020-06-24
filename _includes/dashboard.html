@@ -22,40 +22,47 @@
 {% assign q4 = 0 %}
 
 {% assign btd = 0 %}
-
 {% assign ytd = 0 %}
+
+{% assign t_q1 = 0 %}
+{% assign t_q2 = 0 %}
+{% assign t_q3 = 0 %}
+{% assign t_q4 = 0 %}
+
+{% assign t_btd = 0 %}
+{% assign t_ytd = 0 %}
 
 {% for row in site.data.current_points %}
 
-	{% assign logo_q1 = row.jun.logo | plus: row.jul.logo | plus: row.aug.logo %}
-	{% assign logo_q2 = row.sep.logo | plus: row.oct.logo | plus: row.nov.logo %}
-	{% assign logo_q3 = row.dec.logo | plus: row.jan.logo | plus: row.feb.logo %}
-	{% assign logo_q4 = row.mar.logo | plus: row.apr.logo | plus: row.may.logo %}
+	{% assign logo_q1 = logo_q1 | plus: row.jun.logo | plus: row.jul.logo | plus: row.aug.logo %}
+	{% assign logo_q2 = logo_q2 | plus: row.sep.logo | plus: row.oct.logo | plus: row.nov.logo %}
+	{% assign logo_q3 = logo_q3 | plus: row.dec.logo | plus: row.jan.logo | plus: row.feb.logo %}
+	{% assign logo_q4 = logo_q4 | plus: row.mar.logo | plus: row.apr.logo | plus: row.may.logo %}
 	{% assign logo_ytd = logo_q1 | plus: logo_q2 | plus: logo_q3 | plus: logo_q4 %}
 
 	{% assign rev_q1 = rev_q1 | plus: row.jun.arr | plus: row.jul.arr | plus: row.aug.arr %}
 	{% assign rev_q2 = rev_q2 | plus: row.sep.arr | plus: row.oct.arr | plus: row.nov.arr %}
 	{% assign rev_q3 = rev_q3 | plus: row.dec.arr | plus: row.jan.arr | plus: row.feb.arr %}
 	{% assign rev_q4 = rev_q4 | plus: row.mar.arr | plus: row.apr.arr | plus: row.may.arr %}
-	{% assign rev_ytd = rev_ytd | plus: rev_q1 | plus: rev_q2 | plus: rev_q3 | plus: rev_q4 %}
+	{% assign rev_ytd = rev_q1 | plus: rev_q2 | plus: rev_q3 | plus: rev_q4 %}
 
 	{% assign bon_q1 = bon_q1 | plus: row.jun.bonus | plus: row.jul.bonus | plus: row.aug.bonus %}
 	{% assign bon_q2 = bon_q2 | plus: row.sep.bonus | plus: row.oct.bonus | plus: row.nov.bonus %}
 	{% assign bon_q3 = bon_q3 | plus: row.dec.bonus | plus: row.jan.bonus | plus: row.feb.bonus %}
 	{% assign bon_q4 = bon_q4 | plus: row.mar.bonus | plus: row.apr.bonus | plus: row.may.bonus %}
-	{% assign bon_ytd = bon_ytd | plus: bon_q1 | plus: bon_q2 | plus: bon_q3 | plus: bon_q4 %}
+	{% assign bon_ytd = bon_q1 | plus: bon_q2 | plus: bon_q3 | plus: bon_q4 %}
 
 	{% assign q1 = logo_q1 | plus: rev_q1 | plus: bon_q1 | plus: row.bonus_q1 %}
 	{% assign q2 = logo_q2 | plus: rev_q2 | plus: bon_q2 | plus: row.bonus_q2 %}
 	{% assign q3 = logo_q3 | plus: rev_q3 | plus: bon_q3 | plus: row.bonus_q3 %}
 	{% assign q4 = logo_q4 | plus: rev_q4 | plus: bon_q4 | plus: row.bonus_q4 %}
 
-	{% assign b1 = row.bonus_q1 %}
-	{% assign b2 = row.bonus_q2 %}
-	{% assign b3 = row.bonus_q3 %}
-	{% assign b4 = row.bonus_q4 %}
+	{% assign b1 = bon_q1 | plus: row.bonus_q1 %}
+	{% assign b2 = bon_q2 | plus: row.bonus_q2 %}
+	{% assign b3 = bon_q3 | plus: row.bonus_q3 %}
+	{% assign b4 = bon_q4 | plus: row.bonus_q4 %}
 
-	{% assign btd = row.bonus_q1 | plus: row.bonus_q2 | plus: row.bonus_q3 | plus: row.bonus_q4 %}
+	{% assign btd = b1 | plus: b2 | plus: b3 | plus: b4 %}
 	{% assign ytd = q1 | plus: q2 | plus: q3 | plus: q4 %}
 
 	{% assign diff_q2 = q2 | minus: q1 | times: 1.0 %}
@@ -78,6 +85,44 @@
 	{% else %}
 		{% assign g_q4 = 0 %}
 	{% endif %}
+
+	{% assign t_q1 = t_q1 | plus: q1 %}
+    {% assign t_q2 = t_q2 | plus: q2 %}
+    {% assign t_q3 = t_q3 | plus: q3 %}
+    {% assign t_q4 = t_q4 | plus: q4 %}
+    {% assign t_btd = t_btd | plus: btd %}
+    {% assign t_ytd = t_ytd | plus: ytd %}
+
+	<!-- BEGIN ROW DEBUGGING -->
+    <!-- {{ row.name }} -->
+    <!-- LQ1 {{ logo_q1 }} -->
+    <!-- LQ2 {{ logo_q2 }} -->
+    <!-- LQ3 {{ logo_q3 }} -->
+    <!-- LQ4 {{ logo_q4 }} -->
+    <!-- LQT {{ logo_ytd }} -->
+    <!-- RQ1 {{ rev_q1 }} -->
+    <!-- RQ2 {{ rev_q2 }} -->
+    <!-- RQ3 {{ rev_q3 }} -->
+    <!-- RQ4 {{ rev_q4 }} -->
+    <!-- RQT {{ rev_ytd }} -->
+    <!-- BQ1 {{ bon_q1 }} -->
+    <!-- BQ2 {{ bon_q2 }} -->
+    <!-- BQ3 {{ bon_q3 }} -->
+    <!-- BQ4 {{ bon_q4 }} -->
+    <!-- BQT {{ bon_ytd }} -->
+    <!-- Q1 {{ q1 }} -->
+    <!-- Q2 {{ q2 }} -->
+    <!-- Q3 {{ q3 }} -->
+    <!-- Q4 {{ q4 }} -->
+    <!-- BTD {{ btd }} -->
+    <!-- YTD {{ ytd }} -->
+    <!-- TQ1 {{ t_q1 }} -->
+    <!-- TQ2 {{ t_q2 }} -->
+    <!-- TQ3 {{ t_q3 }} -->
+    <!-- TQ4 {{ t_q4 }} -->
+    <!-- TBTD {{ t_btd }} -->
+    <!-- TYTD {{ t_ytd }} -->
+    <!-- END ROW DEBUGGING -->
 
 {% endfor %}
 
