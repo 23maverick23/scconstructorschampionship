@@ -1,9 +1,9 @@
 #### JOHN ####
 - name: John
   jun: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   jul: 
     logo: 
     arr: 
@@ -63,9 +63,9 @@
 #### LAURA ####
 - name: Laura
   jun: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   jul: 
     logo: 
     arr: 
@@ -126,9 +126,9 @@
 
 - name: Trevor
   jun: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 1
+    arr: 0
+    bonus: 0
   jul: 
     logo: 
     arr: 
@@ -189,9 +189,9 @@
 
 - name: Murph
   jun: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   jul: 
     logo: 
     arr: 
@@ -252,9 +252,9 @@
 
 - name: Hellen
   jun: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   jul: 
     logo: 
     arr: 
@@ -317,7 +317,7 @@
   jun: 
     logo: 2
     arr: 1
-    bonus: 
+    bonus: 0
   jul: 
     logo: 
     arr: 
@@ -378,9 +378,9 @@
 
 - name: Kim
   jun: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   jul: 
     logo: 
     arr: 
@@ -441,8 +441,8 @@
 
 - name: Vince
   jun: 
-    logo: 
-    arr: 
+    logo: 0
+    arr: 0
     bonus: -2 # time
   jul: 
     logo: 
@@ -505,7 +505,7 @@
 - name: Bobby
   jun: 
     logo: 2
-    arr: 
+    arr: 0
     bonus: -3 # time
   jul: 
     logo: 
@@ -567,8 +567,8 @@
 
 - name: Danielle
   jun: 
-    logo: 2
-    arr: 1
+    logo: 4
+    arr: 6
     bonus: -1 # time
   jul: 
     logo: 
