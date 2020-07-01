@@ -105,11 +105,11 @@ $(document)
             {% endfor %}
         ];
         
-        for (var i in lineData) {
-          lineData[i].data = lineData[i].data.map(function(val, j) {
-            return val === 0 ? null : val;
-          });
-        }
+        // for (var i in lineData) {
+        //   lineData[i].data = lineData[i].data.map(function(val, j) {
+        //     return val === 0 ? null : val;
+        //   });
+        // }
 
         var chartDataSum = 0;
         for (var i in chartData) {
