@@ -510,7 +510,7 @@
   jul: 
     logo: 
     arr: 
-    bonus: 
+    bonus: -1 # time
   aug: 
     logo: 
     arr: 
