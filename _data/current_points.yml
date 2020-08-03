@@ -67,8 +67,8 @@
     arr: 0
     bonus: 0
   jul: 
-    logo: 
-    arr: 
+    logo: 2
+    arr: 1
     bonus: 
   aug: 
     logo: 
@@ -130,8 +130,8 @@
     arr: 0
     bonus: 0
   jul: 
-    logo: 1
-    arr: 
+    logo: 0
+    arr: 2
     bonus: 
   aug: 
     logo: 
@@ -193,8 +193,8 @@
     arr: 0
     bonus: 0
   jul: 
-    logo: 
-    arr: 
+    logo: 2
+    arr: 1
     bonus: -1 #time
   aug: 
     logo: 
@@ -256,8 +256,8 @@
     arr: 0
     bonus: 0
   jul: 
-    logo: 
-    arr: 
+    logo: 2
+    arr: 1
     bonus: 
   aug: 
     logo: 
@@ -319,8 +319,8 @@
     arr: 1
     bonus: 0
   jul: 
-    logo: 
-    arr: 
+    logo: 4
+    arr: 5
     bonus: 
   aug: 
     logo: 
