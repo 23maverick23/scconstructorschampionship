@@ -132,7 +132,7 @@
   jul: 
     logo: 5
     arr: 7
-    bonus: 0
+    bonus: 7 # 7 multi
   aug: 
     logo: 
     arr: 
@@ -321,7 +321,7 @@
   jul: 
     logo: 6
     arr: 5
-    bonus: 0
+    bonus: 3 # 3 multi
   aug: 
     logo: 3
     arr: 2
@@ -569,7 +569,7 @@
   jun: 
     logo: 6
     arr: 6
-    bonus: -1 # time
+    bonus: 4 # -1 time, 5 multi
   jul: 
     logo: 0
     arr: 0
