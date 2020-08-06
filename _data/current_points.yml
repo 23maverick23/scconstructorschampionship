@@ -5,11 +5,11 @@
     arr: 0
     bonus: 0
   jul: 
-    logo: 4
+    logo: 6
     arr: 7
-    bonus: 
+    bonus: 0
   aug: 
-    logo: 2
+    logo: 3
     arr: 1
     bonus: 
 
@@ -67,9 +67,9 @@
     arr: 0
     bonus: 0
   jul: 
-    logo: 2
+    logo: 3
     arr: 1
-    bonus: 
+    bonus: 0
   aug: 
     logo: 
     arr: 
@@ -130,9 +130,9 @@
     arr: 0
     bonus: 0
   jul: 
-    logo: 4
+    logo: 5
     arr: 7
-    bonus: 
+    bonus: 0
   aug: 
     logo: 
     arr: 
@@ -193,7 +193,7 @@
     arr: 0
     bonus: 0
   jul: 
-    logo: 2
+    logo: 3
     arr: 1
     bonus: -1 #time
   aug: 
@@ -256,9 +256,9 @@
     arr: 0
     bonus: 0
   jul: 
-    logo: 2
+    logo: 3
     arr: 1
-    bonus: 
+    bonus: 0
   aug: 
     logo: 
     arr: 
@@ -315,15 +315,15 @@
 
 - name: Dean
   jun: 
-    logo: 2
+    logo: 3
     arr: 1
     bonus: 0
   jul: 
-    logo: 4
+    logo: 6
     arr: 5
-    bonus: 
+    bonus: 0
   aug: 
-    logo: 2
+    logo: 3
     arr: 2
     bonus: 
 
@@ -382,9 +382,9 @@
     arr: 0
     bonus: 0
   jul: 
-    logo: 2
+    logo: 3
     arr: 1
-    bonus: 
+    bonus: 0
   aug: 
     logo: 
     arr: 
@@ -445,9 +445,9 @@
     arr: 0
     bonus: -2 # time
   jul: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   aug: 
     logo: 
     arr: 
@@ -504,12 +504,12 @@
 
 - name: Bobby
   jun: 
-    logo: 2
+    logo: 0
     arr: 0
     bonus: -3 # time
   jul: 
-    logo: 
-    arr: 
+    logo: 0
+    arr: 0
     bonus: -2 # time
   aug: 
     logo: 
@@ -567,13 +567,13 @@
 
 - name: Danielle
   jun: 
-    logo: 4
+    logo: 6
     arr: 6
     bonus: -1 # time
   jul: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   aug: 
     logo: 
     arr: 
