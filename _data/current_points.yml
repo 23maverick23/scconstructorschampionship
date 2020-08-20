@@ -68,7 +68,7 @@
     bonus: 0
   jul: 
     logo: 3
-    arr: 1
+    arr: 2
     bonus: 0
   aug: 
     logo: 3
@@ -575,8 +575,8 @@
     arr: 0
     bonus: 0
   aug: 
-    logo: 
-    arr: 
+    logo: 3
+    arr: 1
     bonus: 
 
   bonus_q1: 
