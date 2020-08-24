@@ -71,8 +71,8 @@
     arr: 2
     bonus: 0
   aug: 
-    logo: 3
-    arr: 2
+    logo: 6
+    arr: 5
     bonus: 
 
   bonus_q1: 
@@ -134,8 +134,8 @@
     arr: 7
     bonus: 7 # 7 multi
   aug: 
-    logo: 
-    arr: 
+    logo: 3
+    arr: 1
     bonus: 
 
   bonus_q1: 
@@ -197,7 +197,7 @@
     arr: 1
     bonus: -1 #time
   aug: 
-    logo: 
+    logo: 1 
     arr: 
     bonus: -1 #time
 
@@ -449,8 +449,8 @@
     arr: 0
     bonus: 0
   aug: 
-    logo: 
-    arr: 
+    logo: 7
+    arr: 1
     bonus: 
 
   bonus_q1: 
