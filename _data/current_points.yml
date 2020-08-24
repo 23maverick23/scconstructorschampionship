@@ -11,7 +11,7 @@
   aug: 
     logo: 3
     arr: 1
-    bonus: 
+    bonus: 4
 
   bonus_q1: 
   
@@ -73,7 +73,7 @@
   aug: 
     logo: 6
     arr: 5
-    bonus: 
+    bonus: 11
 
   bonus_q1: 
   
@@ -136,7 +136,7 @@
   aug: 
     logo: 3
     arr: 1
-    bonus: 
+    bonus: 4
 
   bonus_q1: 
   
@@ -198,8 +198,8 @@
     bonus: -1 #time
   aug: 
     logo: 1 
-    arr: 
-    bonus: -1 #time
+    arr: 0
+    bonus: 0 #time -1
 
   bonus_q1: 
   
@@ -325,7 +325,7 @@
   aug: 
     logo: 9
     arr: 14
-    bonus: 
+    bonus: 23
 
   bonus_q1: 
   
@@ -451,7 +451,7 @@
   aug: 
     logo: 7
     arr: 1
-    bonus: 
+    bonus: 8
 
   bonus_q1: 
   
@@ -577,7 +577,7 @@
   aug: 
     logo: 3
     arr: 1
-    bonus: 
+    bonus: 4
 
   bonus_q1: 
   

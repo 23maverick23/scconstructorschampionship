@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": ".",
+            "file_exclude_patterns": [
+                "Gemfile.lock",
+                "*.sublime-project"
+            ],
+            "folder_exclude_patterns": [
+                ".sass-cache",
+                "_site"
+            ]
+		}
+	]
+}
