@@ -386,9 +386,9 @@
     arr: 1
     bonus: 0
   aug: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 1
+    arr: 0
+    bonus: 1
 
   bonus_q1: 
   
@@ -512,9 +512,9 @@
     arr: 0
     bonus: -2 # time
   aug: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 3
+    arr: 2
+    bonus: 5
 
   bonus_q1: 
   
