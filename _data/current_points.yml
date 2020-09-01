@@ -9,11 +9,11 @@
     arr: 7
     bonus: 0
   aug: 
-    logo: 3
-    arr: 1
+    logo: 6
+    arr: 2
     bonus: 4
 
-  bonus_q1: 
+  bonus_q1: 0
   
   sep: 
     logo: 
@@ -75,7 +75,7 @@
     arr: 5
     bonus: 11
 
-  bonus_q1: 
+  bonus_q1: 0
   
   sep: 
     logo: 
@@ -132,13 +132,13 @@
   jul: 
     logo: 5
     arr: 7
-    bonus: 7 # 7 multi
+    bonus: 10 # 10 multi @ vesta
   aug: 
-    logo: 3
-    arr: 1
+    logo: 6
+    arr: 4
     bonus: 4
 
-  bonus_q1: 
+  bonus_q1: 0
   
   sep: 
     logo: 
@@ -201,7 +201,7 @@
     arr: 0
     bonus: 0 #time -1
 
-  bonus_q1: 
+  bonus_q1: 0
   
   sep: 
     logo: 
@@ -260,11 +260,11 @@
     arr: 1
     bonus: 0
   aug: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
 
-  bonus_q1: 
+  bonus_q1: 0
   
   sep: 
     logo: 
@@ -321,13 +321,13 @@
   jul: 
     logo: 6
     arr: 5
-    bonus: 3 # 3 multi
+    bonus: 6 # 6 multi @ lean
   aug: 
     logo: 9
     arr: 14
     bonus: 23
 
-  bonus_q1: 
+  bonus_q1: 10 # 5 logos, 250k ARR
   
   sep: 
     logo: 
@@ -386,11 +386,11 @@
     arr: 1
     bonus: 0
   aug: 
-    logo: 1
-    arr: 0
+    logo: 4
+    arr: 1
     bonus: 1
 
-  bonus_q1: 
+  bonus_q1: 0
   
   sep: 
     logo: 
@@ -450,10 +450,10 @@
     bonus: 0
   aug: 
     logo: 7
-    arr: 1
-    bonus: 8
+    arr: 2
+    bonus: 5
 
-  bonus_q1: 
+  bonus_q1: 0
   
   sep: 
     logo: 
@@ -512,11 +512,11 @@
     arr: 0
     bonus: -2 # time
   aug: 
-    logo: 3
-    arr: 2
-    bonus: 5
+    logo: 6
+    arr: 3
+    bonus: 14 # 9 multi @ ks2, rkneal; 5 Q1
 
-  bonus_q1: 
+  bonus_q1: 0
   
   sep: 
     logo: 
@@ -569,7 +569,7 @@
   jun: 
     logo: 6
     arr: 6
-    bonus: 4 # -1 time, 5 multi
+    bonus: 7 # -1 time, 8 multi @ adswerve
   jul: 
     logo: 0
     arr: 0
@@ -579,7 +579,7 @@
     arr: 1
     bonus: 4
 
-  bonus_q1: 
+  bonus_q1: 0
   
   sep: 
     logo: 

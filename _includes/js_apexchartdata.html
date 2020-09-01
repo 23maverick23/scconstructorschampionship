@@ -105,11 +105,41 @@ $(document)
             {% endfor %}
         ];
         
+        // Replace 0 with null
         // for (var i in lineData) {
         //   lineData[i].data = lineData[i].data.map(function(val, j) {
         //     return val === 0 ? null : val;
         //   });
         // }
+        
+        // Strip data based on current month, adjusted for fiscal June-May
+        var d = new Date().getMonth();
+        console.log("d=" + d);
+        var o = 0;
+        switch (d) {
+          case 5:
+          case 6:
+          case 7:
+          case 8:
+          case 9:
+          case 10:
+          case 11:
+            o = d - 5;
+            break;
+          case 0:
+          case 1:
+          case 2:
+          case 3:
+          case 4:
+            o = d + 7;
+            break;
+        }
+        console.log("o=" + o);
+        for (var i in lineData) {
+          lineData[i].data = lineData[i].data.slice(0, o);
+        }
+
+        console.log("lineData: " + JSON.stringify(lineData));
 
         var chartDataSum = 0;
         for (var i in chartData) {
@@ -117,7 +147,7 @@ $(document)
         }
 
         var chartDataMax = Math.max.apply(Math, chartData);
-        console.log(chartDataMax);
+        // console.log(chartDataMax);
 
         var chartDataPer = [];
         for (var i in chartData) {
@@ -350,6 +380,9 @@ $(document)
         },
         dataLabels: {
           enabled: false
+        },
+        title: {
+          text: 'Points Trend to Date'
         },
         markers: {
             size: 1,

@@ -2,7 +2,7 @@
   team: Red Bull
   flag: gb wls
   ln: https://www.linkedin.com/in/john-szabo-85054b14/
-  image: https://media-exp1.licdn.com/dms/image/C4E03AQEIDpdKiyz2Ew/profile-displayphoto-shrink_400_400/0?e=1602115200&v=beta&t=TDDiBO2DwW5gTCdI_qcQ9KUsiRI8vTUJGv0MEyquqpQ
+  image: assets/images/headshots/john.jpg
   archive:
     - year: 2020
       place: 2nd
@@ -13,7 +13,7 @@
   team: Danny Ric
   flag: de
   ln: https://www.linkedin.com/in/laura-van-lenten-cpa-71b85922/
-  image: https://media-exp1.licdn.com/dms/image/C4E03AQEjFltMV4nMBg/profile-displayphoto-shrink_400_400/0?e=1602115200&v=beta&t=8UlcaCOoi-bAAPwkNi9YgiNQ9S7Hu524pWTYQ-eZcTg
+  image: assets/images/headshots/laura.jpg
   archive:
     - year: 2020
       place: 1st
@@ -24,7 +24,7 @@
   team: Improv
   flag: ie
   ln: https://www.linkedin.com/in/murphyryanp/
-  image: https://media-exp1.licdn.com/dms/image/C4E03AQGmhIsG2iYwag/profile-displayphoto-shrink_400_400/0?e=1602115200&v=beta&t=Q9TvkqPeBN1nxogISqJkUDLyVZaiI5CJy-DI4NYUcJ4
+  image: assets/images/headshots/murph.jpg
   archive:
     - year: 2020
       place: 7th
@@ -35,7 +35,7 @@
   team: Ferrari
   flag: gb sct
   ln: https://www.linkedin.com/in/trevor-rancourt-2b999b65/
-  image: https://media-exp1.licdn.com/dms/image/C5603AQHGbbfRPzNFDg/profile-displayphoto-shrink_400_400/0?e=1602115200&v=beta&t=wIfsRjv2dogmmEhyCMRzbWPZwUdPogMpQuuhneftq1Y
+  image: assets/images/headshots/trevor.jpg
   archive:
     - year: 2020
       place: 3rd
@@ -46,7 +46,7 @@
   team: Swahili
   flag: tz
   ln: https://www.linkedin.com/in/hellen-mwangoka-netsuiteexpert/
-  image: https://media-exp1.licdn.com/dms/image/C5603AQEJA6XVhF0DSQ/profile-displayphoto-shrink_400_400/0?e=1602115200&v=beta&t=VKj469YQNaLSRdRNNGsPfAmoIA2md_Yl-XUpQ9xknjk
+  image: assets/images/headshots/hellen.jpg
   archive:
     - year: 2020
       place: 9th
@@ -57,7 +57,7 @@
   team: Canada, Eh
   flag: ca
   ln: https://www.linkedin.com/in/deanherback/
-  image: https://media-exp1.licdn.com/dms/image/C4E03AQF2onXrqC6Ecg/profile-displayphoto-shrink_400_400/0?e=1602115200&v=beta&t=8h2a5ohVCa0rejuKWsek4RLtlhRfvpfEQdW4LElH4Ns
+  image: assets/images/headshots/dean.jpg
   archive:
     - year: 2020
       place: 4th
@@ -68,7 +68,7 @@
   team: Wonder Bread
   flag: gr
   ln: https://www.linkedin.com/in/kimberlyalawton/
-  image: https://media-exp1.licdn.com/dms/image/C4E03AQF1hZFPGtVOaw/profile-displayphoto-shrink_400_400/0?e=1602115200&v=beta&t=8wueSSGAqvYMQNpGfsb7lW57L5OBQgrqwQidlU7uNvo
+  image: assets/images/headshots/kim.jpg
   archive:
     - year: 2020
       place: 5th
@@ -79,7 +79,7 @@
   team: Toro Rosso
   flag: cl
   ln: https://www.linkedin.com/in/vince-kroll-cpa-54102677/
-  image: https://media-exp1.licdn.com/dms/image/C4E03AQGROYsJvcvwZQ/profile-displayphoto-shrink_400_400/0?e=1602115200&v=beta&t=ABWkS0UKPoTfO15plSjvcQrgAy-AjsdvkiFpzoOZfr4
+  image: assets/images/headshots/vince.jpg
   archive:
     - year: 2020
       place: 10th
@@ -90,7 +90,7 @@
   team: Rebel Alliance
   flag: us
   ln: https://www.linkedin.com/in/bobby-shores-111a4a13/
-  image: https://media-exp1.licdn.com/dms/image/C4D03AQHpXZZAbIDRYg/profile-displayphoto-shrink_400_400/0?e=1602115200&v=beta&t=OTx9oF6N1i8REv7r951YZyXWQAJVDkVxw4L58fKZpYk
+  image: assets/images/headshots/bobby.jpg
   archive:
     - year: 2020
       place: 8th
@@ -101,7 +101,7 @@
   team: Ranger
   flag: nl
   ln: https://www.linkedin.com/in/daniellelau1/
-  image: https://media-exp1.licdn.com/dms/image/C4E03AQGgThJ1-aPu3w/profile-displayphoto-shrink_400_400/0?e=1602115200&v=beta&t=1uJeH_HbHxRa1gPussmc3yILE8CQTL4q5Wp3WQBpt6c
+  image: assets/images/headshots/danielle.jpg
   archive:
     - year: 2020
       place: 6th

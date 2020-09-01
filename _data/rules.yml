@@ -18,4 +18,15 @@
 
     - title: Swiss Army Knife
       image: knife
-      description: <b>2x deal pts</b> for deals where you lead and sell both the main SKU and an approved add-on (OpenAir, SuitePeople, SuiteBilling, Salesforce).
+      description: <b>2x deal pts</b> for deals where you lead and sell both the main SKU and an approved add-on <em>(OpenAir, SuitePeople, SuiteBilling)</em>.
+
+- name: Q2 Bonus
+  id: q2
+  rules:
+    - title: Ghosted
+      image: ghost
+      description: <b>1x deal pts</b> for deals you shadow and provide a peer feedback scorecard <em>(minimum 3 pts per scorecard)</em>.
+
+    - title: TBD
+      image: question
+      description: To be voted on by the team...
