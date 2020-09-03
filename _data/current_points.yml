@@ -323,8 +323,8 @@
     arr: 5
     bonus: 6 # 6 multi @ lean
   aug: 
-    logo: 9
-    arr: 14
+    logo: 12
+    arr: 16
     bonus: 23
 
   bonus_q1: 10 # 5 logos, 250k ARR
