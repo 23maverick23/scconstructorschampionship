@@ -16,8 +16,8 @@
   bonus_q1: 0
   
   sep: 
-    logo: 
-    arr: 
+    logo: 3
+    arr: 5
     bonus: 
   oct: 
     logo: 
@@ -141,7 +141,7 @@
   bonus_q1: 0
   
   sep: 
-    logo: 
+    logo: 1
     arr: 
     bonus: 
   oct: 
@@ -456,8 +456,8 @@
   bonus_q1: 0
   
   sep: 
-    logo: 
-    arr: 
+    logo: 3
+    arr: 1
     bonus: -1 # time
   oct: 
     logo: 
@@ -520,7 +520,7 @@
   
   sep: 
     logo: 3
-    arr: 
+    arr: 0
     bonus: 
   oct: 
     logo: 
