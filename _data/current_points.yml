@@ -458,7 +458,7 @@
   sep: 
     logo: 
     arr: 
-    bonus: 
+    bonus: -1 # time
   oct: 
     logo: 
     arr: 
