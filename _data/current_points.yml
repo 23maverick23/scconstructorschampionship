@@ -18,7 +18,7 @@
   sep: 
     logo: 3
     arr: 5
-    bonus: 
+    bonus: 0
   oct: 
     logo: 
     arr: 
@@ -78,8 +78,8 @@
   bonus_q1: 0
   
   sep: 
-    logo: 
-    arr: 
+    logo: 1
+    arr: 0
     bonus: -1 # time
   oct: 
     logo: 
@@ -141,8 +141,8 @@
   bonus_q1: 0
   
   sep: 
-    logo: 1
-    arr: 
+    logo: 4
+    arr: 2
     bonus: 
   oct: 
     logo: 
@@ -204,9 +204,9 @@
   bonus_q1: 0
   
   sep: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   oct: 
     logo: 
     arr: 
@@ -267,9 +267,9 @@
   bonus_q1: 0
   
   sep: 
-    logo: 3
-    arr: 1
-    bonus: 
+    logo: 7
+    arr: 2
+    bonus: 0
   oct: 
     logo: 
     arr: 
@@ -330,9 +330,9 @@
   bonus_q1: 10 # 5 logos, 250k ARR
   
   sep: 
-    logo: 3
-    arr: 1
-    bonus: 
+    logo: 6
+    arr: 5
+    bonus: 0
   oct: 
     logo: 
     arr: 
@@ -393,9 +393,9 @@
   bonus_q1: 0
   
   sep: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 6
+    arr: 3
+    bonus: 0
   oct: 
     logo: 
     arr: 
@@ -519,9 +519,9 @@
   bonus_q1: 0
   
   sep: 
-    logo: 3
-    arr: 0
-    bonus: 
+    logo: 9
+    arr: 3
+    bonus: 0
   oct: 
     logo: 
     arr: 
@@ -582,9 +582,9 @@
   bonus_q1: 0
   
   sep: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   oct: 
     logo: 
     arr: 
