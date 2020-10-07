@@ -462,7 +462,7 @@
   oct: 
     logo: 
     arr: 
-    bonus: 
+    bonus: -1 # time
   nov: 
     logo: 
     arr: 
