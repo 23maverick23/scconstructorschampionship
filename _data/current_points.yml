@@ -82,7 +82,7 @@
     arr: 0
     bonus: -1 # time
   oct: 
-    logo: 3
+    logo: 6
     arr: 11
     bonus: 
   nov: 
@@ -586,8 +586,8 @@
     arr: 0
     bonus: 0
   oct: 
-    logo: 
-    arr: 
+    logo: 3
+    arr: 8
     bonus: 
   nov: 
     logo: 
