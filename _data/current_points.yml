@@ -20,9 +20,9 @@
     arr: 5
     bonus: 0
   oct: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 4
+    arr: 2
+    bonus: 0
   nov: 
     logo: 
     arr: 
@@ -84,7 +84,7 @@
   oct: 
     logo: 6
     arr: 11
-    bonus: 
+    bonus: 0
   nov: 
     logo: 
     arr: 
@@ -145,9 +145,9 @@
     arr: 2
     bonus: 
   oct: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 1
+    arr: 0
+    bonus: 0
   nov: 
     logo: 
     arr: 
@@ -208,9 +208,9 @@
     arr: 0
     bonus: 0
   oct: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 1
+    arr: 0
+    bonus: 0
   nov: 
     logo: 
     arr: 
@@ -271,9 +271,9 @@
     arr: 2
     bonus: 0
   oct: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   nov: 
     logo: 
     arr: 
@@ -334,9 +334,9 @@
     arr: 5
     bonus: 0
   oct: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   nov: 
     logo: 
     arr: 
@@ -399,7 +399,7 @@
   oct: 
     logo: 3
     arr: 9
-    bonus: 
+    bonus: 0
   nov: 
     logo: 
     arr: 
@@ -460,8 +460,8 @@
     arr: 1
     bonus: -1 # time
   oct: 
-    logo: 
-    arr: 
+    logo: 0
+    arr: 0
     bonus: -2 # time
   nov: 
     logo: 
@@ -523,9 +523,9 @@
     arr: 3
     bonus: 0
   oct: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   nov: 
     logo: 
     arr: 
@@ -588,7 +588,7 @@
   oct: 
     logo: 3
     arr: 8
-    bonus: 
+    bonus: 0
   nov: 
     logo: 
     arr: 
