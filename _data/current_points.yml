@@ -28,7 +28,7 @@
     arr: 
     bonus: 
   
-  bonus_q2: 
+  bonus_q2: 10 # 5 logos, $250k ARR
 
   dec: 
     logo:
@@ -88,7 +88,7 @@
   nov: 
     logo: 
     arr: 
-    bonus: 
+    bonus: 10 # 5 logos, $250k ARR
   
   bonus_q2: 
 
@@ -153,7 +153,7 @@
     arr: 
     bonus: 
   
-  bonus_q2: 
+  bonus_q2: 5 # $250k ARR
 
   dec: 
     logo:
@@ -216,7 +216,7 @@
     arr: 
     bonus: 
   
-  bonus_q2: 
+  bonus_q2: 0
 
   dec: 
     logo:
@@ -279,7 +279,7 @@
     arr: 
     bonus: 
   
-  bonus_q2: 
+  bonus_q2: 0
 
   dec: 
     logo:
@@ -342,7 +342,7 @@
     arr: 
     bonus: 
   
-  bonus_q2: 
+  bonus_q2: 10 # $500k ARR
 
   dec: 
     logo:
@@ -405,7 +405,7 @@
     arr: 
     bonus: 
   
-  bonus_q2: 
+  bonus_q2: 10 # 5 logos, $250k ARR
 
   dec: 
     logo:
@@ -468,7 +468,7 @@
     arr: 
     bonus: 
   
-  bonus_q2: 
+  bonus_q2: 0
 
   dec: 
     logo:
@@ -531,7 +531,7 @@
     arr: 
     bonus: 
   
-  bonus_q2: 
+  bonus_q2: 5 # 5 logos
 
   dec: 
     logo:
@@ -594,7 +594,7 @@
     arr: 
     bonus: 
   
-  bonus_q2: 
+  bonus_q2: 5 # $250k ARR
 
   dec: 
     logo:
