@@ -86,8 +86,8 @@
     arr: 11
     bonus: 0
   nov: 
-    logo: 
-    arr: 
+    logo: 6
+    arr: 5
     bonus: 10 # 5 logos, $250k ARR
   
   bonus_q2: 
