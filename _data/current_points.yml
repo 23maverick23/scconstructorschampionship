@@ -338,7 +338,7 @@
     arr: 0
     bonus: 0
   nov: 
-    logo: 
+    logo: 1
     arr: 
     bonus: 
   
@@ -529,7 +529,7 @@
   nov: 
     logo: 
     arr: 
-    bonus: 
+    bonus: -1 #time
   
   bonus_q2: 5 # 5 logos
 
