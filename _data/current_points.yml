@@ -88,9 +88,9 @@
   nov: 
     logo: 6
     arr: 5
-    bonus: 10 # 5 logos, $250k ARR
+    bonus: 0
   
-  bonus_q2: 
+  bonus_q2: 20 # 5 logos, $250k ARR, $500k ARR
 
   dec: 
     logo:
@@ -149,9 +149,9 @@
     arr: 0
     bonus: 0
   nov: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   
   bonus_q2: 5 # $250k ARR
 
@@ -277,7 +277,7 @@
   nov: 
     logo: 3
     arr: 4
-    bonus: 
+    bonus: 0
   
   bonus_q2: 0
 
@@ -338,11 +338,11 @@
     arr: 0
     bonus: 0
   nov: 
-    logo: 1
-    arr: 
-    bonus: 
+    logo: 4
+    arr: 5
+    bonus: 0
   
-  bonus_q2: 10 # $500k ARR
+  bonus_q2: 20 # 10 logos, $500k ARR
 
   dec: 
     logo:
@@ -403,7 +403,7 @@
   nov: 
     logo: 3
     arr: 3
-    bonus: 
+    bonus: 0
   
   bonus_q2: 10 # 5 logos, $250k ARR
 
@@ -464,11 +464,11 @@
     arr: 0
     bonus: -2 # time
   nov: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   
-  bonus_q2: 0
+  bonus_q2: 3 # peer shadow Trevor/Barton
 
   dec: 
     logo:
@@ -527,8 +527,8 @@
     arr: 0
     bonus: 0
   nov: 
-    logo: 
-    arr: 
+    logo: 0
+    arr: 0
     bonus: -1 #time
   
   bonus_q2: 5 # 5 logos
@@ -590,11 +590,11 @@
     arr: 8
     bonus: 0
   nov: 
-    logo: 
-    arr: 
-    bonus: 
+    logo: 0
+    arr: 0
+    bonus: 0
   
-  bonus_q2: 5 # $250k ARR
+  bonus_q2: 8 # peer shadow John/Blue Matter, $250k ARR
 
   dec: 
     logo:
