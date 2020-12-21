@@ -282,8 +282,8 @@
   bonus_q2: 0
 
   dec: 
-    logo: 3
-    arr: 1
+    logo: 6
+    arr: 2
     bonus:
   jan: 
     logo:
@@ -597,8 +597,8 @@
   bonus_q2: 8 # peer shadow John/Blue Matter, $250k ARR
 
   dec: 
-    logo:
-    arr:
+    logo: 3
+    arr: 2
     bonus:
   jan: 
     logo:
