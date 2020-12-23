@@ -536,7 +536,7 @@
   dec: 
     logo: 3
     arr: 1
-    bonus:
+    bonus: -1 #time
   jan: 
     logo:
     arr:
