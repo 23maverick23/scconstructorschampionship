@@ -477,7 +477,7 @@
   jan: 
     logo:
     arr:
-    bonus:
+    bonus: -1 # time
   feb: 
     logo:
     arr:
@@ -540,7 +540,7 @@
   jan: 
     logo:
     arr:
-    bonus:
+    bonus: -2 # time
   feb: 
     logo:
     arr:
