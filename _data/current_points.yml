@@ -160,9 +160,9 @@
     arr: 0
     bonus: 0
   jan: 
-    logo:
-    arr:
-    bonus:
+    logo: 6
+    arr: 3
+    bonus: 0
   feb: 
     logo:
     arr:
@@ -223,8 +223,8 @@
     arr: 5
     bonus: 0
   jan: 
-    logo: 3
-    arr: 1
+    logo: 6
+    arr: 4
     bonus: -1 #time
   feb: 
     logo:
@@ -475,8 +475,8 @@
     arr: 1
     bonus: 0
   jan: 
-    logo:
-    arr:
+    logo: 3
+    arr: 2
     bonus: -1 # time
   feb: 
     logo:
