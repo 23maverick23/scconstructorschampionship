@@ -168,7 +168,7 @@
     arr:
     bonus:
   
-  bonus_q3: 
+  bonus_q3: 5 # 5 logos
 
   mar: 
     logo:
@@ -231,7 +231,7 @@
     arr:
     bonus:
   
-  bonus_q3: 
+  bonus_q3: 10 # 5 logos, $250k ARR
 
   mar: 
     logo:
@@ -483,7 +483,7 @@
     arr:
     bonus:
   
-  bonus_q3: 
+  bonus_q3: 5 # 5 logos
 
   mar: 
     logo:
@@ -609,7 +609,7 @@
     arr:
     bonus:
   
-  bonus_q3: 
+  bonus_q3: 5 # 5 logos
 
   mar: 
     logo:
