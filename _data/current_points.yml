@@ -31,13 +31,13 @@
   bonus_q2: 10 # 5 logos, $250k ARR
 
   dec: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   jan: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   feb: 
     logo:
     arr:
@@ -97,9 +97,9 @@
     arr: 4
     bonus: 0
   jan: 
-    logo:
-    arr:
-    bonus:
+    logo: 3
+    arr: 4
+    bonus: 0
   feb: 
     logo:
     arr:
@@ -223,8 +223,8 @@
     arr: 5
     bonus: 0
   jan: 
-    logo: 6
-    arr: 4
+    logo: 9
+    arr: 8
     bonus: -1 #time
   feb: 
     logo:
@@ -286,9 +286,9 @@
     arr: 2
     bonus: 0
   jan: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   feb: 
     logo:
     arr:
@@ -349,9 +349,9 @@
     arr: 0
     bonus: 0
   jan: 
-    logo:
-    arr:
-    bonus:
+    logo: 3
+    arr: 4
+    bonus: 0
   feb: 
     logo:
     arr:
@@ -412,9 +412,9 @@
     arr: 1
     bonus: 0
   jan: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   feb: 
     logo:
     arr:
@@ -475,7 +475,7 @@
     arr: 1
     bonus: 0
   jan: 
-    logo: 3
+    logo: 4
     arr: 2
     bonus: -1 # time
   feb: 
@@ -538,7 +538,7 @@
     arr: 1
     bonus: 0
   jan: 
-    logo: 3
+    logo: 7
     arr: 1
     bonus: -2 # time
   feb: 
@@ -601,9 +601,9 @@
     arr: 3
     bonus: 0
   jan: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   feb: 
     logo:
     arr:
