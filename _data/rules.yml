@@ -34,6 +34,6 @@
 - name: Q3 Bonus
   id: q3
   rules:
-    - title: TBD
-      image: question
-      description: The team has been lazy about deciding on a bonus this quarter...
+    - title: Chicken Tendies
+      image: stock
+      description: Lock in your ticker symbol in February. Top 3 performers get <b>3x their quarterly points total</b> at the end of Q3.
