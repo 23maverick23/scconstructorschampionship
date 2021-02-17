@@ -353,24 +353,24 @@
     arr: 4
     bonus: 0
   feb: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   
-  bonus_q3: 
+  bonus_q3: 0
 
   mar: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   apr: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   may: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   
   bonus_q4: 
 
@@ -544,7 +544,7 @@
   feb: 
     logo:
     arr:
-    bonus:
+    bonus: -1 # time
   
   bonus_q3: 
 
