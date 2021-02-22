@@ -416,9 +416,9 @@
     arr: 0
     bonus: 0
   feb: 
-    logo:
-    arr:
-    bonus:
+    logo: 3
+    arr: 2
+    bonus: 0
   
   bonus_q3: 
 
