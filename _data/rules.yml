@@ -37,3 +37,10 @@
     - title: Chicken Tendies
       image: tendies
       description: Lock in your ticker symbol in February. Top 3 performers get <b>3x their quarterly points total</b> at the end of Q3.
+ 
+ - name: Q4 Bonus
+  id: q4
+  rules:
+    - title: Tortise & the Hare
+      image: tortoise
+      description: Slow and steady wins the race. Longest "Days Open" deal that closes in Q4 gets <b>3x their deal points</b> for both Logo and ARR.
