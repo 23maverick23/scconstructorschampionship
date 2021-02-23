@@ -41,6 +41,6 @@
 - name: Q4 Bonus
   id: q4
   rules:
-    - title: Tortise & the Hare
+    - title: The Tortise & the Hare
       image: tortoise
       description: Slow and steady wins the race. Longest "Days Open" deal that closes in Q4 gets <b>3x their deal points</b> for both Logo and ARR.
