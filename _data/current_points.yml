@@ -481,7 +481,7 @@
   feb: 
     logo: 3
     arr: 1
-    bonus: -1 # time
+    bonus: -2 # time
   
   bonus_q3: 5 # 5 logos
 
