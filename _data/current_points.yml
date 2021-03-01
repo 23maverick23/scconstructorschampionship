@@ -43,7 +43,7 @@
     arr: 0
     bonus: 0
   
-  bonus_q3: 
+  bonus_q3: 10 # 10 for stock ticker 3x
 
   mar: 
     logo:
@@ -105,7 +105,7 @@
     arr: 12
     bonus: 0
   
-  bonus_q3: 
+  bonus_q3: 10 # 10 logos
 
   mar: 
     logo:
@@ -420,7 +420,7 @@
     arr: 2
     bonus: 0
   
-  bonus_q3: 
+  bonus_q3: 10 # $500k ARR
 
   mar: 
     logo:
@@ -483,7 +483,7 @@
     arr: 5
     bonus: -2 # time
   
-  bonus_q3: 5 # 5 logos
+  bonus_q3: 73 # 5 logos, $250k ARR, 63 for stock ticker 3x
 
   mar: 
     logo:
@@ -546,7 +546,7 @@
     arr: 0
     bonus: -1 # time
   
-  bonus_q3: 
+  bonus_q3: 30 # 30 for stock ticker 3x
 
   mar: 
     logo:
