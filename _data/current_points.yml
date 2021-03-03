@@ -171,9 +171,9 @@
   bonus_q3: 5 # 5 logos
 
   mar: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: -1 # time
   apr: 
     logo:
     arr:
