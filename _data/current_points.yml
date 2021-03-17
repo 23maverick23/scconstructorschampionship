@@ -488,7 +488,7 @@
   mar: 
     logo:
     arr:
-    bonus:
+    bonus: -1 #time
   apr: 
     logo:
     arr:
