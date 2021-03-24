@@ -16,7 +16,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <img src="{{ driver.image }}">
+                            <img src="{{ driver.image }}?{{ site.time | date: '%s%N' }}">
                         </div>
                         <div class="content">
                             <div class="header">{{ driver.name }}</div>

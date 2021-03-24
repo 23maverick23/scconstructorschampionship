@@ -17,14 +17,14 @@
     
     <link rel="stylesheet" href="{{ site.cdn.semantic-css }}" />
     <link rel="stylesheet" href="{{ site.cdn.chart-css }}" />
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css?{{ site.time | date: '%s%N' }}">
 
     <script src="{{ site.cdn.jquery }}"></script>
     <script src="{{ site.cdn.semantic-js }}"></script>
     <script src="{{ site.cdn.chart-js }}"></script>
     <script src="{{ site.cdn.apex-js }}"></script>
     
-    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/main.js?{{ site.time | date: '%s%N' }}"></script>
 
     {% include js_tableplugin.html %}
 
