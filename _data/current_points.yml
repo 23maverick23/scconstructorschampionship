@@ -236,7 +236,7 @@
   mar: 
     logo: 9
     arr: 8
-    bonus: 20 # 10 logos, $500k ARR
+    bonus: 0
   apr: 
     logo:
     arr:
@@ -246,7 +246,7 @@
     arr:
     bonus:
   
-  bonus_q4: 
+  bonus_q4: 20 # 10 logos, $500k ARR
 
 #### HELLEN ####
 
