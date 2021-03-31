@@ -173,7 +173,7 @@
   mar: 
     logo: 0
     arr: 0
-    bonus: -1 # time
+    bonus: -2 # time
   apr: 
     logo:
     arr:
@@ -488,7 +488,7 @@
   mar: 
     logo: 3
     arr: 1
-    bonus: -3 #time
+    bonus: -4 #time
   apr: 
     logo:
     arr:
