@@ -120,7 +120,7 @@
     arr:
     bonus:
   
-  bonus_q4: 
+  bonus_q4: 15 # $1M
 
 #### TREVOR ####
 
@@ -498,7 +498,7 @@
     arr:
     bonus:
   
-  bonus_q4: 
+  bonus_q4: 10 # 10 logos
 
 #### BOBBY ####
 
