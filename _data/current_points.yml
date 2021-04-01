@@ -234,8 +234,8 @@
   bonus_q3: 10 # 5 logos, $250k ARR
 
   mar: 
-    logo: 15
-    arr: 12
+    logo: 18
+    arr: 13
     bonus: 0
   apr: 
     logo:
