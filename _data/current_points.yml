@@ -618,7 +618,7 @@
   apr: 
     logo:
     arr:
-    bonus:
+    bonus: -1 #time
   may: 
     logo:
     arr:
