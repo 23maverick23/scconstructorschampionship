@@ -110,9 +110,9 @@
   mar: 
     logo: 3
     arr: 6
-    bonus:
+    bonus: 0
   apr: 
-    logo:
+    logo: 1
     arr:
     bonus:
   may: 
@@ -490,8 +490,8 @@
     arr: 5
     bonus: -4 #time
   apr: 
-    logo:
-    arr:
+    logo: 3
+    arr: 3
     bonus:
   may: 
     logo:
