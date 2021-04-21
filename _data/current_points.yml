@@ -488,11 +488,11 @@
   mar: 
     logo: 6
     arr: 5
-    bonus: -4 #time
+    bonus: -4 # time
   apr: 
     logo: 3
     arr: 3
-    bonus:
+    bonus: -1 # time
   may: 
     logo:
     arr:
