@@ -47,12 +47,12 @@
 
   mar: 
     logo: 1
-    arr:
-    bonus:
+    arr: 0
+    bonus: 0
   apr: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   may: 
     logo:
     arr:
@@ -112,15 +112,15 @@
     arr: 6
     bonus: 0
   apr: 
-    logo: 1
-    arr:
-    bonus:
+    logo: 4
+    arr: 1
+    bonus: 0
   may: 
     logo:
     arr:
     bonus:
   
-  bonus_q4: 15 # $1M
+  bonus_q4: 15 # $1M ARR
 
 #### TREVOR ####
 
@@ -175,15 +175,15 @@
     arr: 3
     bonus: -2 # time
   apr: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   may: 
     logo:
     arr:
     bonus:
   
-  bonus_q4: 
+  bonus_q4: 10 # 500k ARR
 
 #### MURPH ####
 
@@ -238,9 +238,9 @@
     arr: 13
     bonus: 0
   apr: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   may: 
     logo:
     arr:
@@ -297,13 +297,13 @@
   bonus_q3: 10 # 5 logos, $250k ARR
 
   mar: 
-    logo:
-    arr:
-    bonus:
+    logo: 0
+    arr: 0
+    bonus: 0
   apr: 
-    logo:
-    arr:
-    bonus:
+    logo: 3
+    arr: 0
+    bonus: 0
   may: 
     logo:
     arr:
@@ -423,13 +423,13 @@
   bonus_q3: 10 # $500k ARR
 
   mar: 
-    logo:
-    arr:
+    logo: 0
+    arr: 0
     bonus: -1 # time
   apr: 
-    logo:
-    arr:
-    bonus:
+    logo: 1
+    arr: 0
+    bonus: 0
   may: 
     logo:
     arr:
@@ -490,15 +490,15 @@
     arr: 5
     bonus: -4 # time
   apr: 
-    logo: 3
-    arr: 3
+    logo: 6
+    arr: 4
     bonus: -1 # time
   may: 
     logo:
     arr:
     bonus:
   
-  bonus_q4: 10 # 10 logos
+  bonus_q4: 20 # 10 logos, $500k ARR
 
 #### BOBBY ####
 
@@ -553,8 +553,8 @@
     arr: 1
     bonus: 0
   apr: 
-    logo:
-    arr:
+    logo: 0
+    arr: 0
     bonus: -1
   may: 
     logo:
@@ -616,12 +616,12 @@
     arr: 6
     bonus: 0
   apr: 
-    logo:
-    arr:
+    logo: 3
+    arr: 2
     bonus: -1 #time
   may: 
     logo:
     arr:
     bonus:
   
-  bonus_q4: 
+  bonus_q4: 10 # 500k ARR
