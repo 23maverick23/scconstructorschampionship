@@ -242,11 +242,11 @@
     arr: 0
     bonus: 0
   may: 
-    logo:
-    arr:
+    logo: 3
+    arr: 1
     bonus:
   
-  bonus_q4: 20 # 10 logos, $500k ARR
+  bonus_q4: 35 # 10 & 15 logos, $500k ARR
 
 #### HELLEN ####
 
