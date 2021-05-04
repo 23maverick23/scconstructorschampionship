@@ -87,17 +87,17 @@ $(document)
             {
                 name: "{{ row.name | capitalize }}",
                 data: [
-                    {{ r_jun }},
-                    {{ r_jun | plus: r_jul }},
+                    {{ r_jun | plus: b1 }},
+                    {{ r_jun | plus: r_jul | plus: b1 }},
                     {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 }},
-                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep }},
-                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: b2 }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: b2 }},
                     {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 }},
-                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec }},
-                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: b3 }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan | plus: b3 }},
                     {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan | plus: r_feb | plus: b3 }},
-                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan | plus: r_feb | plus: b3 | plus: r_mar }},
-                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan | plus: r_feb | plus: b3 | plus: r_mar | plus: r_apr }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan | plus: r_feb | plus: b3 | plus: r_mar | plus: b4 }},
+                    {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan | plus: r_feb | plus: b3 | plus: r_mar | plus: r_apr | plus: b4 }},
                     {{ r_jun | plus: r_jul | plus: r_aug | plus: b1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: b2 | plus: r_dec | plus: r_jan | plus: r_feb | plus: b3 | plus: r_mar | plus: r_apr | plus: r_may | plus: b4 }}
                 ]
             }{% unless forloop.last %},{% endunless %}
