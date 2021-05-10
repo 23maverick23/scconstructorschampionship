@@ -494,8 +494,8 @@
     arr: 4
     bonus: -1 # time
   may: 
-    logo:
-    arr:
+    logo: 3
+    arr: 2
     bonus: -1 # time
   
   bonus_q4: 20 # 10 logos, $500k ARR
