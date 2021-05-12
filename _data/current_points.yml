@@ -179,8 +179,8 @@
     arr: 0
     bonus: 0
   may: 
-    logo:
-    arr:
+    logo: 3
+    arr: 3
     bonus:
   
   bonus_q4: 10 # 500k ARR
@@ -431,8 +431,8 @@
     arr: 0
     bonus: 0
   may: 
-    logo: 3
-    arr:
+    logo: 6
+    arr: 1
     bonus:
   
   bonus_q4: 
