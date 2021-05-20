@@ -116,8 +116,8 @@
     arr: 1
     bonus: 0
   may: 
-    logo:
-    arr:
+    logo: 3
+    arr: 2
     bonus:
   
   bonus_q4: 15 # $1M ARR
