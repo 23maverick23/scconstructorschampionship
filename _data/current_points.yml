@@ -54,8 +54,8 @@
     arr: 0
     bonus: 0
   may: 
-    logo: 4
-    arr: 1
+    logo: 7
+    arr: 2
     bonus:
   
   bonus_q4: 
@@ -179,11 +179,11 @@
     arr: 0
     bonus: 0
   may: 
-    logo: 13
-    arr: 23
+    logo: 19
+    arr: 29
     bonus:
   
-  bonus_q4: 25 # 500k ARR, 1M ARR
+  bonus_q4: 40 # 500k ARR, 1M ARR, 15 logos
 
 #### MURPH ####
 
@@ -431,9 +431,9 @@
     arr: 0
     bonus: 0
   may: 
-    logo: 10
-    arr: 2
-    bonus:
+    logo: 13
+    arr: 4
+    bonus: 0 
   
   bonus_q4: 
 
