@@ -620,8 +620,8 @@
     arr: 2
     bonus: -1 #time
   may: 
-    logo:
-    arr:
+    logo: 6
+    arr: 5
     bonus: -1 # time
   
   bonus_q4: 10 # 500k ARR
