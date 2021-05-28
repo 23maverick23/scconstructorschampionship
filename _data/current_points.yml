@@ -58,7 +58,7 @@
     arr: 2
     bonus:
   
-  bonus_q4: 
+  bonus_q4: 10 # demo acct bugs
 
 #### LAURA ####
 - name: Laura
