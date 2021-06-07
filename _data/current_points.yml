@@ -498,7 +498,7 @@
     arr: 2
     bonus: -3 # time
   
-  bonus_q4: 20 # 10 logos, $500k ARR
+  bonus_q4: 0 # 10 logos, $500k ARR, -20 time infringement
 
 #### BOBBY ####
 
