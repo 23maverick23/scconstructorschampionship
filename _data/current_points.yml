@@ -54,11 +54,11 @@
     arr: 0
     bonus: 0
   may: 
-    logo: 7
-    arr: 2
-    bonus:
+    logo: 10
+    arr: 9
+    bonus: 0
   
-  bonus_q4: 10 # demo acct bugs
+  bonus_q4: 20 # demo acct bugs, $500k ARR
 
 #### LAURA ####
 - name: Laura
@@ -116,11 +116,11 @@
     arr: 1
     bonus: 0
   may: 
-    logo: 3
-    arr: 2
-    bonus:
+    logo: 9
+    arr: 3
+    bonus: 0
   
-  bonus_q4: 15 # $1M ARR
+  bonus_q4: 30 # $1M ARR, 15 logos
 
 #### TREVOR ####
 
@@ -181,7 +181,7 @@
   may: 
     logo: 19
     arr: 29
-    bonus:
+    bonus: 0
   
   bonus_q4: 40 # 500k ARR, 1M ARR, 15 logos
 
@@ -244,7 +244,7 @@
   may: 
     logo: 3
     arr: 1
-    bonus:
+    bonus: 0
   
   bonus_q4: 35 # 10 & 15 logos, $500k ARR
 
@@ -307,9 +307,9 @@
   may: 
     logo: 0
     arr: 0
-    bonus:
+    bonus: 0
   
-  bonus_q4: 
+  bonus_q4: 0
 
 #### Dean ####
 
@@ -372,7 +372,7 @@
     arr: 0
     bonus: 0
   
-  bonus_q4: 
+  bonus_q4: 0
 
 #### KIM ####
 
@@ -431,11 +431,11 @@
     arr: 0
     bonus: 0
   may: 
-    logo: 16
-    arr: 5
+    logo: 22
+    arr: 8
     bonus: 0 
   
-  bonus_q4: 
+  bonus_q4: 25 # 10 logos, 15 logos
 
 #### VINCE ####
 
@@ -557,11 +557,11 @@
     arr: 0
     bonus: -1
   may: 
-    logo: 3
-    arr: 1
+    logo: 6
+    arr: 2
     bonus: -1 # time
   
-  bonus_q4: 
+  bonus_q4: 10 # 10 logos
 
 #### DANIELLE ####
 
@@ -620,7 +620,7 @@
     arr: 2
     bonus: -1 #time
   may: 
-    logo: 6
+    logo: 3
     arr: 5
     bonus: -1 # time
   
