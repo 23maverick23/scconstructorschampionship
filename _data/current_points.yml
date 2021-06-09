@@ -54,11 +54,11 @@
     arr: 0
     bonus: 0
   may: 
-    logo: 10
-    arr: 9
+    logo: 13
+    arr: 18
     bonus: 0
   
-  bonus_q4: 20 # demo acct bugs, $500k ARR
+  bonus_q4: 30 # 10 demo acct bugs, $500k ARR, 10 logos
 
 #### LAURA ####
 - name: Laura
