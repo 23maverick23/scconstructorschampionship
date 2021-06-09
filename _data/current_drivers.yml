@@ -4,6 +4,10 @@
   ln: https://www.linkedin.com/in/john-szabo-85054b14/
   image: assets/images/headshots/john.jpg
   archive:
+    - year: 2021
+      place: 5th-T
+      color: 
+      points: 121
     - year: 2020
       place: 2nd
       color: gray
@@ -15,6 +19,10 @@
   ln: https://www.linkedin.com/in/laura-van-lenten-cpa-71b85922/
   image: assets/images/headshots/laura.jpg
   archive:
+    - year: 2021
+      place: 2nd
+      color: gray
+      points: 167
     - year: 2020
       place: 1st
       color: yellow
@@ -26,6 +34,10 @@
   ln: https://www.linkedin.com/in/murphyryanp/
   image: assets/images/headshots/murph.jpg
   archive:
+    - year: 2021
+      place: 5th-T
+      color: 
+      points: 121
     - year: 2020
       place: 7th
       color: 
@@ -37,6 +49,10 @@
   ln: https://www.linkedin.com/in/trevor-rancourt-2b999b65/
   image: assets/images/headshots/trevor.jpg
   archive:
+    - year: 2021
+      place: 1st
+      color: yellow
+      points: 178
     - year: 2020
       place: 3rd
       color: brown
@@ -48,6 +64,10 @@
   ln: https://www.linkedin.com/in/hellen-mwangoka-netsuiteexpert/
   image: assets/images/headshots/hellen.jpg
   archive:
+    - year: 2021
+      place: 9th
+      color: 
+      points: 47
     - year: 2020
       place: 9th
       color:
@@ -59,6 +79,10 @@
   ln: https://www.linkedin.com/in/deanherback/
   image: assets/images/headshots/dean.jpg
   archive:
+    - year: 2021
+      place: DNF
+      color: 
+      points: 129
     - year: 2020
       place: 4th
       color: 
@@ -70,6 +94,10 @@
   ln: https://www.linkedin.com/in/kimberlyalawton/
   image: assets/images/headshots/kim.jpg
   archive:
+    - year: 2021
+      place: 4th
+      color: 
+      points: 124
     - year: 2020
       place: 5th
       color: 
@@ -81,6 +109,10 @@
   ln: https://www.linkedin.com/in/vince-kroll-cpa-54102677/
   image: assets/images/headshots/vince.jpg
   archive:
+     - year: 2021
+      place: 3rd
+      color: brown
+      points: 131
     - year: 2020
       place: 10th
       color: 
@@ -92,6 +124,10 @@
   ln: https://www.linkedin.com/in/bobby-shores-111a4a13/
   image: assets/images/headshots/bobby.jpg
   archive:
+    - year: 2021
+      place: 7th
+      color: 
+      points: 95
     - year: 2020
       place: 8th
       color: 
@@ -103,6 +139,10 @@
   ln: https://www.linkedin.com/in/daniellelau1/
   image: assets/images/headshots/danielle.jpg
   archive:
+    - year: 2021
+      place: 8th
+      color: 
+      points: 90
     - year: 2020
       place: 6th
       color: 
