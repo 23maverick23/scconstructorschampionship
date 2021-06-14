@@ -557,8 +557,8 @@
     arr: 0
     bonus: -1
   may: 
-    logo: 6
-    arr: 2
+    logo: 9
+    arr: 5
     bonus: -1 # time
   
   bonus_q4: 10 # 10 logos
