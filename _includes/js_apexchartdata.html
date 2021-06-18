@@ -11,35 +11,35 @@ $(document)
         var chartData = [
             {% for row in site.data.current_points %}
 
-            {% assign r_jun = row.jun.logo | plus: row.jun.arr | plus: row.jun.bonus %}
-            {% assign r_jul = row.jul.logo | plus: row.jul.arr | plus: row.jul.bonus %}
-            {% assign r_aug = row.aug.logo | plus: row.aug.arr | plus: row.aug.bonus %}
-            {% assign r_sep = row.sep.logo | plus: row.sep.arr | plus: row.sep.bonus %}
-            {% assign r_oct = row.oct.logo | plus: row.oct.arr | plus: row.oct.bonus %}
-            {% assign r_nov = row.nov.logo | plus: row.nov.arr | plus: row.nov.bonus %}
-            {% assign r_dec = row.dec.logo | plus: row.dec.arr | plus: row.dec.bonus %}
-            {% assign r_jan = row.jan.logo | plus: row.jan.arr | plus: row.jan.bonus %}
-            {% assign r_feb = row.feb.logo | plus: row.feb.arr | plus: row.feb.bonus %}
-            {% assign r_mar = row.mar.logo | plus: row.mar.arr | plus: row.mar.bonus %}
-            {% assign r_apr = row.apr.logo | plus: row.apr.arr | plus: row.apr.bonus %}
-            {% assign r_may = row.may.logo | plus: row.may.arr | plus: row.may.bonus %}
+            {% assign r_jun = row.jun_logo | plus: row.jun_arr | plus: row.jun_bonus %}
+            {% assign r_jul = row.jul_logo | plus: row.jul_arr | plus: row.jul_bonus %}
+            {% assign r_aug = row.aug_logo | plus: row.aug_arr | plus: row.aug_bonus %}
+            {% assign r_sep = row.sep_logo | plus: row.sep_arr | plus: row.sep_bonus %}
+            {% assign r_oct = row.oct_logo | plus: row.oct_arr | plus: row.oct_bonus %}
+            {% assign r_nov = row.nov_logo | plus: row.nov_arr | plus: row.nov_bonus %}
+            {% assign r_dec = row.dec_logo | plus: row.dec_arr | plus: row.dec_bonus %}
+            {% assign r_jan = row.jan_logo | plus: row.jan_arr | plus: row.jan_bonus %}
+            {% assign r_feb = row.feb_logo | plus: row.feb_arr | plus: row.feb_bonus %}
+            {% assign r_mar = row.mar_logo | plus: row.mar_arr | plus: row.mar_bonus %}
+            {% assign r_apr = row.apr_logo | plus: row.apr_arr | plus: row.apr_bonus %}
+            {% assign r_may = row.may_logo | plus: row.may_arr | plus: row.may_bonus %}
 
-            {% assign logo_q1 = row.jun.logo | plus: row.jul.logo | plus: row.aug.logo %}
-            {% assign logo_q2 = row.sep.logo | plus: row.oct.logo | plus: row.nov.logo %}
-            {% assign logo_q3 = row.dec.logo | plus: row.jan.logo | plus: row.feb.logo %}
-            {% assign logo_q4 = row.mar.logo | plus: row.apr.logo | plus: row.may.logo %}
+            {% assign logo_q1 = row.jun_logo | plus: row.jul_logo | plus: row.aug_logo %}
+            {% assign logo_q2 = row.sep_logo | plus: row.oct_logo | plus: row.nov_logo %}
+            {% assign logo_q3 = row.dec_logo | plus: row.jan_logo | plus: row.feb_logo %}
+            {% assign logo_q4 = row.mar_logo | plus: row.apr_logo | plus: row.may_logo %}
             {% assign logo_ytd = logo_q1 | plus: logo_q2 | plus: logo_q3 | plus: logo_q4 %}
 
-            {% assign rev_q1 = row.jun.arr | plus: row.jul.arr | plus: row.aug.arr %}
-            {% assign rev_q2 = row.sep.arr | plus: row.oct.arr | plus: row.nov.arr %}
-            {% assign rev_q3 = row.dec.arr | plus: row.jan.arr | plus: row.feb.arr %}
-            {% assign rev_q4 = row.mar.arr | plus: row.apr.arr | plus: row.may.arr %}
+            {% assign rev_q1 = row.jun_arr | plus: row.jul_arr | plus: row.aug_arr %}
+            {% assign rev_q2 = row.sep_arr | plus: row.oct_arr | plus: row.nov_arr %}
+            {% assign rev_q3 = row.dec_arr | plus: row.jan_arr | plus: row.feb_arr %}
+            {% assign rev_q4 = row.mar_arr | plus: row.apr_arr | plus: row.may_arr %}
             {% assign rev_ytd = rev_q1 | plus: rev_q2 | plus: rev_q3 | plus: rev_q4 %}
 
-            {% assign bon_q1 = row.jun.bonus | plus: row.jul.bonus | plus: row.aug.bonus %}
-            {% assign bon_q2 = row.sep.bonus | plus: row.oct.bonus | plus: row.nov.bonus %}
-            {% assign bon_q3 = row.dec.bonus | plus: row.jan.bonus | plus: row.feb.bonus %}
-            {% assign bon_q4 = row.mar.bonus | plus: row.apr.bonus | plus: row.may.bonus %}
+            {% assign bon_q1 = row.jun_bonus| plus: row.jul_bonus| plus: row.aug_bonus %}
+            {% assign bon_q2 = row.sep_bonus| plus: row.oct_bonus| plus: row.nov_bonus %}
+            {% assign bon_q3 = row.dec_bonus| plus: row.jan_bonus| plus: row.feb_bonus %}
+            {% assign bon_q4 = row.mar_bonus| plus: row.apr_bonus| plus: row.may_bonus %}
             {% assign bon_ytd = bon_q1 | plus: bon_q2 | plus: bon_q3 | plus: bon_q4 %}
 
             {% assign b1 = row.bonus_q1 %}
@@ -63,21 +63,21 @@ $(document)
         var lineData = [
             {% for row in site.data.current_points %}
 
-            {% assign r_jun = row.jun.logo | plus: row.jun.arr | plus: row.jun.bonus %}
-            {% assign r_jul = row.jul.logo | plus: row.jul.arr | plus: row.jul.bonus %}
-            {% assign r_aug = row.aug.logo | plus: row.aug.arr | plus: row.aug.bonus %}
+            {% assign r_jun = row.jun_logo | plus: row.jun_arr | plus: row.jun_bonus %}
+            {% assign r_jul = row.jul_logo | plus: row.jul_arr | plus: row.jul_bonus %}
+            {% assign r_aug = row.aug_logo | plus: row.aug_arr | plus: row.aug_bonus %}
 
-            {% assign r_sep = row.sep.logo | plus: row.sep.arr | plus: row.sep.bonus %}
-            {% assign r_oct = row.oct.logo | plus: row.oct.arr | plus: row.oct.bonus %}
-            {% assign r_nov = row.nov.logo | plus: row.nov.arr | plus: row.nov.bonus %}
+            {% assign r_sep = row.sep_logo | plus: row.sep_arr | plus: row.sep_bonus %}
+            {% assign r_oct = row.oct_logo | plus: row.oct_arr | plus: row.oct_bonus %}
+            {% assign r_nov = row.nov_logo | plus: row.nov_arr | plus: row.nov_bonus %}
 
-            {% assign r_dec = row.dec.logo | plus: row.dec.arr | plus: row.dec.bonus %}
-            {% assign r_jan = row.jan.logo | plus: row.jan.arr | plus: row.jan.bonus %}
-            {% assign r_feb = row.feb.logo | plus: row.feb.arr | plus: row.feb.bonus %}
+            {% assign r_dec = row.dec_logo | plus: row.dec_arr | plus: row.dec_bonus %}
+            {% assign r_jan = row.jan_logo | plus: row.jan_arr | plus: row.jan_bonus %}
+            {% assign r_feb = row.feb_logo | plus: row.feb_arr | plus: row.feb_bonus %}
 
-            {% assign r_mar = row.mar.logo | plus: row.mar.arr | plus: row.mar.bonus %}
-            {% assign r_apr = row.apr.logo | plus: row.apr.arr | plus: row.apr.bonus %}
-            {% assign r_may = row.may.logo | plus: row.may.arr | plus: row.may.bonus %}
+            {% assign r_mar = row.mar_logo | plus: row.mar_arr | plus: row.mar_bonus %}
+            {% assign r_apr = row.apr_logo | plus: row.apr_arr | plus: row.apr_bonus %}
+            {% assign r_may = row.may_logo | plus: row.may_arr | plus: row.may_bonus %}
 
             {% assign b1 = row.bonus_q1 %}
             {% assign b2 = row.bonus_q2 %}
@@ -136,7 +136,7 @@ $(document)
         }
         console.log("o=" + o);
         for (var i in lineData) {
-          lineData[i].data = lineData[i].data.slice(0, o);
+          lineData[i].data = lineData[i].data.slice(0, o+1);  // added +1 to include current month
         }
 
         console.log("lineData: " + JSON.stringify(lineData));
@@ -195,20 +195,6 @@ $(document)
             });
           }, 200);
         }
-
-        $('.stage').on('click', function() {
-          var $this = $(this);
-          
-          $this.addClass('active');
-          $this.children('i').addClass('transition hidden');
-
-          $this.siblings().each(function(el) {
-            $(this).removeClass('active');
-            $(this).children('i').removeClass('transition hidden');
-          });
-
-          reDraw();
-        });
 
         
         // APEX DEMO
@@ -291,69 +277,6 @@ $(document)
         var chart_bar = new ApexCharts(document.querySelector("#chart-bar"), options);
         chart_bar.render();
 
-        /** ANOTHER CHART */
-
-        var options2 = {
-          series: chartDataPer,
-          colors: colors,
-          legend: {
-            show: true,
-            position: 'bottom',
-            fontSize: '16px',
-            labels: {
-                colors: '#bdc3c7'
-            }
-          },
-          chart: {
-          height: 500,
-          type: 'radialBar',
-          toolbar: {
-            show: true
-          }
-        },
-        plotOptions: {
-          radialBar: {
-            track: {
-              show: true,
-              background: '#333333',
-              opacity: 1
-            },
-            dataLabels: {
-              style: {
-                colors: '#bdc3c7'
-              },
-              name: {
-                fontSize: '36px',
-                offset: -15
-              },
-              value: {
-                fontSize: '36px'
-              },
-              total: {
-                show: true,
-                label: 'Leader Points',
-                color: '#bdc3c7',
-                formatter: function (w) {
-                  // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-                  return chartDataMax;
-                }
-              }
-            }
-          }
-        },
-        stroke: {
-            lineCap: "round"
-          },
-        labels: chartLabels,
-        };
-
-        var chart_radial = new ApexCharts(document.querySelector("#chart-radial"), options2);
-        chart_radial.render();
-
-        var charts = [
-                chart_bar
-        ];
-
         /** FANCY CHART */
 
         var options3 = {
@@ -396,7 +319,7 @@ $(document)
         }
         };
 
-        var chart_fancy = new ApexCharts(document.querySelector("#chart-fancy-2"), options3);
+        var chart_fancy = new ApexCharts(document.querySelector("#chart-line-trend"), options3);
         chart_fancy.render();
 
     })

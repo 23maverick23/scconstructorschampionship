@@ -28,21 +28,6 @@
       color: yellow
       points: 142
 
-- name: Kim
-  team: Wonder Bread
-  flag: gr
-  ln: https://www.linkedin.com/in/kimberlyalawton/
-  image: assets/images/headshots/kim.jpg
-  archive:
-    - year: 2021
-      place: 4th
-      color: 
-      points: 124
-    - year: 2020
-      place: 5th
-      color: 
-      points: 99
-
 - name: Murph
   team: Improv
   flag: ie
@@ -102,6 +87,21 @@
       place: 4th
       color: 
       points: 107
+
+- name: Kim
+  team: Wonder Bread
+  flag: gr
+  ln: https://www.linkedin.com/in/kimberlyalawton/
+  image: assets/images/headshots/kim.jpg
+  archive:
+    - year: 2021
+      place: 4th
+      color: 
+      points: 124
+    - year: 2020
+      place: 5th
+      color: 
+      points: 99
 
 - name: Vince
   team: Toro Rosso

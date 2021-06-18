@@ -1,46 +1,29 @@
 - name: Achievement Bonus
   id: achievement
   rules:
-    - title: Logo Achievement
+    - title: Lead Revenue Achivement
+      image: bonus
+      description: <b>5 pts</b> for reaching $250k ARR; <b>10 pts</b> for reaching $500k ARR; <b>15 pts</b> for reaching $1M ARR.
+
+    - title: Lead Logo Achievement
       image: new
       description: <b>5 pts</b> for reaching 5 logos; <b>10 pts</b> for reaching 10 logos; <b>15 pts</b> for reaching 15 logos.
 
-    - title: Revenue Achivement
-      image: bonus
-      description: <b>5 pts</b> for reaching $250k ARR; <b>10 pts</b> for reaching $500k ARR; <b>15 pts</b> for reaching $1M ARR.
+    - title: Total Engagement Achievement
+      image: help
+      description: <b>5 pts</b> for reaching 40 engagements; <b>10 pts</b> for reaching 50 engagements; <b>15 pts</b> for reaching 60 engagements.
 
 - name: Q1 Bonus
   id: q1
   rules:
-    - title: Early Close 
-      image: early
-      description: <b>2x deal pts</b> for deals that close outside of the last 7 days of the last month in a quarter.
+    - title: Guess the Weight 
+      image: weight
+      description: <b>25 pts, 18 pts, 15 pts, 12 pts, 10 pts, 8 pts, 6 pts, 4 pts, 2 pts, 1 pts</b> for closest guess, down to the ounce.
 
-    - title: Swiss Army Knife
-      image: knife
-      description: <b>2x deal pts</b> for deals where you lead and sell both the main SKU and an approved add-on <em>(OpenAir, SuitePeople, SuiteBilling)</em>.
+    - title: Guess the Date
+      image: date
+      description: <b>10 pts - 1st, 8 pts - 2nd, 5 pts - 3rd</b> for the closest guess.
 
-- name: Q2 Bonus
-  id: q2
-  rules:
-    - title: Ghosted
-      image: ghost
-      description: <b>1x deal pts</b> for deals you shadow and provide a peer feedback scorecard <em>(minimum 3 pts per scorecard)</em>.
-
-    - title: TBD
-      image: question
-      description: To be voted on by the team...
-
-- name: Q3 Bonus
-  id: q3
-  rules:
-    - title: Chicken Tendies
-      image: tendies
-      description: Lock in your ticker symbol in February. Top 3 performers get <b>3x their quarterly points total</b> at the end of Q3.
- 
-- name: Q4 Bonus
-  id: q4
-  rules:
-    - title: The Tortise & the Hare
-      image: tortoise
-      description: Slow and steady wins the race. Longest "Days Open" deal that closes in Q4 gets <b>3x their deal points</b> for both Logo and ARR.
+    - title: Guess the Sex
+      image: sex
+      description: <b>5 pts</b> for anyone who guesses correctly.

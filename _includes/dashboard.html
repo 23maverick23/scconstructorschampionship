@@ -130,154 +130,20 @@
 <div class="ui inverted vertical center aligned dashchart segment" id="stats">
 	<div class="ui dashboard stackable internally celled grid">
 		<div class="row">
-			<div class="six wide column">
+			<div class="sixteen wide column">
 				<div class="ui segment alt">
-					<div id="chart-radial"></div>
-				</div>
-			</div>
-			<div class="ten wide column">
-				<div class="ui segment alt">
-					<div id="chart-fancy-2"></div>
+					<div id="chart-line-trend"></div>
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 	<div class="ui dashboard grid">
-
-		<h4 class="ui horizontal inverted divider">
-		Current Fiscal Year
-		</h4>
-
 		<div class="row">
-			<div class="column">
+			<div class="sixteen wide column">
 				<div class="ui segment alt">
-					<div class="stage">
-						<i class="right angle remove icon"></i>
-						<div class="ct chart" id="chart-bar"></div>
-						<div class="rotated title">
-							<h3>Total Points by SC</h3>
-						</div>
-					</div>
-					<div class="stage active">
-						<i class="left angle remove icon transition hidden"></i>
-						<div class="content">
-							<div class="ui huge left floated statistic">
-								<div class="value" data-tooltip="Points summary for Fiscal Year" data-position="top center">
-									{{ ytd }}
-								</div>
-								<div class="label">
-									points YTD
-								</div>
-								<div class="label" data-tooltip="Logos | ARR | Bonus" data-position="bottom center">
-									<i class="pink user plus icon"></i>
-									<span>{{ logo_ytd }}</span> | 
-									<i class="green money bill alternate outline icon"></i>
-									<span>{{ rev_ytd }}</span> |
-									<i class="yellow trophy icon"></i>
-									<span>{{ btd }}</span>
-								</div>
-							</div>
-							<div class="ui small grey statistics">
-								<div class="statistic">
-									<div class="value" data-tooltip="Points summary for Q1" data-position="top center">
-										{{ q1 }}
-									</div>
-									<div class="label">
-										Q1
-									</div>
-									<div class="label" data-tooltip="Logos | ARR | Bonus" data-position="bottom center">
-										<i class="pink user plus icon"></i>
-										<span>{{ logo_q1 }}</span> | 
-										<i class="green money bill alternate outline icon"></i>
-										<span>{{ rev_q1 }}</span> |
-										<i class="yellow trophy icon"></i>
-										<span>{{ b1 }}</span>
-									</div>
-								</div>
-								<div class="statistic">
-									<div class="value" data-tooltip="Points summary for Q2" data-position="top center">
-										{{ q2 }}
-										{% if q2 > 0 %}
-										<small class="{% if g_q2 > 0 %}positive{% elsif g_q2 < 0 %}negative{% else %}neutral{% endif %}">
-											<i class="small icons">
-												<i class="green sort up icon"></i>
-												<i class="red sort down icon"></i>
-											</i>
-											{{ g_q2 }}%
-										</small>
-										{% endif %}
-									</div>
-									<div class="label">
-										Q2
-									</div>
-									<div class="label" data-tooltip="Logos | ARR | Bonus" data-position="bottom center">
-										<i class="pink user plus icon"></i>
-										<span>{{ logo_q2 }}</span> | 
-										<i class="green money bill alternate outline icon"></i>
-										<span>{{ rev_q2 }}</span>    |
-										<i class="yellow trophy icon"></i>
-										<span>{{ b2 }}</span>           
-									</div>
-								</div>
-								<div class="statistic">
-									<div class="value" data-tooltip="Points summary for Q3" data-position="top center">
-										{{ q3 }}
-										{% if q3 > 0 %}  
-										<small class="{% if g_q3 > 0 %}positive{% elsif g_q3 < 0 %}negative{% else %}neutral{% endif %}">
-											<i class="small icons">
-												<i class="green sort up icon"></i>
-												<i class="red sort down icon"></i>
-											</i>
-											{{ g_q3 }}%
-										</small>
-										{% endif %}
-									</div>
-									<div class="label">
-										Q3
-									</div>
-									<div class="label" data-tooltip="Logos | ARR | Bonus" data-position="bottom center">
-										<i class="pink user plus icon"></i>
-										<span>{{ logo_q3 }}</span> | 
-										<i class="green money bill alternate outline icon"></i>
-										<span>{{ rev_q3 }}</span>   |
-										<i class="yellow trophy icon"></i>
-										<span>{{ b3 }}</span>             
-									</div>
-								</div>
-								<div class="statistic">
-									<div class="value" data-tooltip="Points summary for Q4" data-position="top center">
-										{{ q4 }}
-										{% if q4 > 0 %}
-										<small class="{% if g_q4 > 0 %}positive{% elsif g_q4 < 0 %}negative{% else %}neutral{% endif %}">
-											<i class="small icons">
-												<i class="green sort up icon"></i>
-												<i class="red sort down icon"></i>
-											</i>
-											{{ g_q4 }}%
-										</small>
-										{% endif %}
-									</div>
-									<div class="label">
-										Q4
-									</div>
-									<div class="label" data-tooltip="Logos | ARR | Bonus" data-position="bottom center">
-										<i class="pink user plus icon"></i>
-										<span>{{ logo_q4 }}</span> | 
-										<i class="green money bill alternate outline icon"></i>
-										<span>{{ rev_q4 }}</span>       |
-										<i class="yellow trophy icon"></i>
-										<span>{{ b4 }}</span>          
-									</div>
-								</div>
-							</div>            
-						</div>
-						<div class="rotated title">
-							<h3>Quarterly Team Stats</h3>
-						</div>
-					</div>
-				</div>      
+					<canvas id="chart-bar-rank"></canvas>
+				</div>
 			</div>
 		</div>  
 	</div>

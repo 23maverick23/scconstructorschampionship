@@ -16,7 +16,6 @@
     <link rel="icon" href="{{ site.icon }}">
     
     <link rel="stylesheet" href="{{ site.cdn.semantic-css }}" />
-    <link rel="stylesheet" href="{{ site.cdn.chart-css }}" />
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css?{{ site.time | date: '%s%N' }}">
 
     <script src="{{ site.cdn.jquery }}"></script>
@@ -26,11 +25,7 @@
     
     <script src="{{ site.baseurl }}/assets/js/main.js?{{ site.time | date: '%s%N' }}"></script>
 
-    {% include js_tableplugin.html %}
-
-    {% comment %}
-    {% include js_chartdata.html %}
-    {% endcomment %}
-    
+    {% include js_tableplugin.html %}  
     {% include js_apexchartdata.html %}
+    {% include js_chartdata.html %}
 </head>
