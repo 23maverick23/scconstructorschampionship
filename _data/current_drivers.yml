@@ -132,18 +132,3 @@
       place: 8th
       color: 
       points: 54
-
-- name: Danielle
-  team: Ranger
-  flag: nl
-  ln: https://www.linkedin.com/in/daniellelau1/
-  image: assets/images/headshots/danielle.jpg
-  archive:
-    - year: 2021
-      place: 8th
-      color: 
-      points: 90
-    - year: 2020
-      place: 6th
-      color: 
-      points: 88
