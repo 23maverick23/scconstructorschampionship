@@ -27,3 +27,18 @@
     - title: Guess the Sex
       image: sex
       description: <b>5 pts</b> for anyone who guesses correctly.
+
+- name: Q2 Bonus
+  id: q2
+  rules:
+    - title: NSPB Pitch
+      image: pitch
+      description: <b>10 pts</b> for anyone who completes an NSPB Pitch during a 1on1 in the month of September.
+
+    - title: HCM Self-Eval
+      image: evaluation
+      description: <b>10 pts</b> for anyone who gets their HCM task done before 9/14 (5 pts if you complete by 9/17).
+
+    - title: NFL Spread
+      image: football
+      description: <b>5 pts</b> for each game you guess correctly during Q2.
