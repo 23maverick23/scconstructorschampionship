@@ -44,26 +44,88 @@
                         <div class="extra content">
 
                             {% assign total_points = 0 %}
+
+                            {% assign t_jun = 0 %}
+                            {% assign t_jul = 0 %}
+                            {% assign t_aug = 0 %}
+                            {% assign t_sep = 0 %}
+                            {% assign t_oct = 0 %}
+                            {% assign t_nov = 0 %}
+                            {% assign t_dec = 0 %}
+                            {% assign t_jan = 0 %}
+                            {% assign t_feb = 0 %}
+                            {% assign t_mar = 0 %}
+                            {% assign t_apr = 0 %}
+                            {% assign t_may = 0 %}
+                            {% assign t_q1 = 0 %}
+                            {% assign t_q2 = 0 %}
+                            {% assign t_q3 = 0 %}
+                            {% assign t_q4 = 0 %}
+                            {% assign t_btd = 0 %}
+                            {% assign t_ytd = 0 %}
+
+                            {% assign logo_q1 = 0 %}
+                            {% assign logo_q2 = 0 %}
+                            {% assign logo_q3 = 0 %}
+                            {% assign logo_q4 = 0 %}
+                            {% assign logo_ytd = 0 %}
+
+                            {% assign rev_q1 = 0 %}
+                            {% assign rev_q2 = 0 %}
+                            {% assign rev_q3 = 0 %}
+                            {% assign rev_q4 = 0 %}
+                            {% assign rev_ytd = 0 %}
+
+                            {% assign bon_q1 = 0 %}
+                            {% assign bon_q2 = 0 %}
+                            {% assign bon_q3 = 0 %}
+                            {% assign bon_q4 = 0 %}
+                            {% assign bon_ytd = 0 %}
+
                             {% for row in site.data.current_points %}
 
-                            {% assign r_jun = row.jun.logo | plus: row.jun.arr | plus: row.jun.bonus %}
-                            {% assign r_jul = row.jul.logo | plus: row.jul.arr | plus: row.jul.bonus %}
-                            {% assign r_aug = row.aug.logo | plus: row.aug.arr | plus: row.aug.bonus %}
-                            {% assign r_sep = row.sep.logo | plus: row.sep.arr | plus: row.sep.bonus %}
-                            {% assign r_oct = row.oct.logo | plus: row.oct.arr | plus: row.oct.bonus %}
-                            {% assign r_nov = row.nov.logo | plus: row.nov.arr | plus: row.nov.bonus %}
-                            {% assign r_dec = row.dec.logo | plus: row.dec.arr | plus: row.dec.bonus %}
-                            {% assign r_jan = row.jan.logo | plus: row.jan.arr | plus: row.jan.bonus %}
-                            {% assign r_feb = row.feb.logo | plus: row.feb.arr | plus: row.feb.bonus %}
-                            {% assign r_mar = row.mar.logo | plus: row.mar.arr | plus: row.mar.bonus %}
-                            {% assign r_apr = row.apr.logo | plus: row.apr.arr | plus: row.apr.bonus %}
-                            {% assign r_may = row.may.logo | plus: row.may.arr | plus: row.may.bonus %}
+                            {% assign r_jun = row.jun_logo | plus: row.jun_arr | plus: row.jun_bonus %}
+                            {% assign r_jul = row.jul_logo | plus: row.jul_arr | plus: row.jul_bonus %}
+                            {% assign r_aug = row.aug_logo | plus: row.aug_arr | plus: row.aug_bonus %}
+                            {% assign r_sep = row.sep_logo | plus: row.sep_arr | plus: row.sep_bonus %}
+                            {% assign r_oct = row.oct_logo | plus: row.oct_arr | plus: row.oct_bonus %}
+                            {% assign r_nov = row.nov_logo | plus: row.nov_arr | plus: row.nov_bonus %}
+                            {% assign r_dec = row.dec_logo | plus: row.dec_arr | plus: row.dec_bonus %}
+                            {% assign r_jan = row.jan_logo | plus: row.jan_arr | plus: row.jan_bonus %}
+                            {% assign r_feb = row.feb_logo | plus: row.feb_arr | plus: row.feb_bonus %}
+                            {% assign r_mar = row.mar_logo | plus: row.mar_arr | plus: row.mar_bonus %}
+                            {% assign r_apr = row.apr_logo | plus: row.apr_arr | plus: row.apr_bonus %}
+                            {% assign r_may = row.may_logo | plus: row.may_arr | plus: row.may_bonus %}
 
-                            {% assign q1 = r_jun | plus: r_jul | plus: r_aug | plus: row.bonus_q1 %}
-                            {% assign q2 = r_sep | plus: r_oct | plus: r_nov | plus: row.bonus_q2 %}
-                            {% assign q3 = r_dec | plus: r_jan | plus: r_feb | plus: row.bonus_q3 %}
-                            {% assign q4 = r_mar | plus: r_apr | plus: r_may | plus: row.bonus_q4 %}
+                            {% assign logo_q1 = row.jun_logo | plus: row.jul_logo | plus: row.aug_logo %}
+                            {% assign logo_q2 = row.sep_logo | plus: row.oct_logo | plus: row.nov_logo %}
+                            {% assign logo_q3 = row.dec_logo | plus: row.jan_logo | plus: row.feb_logo %}
+                            {% assign logo_q4 = row.mar_logo | plus: row.apr_logo | plus: row.may_logo %}
+                            {% assign logo_ytd = logo_q1 | plus: logo_q2 | plus: logo_q3 | plus: logo_q4 %}
 
+                            {% assign rev_q1 = row.jun_arr | plus: row.jul_arr | plus: row.aug_arr %}
+                            {% assign rev_q2 = row.sep_arr | plus: row.oct_arr | plus: row.nov_arr %}
+                            {% assign rev_q3 = row.dec_arr | plus: row.jan_arr | plus: row.feb_arr %}
+                            {% assign rev_q4 = row.mar_arr | plus: row.apr_arr | plus: row.may_arr %}
+                            {% assign rev_ytd = rev_q1 | plus: rev_q2 | plus: rev_q3 | plus: rev_q4 %}
+
+                            {% assign bon_q1 = row.jun_bonus | plus: row.jul_bonus | plus: row.aug_bonus %}
+                            {% assign bon_q2 = row.sep_bonus | plus: row.oct_bonus | plus: row.nov_bonus %}
+                            {% assign bon_q3 = row.dec_bonus | plus: row.jan_bonus | plus: row.feb_bonus %}
+                            {% assign bon_q4 = row.mar_bonus | plus: row.apr_bonus | plus: row.may_bonus %}
+                            {% assign bon_ytd = bon_q1 | plus: bon_q2 | plus: bon_q3 | plus: bon_q4 %}
+
+                            {% assign b1 = row.bonus_q1 %}
+                            {% assign b2 = row.bonus_q2 %}
+                            {% assign b3 = row.bonus_q3 %}
+                            {% assign b4 = row.bonus_q4 %}
+
+                            {% assign q1 = logo_q1 | plus: rev_q1 | plus: bon_q1 | plus: b1 %}
+                            {% assign q2 = logo_q2 | plus: rev_q2 | plus: bon_q2 | plus: b2 %}
+                            {% assign q3 = logo_q3 | plus: rev_q3 | plus: bon_q3 | plus: b3 %}
+                            {% assign q4 = logo_q4 | plus: rev_q4 | plus: bon_q4 | plus: b4 %}
+
+                            {% assign btd = b1 | plus: b2 | plus: b3 | plus: b4 %}
                             {% assign ytd = q1 | plus: q2 | plus: q3 | plus: q4 %}
 
                             {% if driver.name == row.name %}
