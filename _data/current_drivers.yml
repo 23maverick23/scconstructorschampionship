@@ -19,6 +19,10 @@
   ln: https://www.linkedin.com/in/laura-van-lenten-cpa-71b85922/
   image: assets/images/headshots/laura.jpg
   archive:
+    - year: 2022
+      place: DNF
+      color: 
+      points: 84
     - year: 2021
       place: 2nd
       color: gray
@@ -132,3 +136,18 @@
       place: 8th
       color: 
       points: 54
+
+- name: Doug
+  team: Utrect Alumni
+  flag: nl
+  ln: https://www.linkedin.com/in/dougstepina/
+  image: assets/images/headshots/john.jpg
+  archive:
+    - year: 2021
+      place: n/a
+      color: 
+      points: 
+    - year: 2020
+      place: n/a
+      color: 
+      points: 
