@@ -16,20 +16,8 @@
 
 {% for row in site.data.current_points %}
 {% capture row_name %}{{ row.name | capitalize }}{% endcapture %}
-{% assign r_jun = row.jun_logo | plus: row.jun_arr | plus: row.jun_bonus %}
-{% assign r_jul = row.jul_logo | plus: row.jul_arr | plus: row.jul_bonus %}
-{% assign r_aug = row.aug_logo | plus: row.aug_arr | plus: row.aug_bonus %}
-{% assign r_sep = row.sep_logo | plus: row.sep_arr | plus: row.sep_bonus %}
-{% assign r_oct = row.oct_logo | plus: row.oct_arr | plus: row.oct_bonus %}
-{% assign r_nov = row.nov_logo | plus: row.nov_arr | plus: row.nov_bonus %}
-{% assign r_dec = row.dec_logo | plus: row.dec_arr | plus: row.dec_bonus %}
-{% assign r_jan = row.jan_logo | plus: row.jan_arr | plus: row.jan_bonus %}
-{% assign r_feb = row.feb_logo | plus: row.feb_arr | plus: row.feb_bonus %}
-{% assign r_mar = row.mar_logo | plus: row.mar_arr | plus: row.mar_bonus %}
-{% assign r_apr = row.apr_logo | plus: row.apr_arr | plus: row.apr_bonus %}
-{% assign r_may = row.may_logo | plus: row.may_arr | plus: row.may_bonus %}
 
-{% assign meta_ytd = r_jun | plus: r_jul | plus: r_aug | plus: row.bonus_q1 | plus: r_sep | plus: r_oct | plus: r_nov | plus: row.bonus_q2 | plus: r_dec | plus: r_jan | plus: r_feb | plus: row.bonus_q3 | plus: r_mar | plus: r_apr | plus: r_may | plus: row.bonus_q4 %}
+    {% assign meta_ytd = row.q1 | plus: row.q2 | plus: row.q3 | plus: row.q4 | row.ach %}
 
     {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 
