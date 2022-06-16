@@ -3,42 +3,31 @@
   rules:
     - title: Lead Revenue Achivement
       image: bonus
-      description: <b>5 pts</b> for reaching $250k ARR; <b>10 pts</b> for reaching $500k ARR; <b>15 pts</b> for reaching $1M ARR.
+      description: <b>5 pts</b> for reaching $500k ARR; <b>10 pts</b> for reaching $1M ARR; <b>15 pts</b> for reaching $1.5M ARR; <b>20 pts</b> for reaching $2M ARR.
 
     - title: Lead Logo Achievement
       image: new
-      description: <b>5 pts</b> for reaching 5 logos; <b>10 pts</b> for reaching 10 logos; <b>15 pts</b> for reaching 15 logos.
+      description: <b>5 pts</b> for reaching 5 logos; <b>10 pts</b> for reaching 10 logos; <b>15 pts</b> for reaching 15 logos; <b>20 pts</b> for reaching 20 logos.
 
     - title: Total Engagement Achievement
       image: help
-      description: <b>5 pts</b> for reaching 40 engagements; <b>10 pts</b> for reaching 50 engagements; <b>15 pts</b> for reaching 60 engagements.
+      description: <b>1 pt</b> for every Lead SC engagement; <b>2 pts</b> for every Secondary SC engagement.
 
 - name: Q1 Bonus
   id: q1
   rules:
-    - title: Guess the Weight 
-      image: weight
-      description: <b>25 pts, 18 pts, 15 pts, 12 pts, 10 pts, 8 pts, 6 pts, 4 pts, 2 pts, 1 pts</b> for closest guess, down to the ounce.
-
-    - title: Guess the Date
+    - title: PTO Bonus
       image: date
-      description: <b>10 pts - 1st, 8 pts - 2nd, 5 pts - 3rd</b> for the closest guess.
-
-    - title: Guess the Sex
-      image: sex
-      description: <b>5 pts</b> for anyone who guesses correctly.
+      description: <b>20 pts</b> if you take at least 1 PTO day in Q1.
 
 - name: Q2 Bonus
   id: q2
   rules:
-    - title: NSPB Pitch
-      image: pitch
-      description: <b>10 pts</b> for anyone who completes an NSPB Pitch during a 1on1 in the month of September.
 
-    - title: HCM Self-Eval
-      image: evaluation
-      description: <b>10 pts</b> for anyone who gets their HCM task done before 9/14 (5 pts if you complete by 9/17).
+- name: Q3 Bonus
+  id: q3
+  rules:
 
-    - title: NFL Spread
-      image: football
-      description: <b>5 pts</b> for each game you guess correctly during Q2.
+- name: Q4 Bonus
+  id: q4
+  rules:

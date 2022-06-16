@@ -3,31 +3,19 @@
         <div class="row">
             <!-- Computer only -->
             <div class="sixteen wide column computer only centered">
-                <h2 class="ui top  center aligned header">
-                  🏎 Current Constructors Standings <span class="flip-text-h">🏎</span>
+                <h2 class="ui top attached center aligned header">
+                  🏎 Current SC Constructors' Championship Standings <span class="flip-text-h">🏎</span>
                 </h2>
-                <table class="ui sortable selectable celled padded attached table">
+                <table class="ui fixed sortable selectable celled padded striped attached table">
                     <thead>
                         <tr>
                             <th data-sort="string" class="left aligned">Name</th>
-                            <th data-sort="int" class="right aligned">Jun</th>
-                            <th data-sort="int" class="right aligned">Jul</th>
-                            <th data-sort="int" class="right aligned">Aug</th>
-                            <th data-sort="int" class="right aligned"><i class="battery quarter icon"></i></th>
-                            <th data-sort="int" class="right aligned">Sep</th>
-                            <th data-sort="int" class="right aligned">Oct</th>
-                            <th data-sort="int" class="right aligned">Nov</th>
-                            <th data-sort="int" class="right aligned"><i class="battery half icon"></i></th>
-                            <th data-sort="int" class="right aligned">Dec</th>
-                            <th data-sort="int" class="right aligned">Jan</th>
-                            <th data-sort="int" class="right aligned">Feb</th>
-                            <th data-sort="int" class="right aligned"><i class="battery three quarters icon"></i></th>
-                            <th data-sort="int" class="right aligned">Mar</th>
-                            <th data-sort="int" class="right aligned">Apr</th>
-                            <th data-sort="int" class="right aligned">May</th>
-                            <th data-sort="int" class="right aligned"><i class="battery full icon"></i></th>
-                            <th data-sort="int" class="right aligned" title="Bonus Points">👑</th>
-                            <th data-sort="int" data-sort-onload="yes" data-sort-default="desc" class="right aligned" title="Total Points">🏁</th>
+                            <th data-sort="int" class="right aligned">Q1</th>
+                            <th data-sort="int" class="right aligned">Q2</th>
+                            <th data-sort="int" class="right aligned">Q3</th>
+                            <th data-sort="int" class="right aligned">Q4</th>
+                            <th data-sort="int" class="right aligned" title="Bonus Points">Achievement Bonus</th>
+                            <th data-sort="int" data-sort-onload="yes" data-sort-default="desc" class="right aligned" title="Total Points">Total Points</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,289 +23,55 @@
                         Create variables for quarters and summary columns
                         {% endcomment %}
 
+                        {% assign q1 = 0 %}
+                        {% assign q2 = 0 %}
+                        {% assign q3 = 0 %}
+                        {% assign q4 = 0 %}
+                        {% assign ach = 0 %}
+                        {% assign ytd = 0 %}
 
-                        {% assign t_jun = 0 %}
-                        {% assign t_jul = 0 %}
-                        {% assign t_aug = 0 %}
-                        {% assign t_sep = 0 %}
-                        {% assign t_oct = 0 %}
-                        {% assign t_nov = 0 %}
-                        {% assign t_dec = 0 %}
-                        {% assign t_jan = 0 %}
-                        {% assign t_feb = 0 %}
-                        {% assign t_mar = 0 %}
-                        {% assign t_apr = 0 %}
-                        {% assign t_may = 0 %}
                         {% assign t_q1 = 0 %}
                         {% assign t_q2 = 0 %}
                         {% assign t_q3 = 0 %}
                         {% assign t_q4 = 0 %}
-                        {% assign t_btd = 0 %}
+                        {% assign t_ach = 0 %}
                         {% assign t_ytd = 0 %}
-
-                        {% assign logo_q1 = 0 %}
-                        {% assign logo_q2 = 0 %}
-                        {% assign logo_q3 = 0 %}
-                        {% assign logo_q4 = 0 %}
-                        {% assign logo_ytd = 0 %}
-
-                        {% assign rev_q1 = 0 %}
-                        {% assign rev_q2 = 0 %}
-                        {% assign rev_q3 = 0 %}
-                        {% assign rev_q4 = 0 %}
-                        {% assign rev_ytd = 0 %}
-
-                        {% assign bon_q1 = 0 %}
-                        {% assign bon_q2 = 0 %}
-                        {% assign bon_q3 = 0 %}
-                        {% assign bon_q4 = 0 %}
-                        {% assign bon_ytd = 0 %}
 
                         {% for row in site.data.current_points %}
 
-                        {% assign r_jun = row.jun_logo | plus: row.jun_arr | plus: row.jun_bonus %}
-                        {% assign r_jul = row.jul_logo | plus: row.jul_arr | plus: row.jul_bonus %}
-                        {% assign r_aug = row.aug_logo | plus: row.aug_arr | plus: row.aug_bonus %}
-                        {% assign r_sep = row.sep_logo | plus: row.sep_arr | plus: row.sep_bonus %}
-                        {% assign r_oct = row.oct_logo | plus: row.oct_arr | plus: row.oct_bonus %}
-                        {% assign r_nov = row.nov_logo | plus: row.nov_arr | plus: row.nov_bonus %}
-                        {% assign r_dec = row.dec_logo | plus: row.dec_arr | plus: row.dec_bonus %}
-                        {% assign r_jan = row.jan_logo | plus: row.jan_arr | plus: row.jan_bonus %}
-                        {% assign r_feb = row.feb_logo | plus: row.feb_arr | plus: row.feb_bonus %}
-                        {% assign r_mar = row.mar_logo | plus: row.mar_arr | plus: row.mar_bonus %}
-                        {% assign r_apr = row.apr_logo | plus: row.apr_arr | plus: row.apr_bonus %}
-                        {% assign r_may = row.may_logo | plus: row.may_arr | plus: row.may_bonus %}
+                        {% assign q1 = row.q1 | default: 0 %}
+                        {% assign q2 = row.q2 | default: 0 %}
+                        {% assign q3 = row.q3 | default: 0 %}
+                        {% assign q4 = row.q4 | default: 0 %}
+                        {% assign ach = row.ach | default: 0 %}
 
-                        {% assign logo_q1 = row.jun_logo | plus: row.jul_logo | plus: row.aug_logo %}
-                        {% assign logo_q2 = row.sep_logo | plus: row.oct_logo | plus: row.nov_logo %}
-                        {% assign logo_q3 = row.dec_logo | plus: row.jan_logo | plus: row.feb_logo %}
-                        {% assign logo_q4 = row.mar_logo | plus: row.apr_logo | plus: row.may_logo %}
-                        {% assign logo_ytd = logo_q1 | plus: logo_q2 | plus: logo_q3 | plus: logo_q4 %}
-
-                        {% assign rev_q1 = row.jun_arr | plus: row.jul_arr | plus: row.aug_arr %}
-                        {% assign rev_q2 = row.sep_arr | plus: row.oct_arr | plus: row.nov_arr %}
-                        {% assign rev_q3 = row.dec_arr | plus: row.jan_arr | plus: row.feb_arr %}
-                        {% assign rev_q4 = row.mar_arr | plus: row.apr_arr | plus: row.may_arr %}
-                        {% assign rev_ytd = rev_q1 | plus: rev_q2 | plus: rev_q3 | plus: rev_q4 %}
-
-                        {% assign bon_q1 = row.jun_bonus | plus: row.jul_bonus | plus: row.aug_bonus %}
-                        {% assign bon_q2 = row.sep_bonus | plus: row.oct_bonus | plus: row.nov_bonus %}
-                        {% assign bon_q3 = row.dec_bonus | plus: row.jan_bonus | plus: row.feb_bonus %}
-                        {% assign bon_q4 = row.mar_bonus | plus: row.apr_bonus | plus: row.may_bonus %}
-                        {% assign bon_ytd = bon_q1 | plus: bon_q2 | plus: bon_q3 | plus: bon_q4 %}
-
-                        {% assign b1 = row.bonus_q1 %}
-                        {% assign b2 = row.bonus_q2 %}
-                        {% assign b3 = row.bonus_q3 %}
-                        {% assign b4 = row.bonus_q4 %}
-
-                        {% assign q1 = logo_q1 | plus: rev_q1 | plus: bon_q1 | plus: b1 %}
-                        {% assign q2 = logo_q2 | plus: rev_q2 | plus: bon_q2 | plus: b2 %}
-                        {% assign q3 = logo_q3 | plus: rev_q3 | plus: bon_q3 | plus: b3 %}
-                        {% assign q4 = logo_q4 | plus: rev_q4 | plus: bon_q4 | plus: b4 %}
-
-                        {% assign btd = b1 | plus: b2 | plus: b3 | plus: b4 %}
-                        {% assign ytd = q1 | plus: q2 | plus: q3 | plus: q4 %}
+                        {% assign ytd = q1 | plus: q2 | plus: q3 | plus: q4 | plus: ach %}
 
                         <tr>
                             <td class="left aligned">{{ row.name | capitalize }}</td>
-                            <td class="right aligned" data-inverted="" data-tooltip="Logos: {{ row.jun_logo }} | ARR: {{ row.jun_arr }} | Bonus: {{ row.jun_bonus }}" data-position="bottom right">{{ r_jun }}</td>
-                            <td class="right aligned" data-inverted="" data-tooltip="Logos: {{ row.jul_logo }} | ARR: {{ row.jul_arr }} | Bonus: {{ row.jul_bonus }}" data-position="bottom right">{{ r_jul }}</td>
-                            <td class="right aligned" data-inverted="" data-tooltip="Logos: {{ row.aug_logo }} | ARR: {{ row.aug_arr }} | Bonus: {{ row.aug_bonus }}" data-position="bottom right">{{ r_aug }}</td>
-                            <td class="right aligned disabled">{{ q1 }}</td>
-                            <td class="right aligned" data-inverted="" data-tooltip="Logos: {{ row.sep_logo }} | ARR: {{ row.sep_arr }} | Bonus: {{ row.sep_bonus }}" data-position="bottom right">{{ r_sep }}</td>
-                            <td class="right aligned" data-inverted="" data-tooltip="Logos: {{ row.oct_logo }} | ARR: {{ row.oct_arr }} | Bonus: {{ row.oct_bonus }}" data-position="bottom right">{{ r_oct }}</td>
-                            <td class="right aligned" data-inverted="" data-tooltip="Logos: {{ row.nov_logo }} | ARR: {{ row.nov_arr }} | Bonus: {{ row.nov_bonus }}" data-position="bottom right">{{ r_nov }}</td>
-                            <td class="right aligned disabled">{{ q2 }}</td>
-                            <td class="right aligned" data-inverted="" data-tooltip="Logos: {{ row.dec_logo }} | ARR: {{ row.dec_arr }} | Bonus: {{ row.dec_bonus }}" data-position="bottom right">{{ r_dec }}</td>
-                            <td class="right aligned" data-inverted="" data-tooltip="Logos: {{ row.jan_logo }} | ARR: {{ row.jan_arr }} | Bonus: {{ row.jan_bonus }}" data-position="bottom right">{{ r_jan }}</td>
-                            <td class="right aligned" data-inverted="" data-tooltip="Logos: {{ row.feb_logo }} | ARR: {{ row.feb_arr }} | Bonus: {{ row.feb_bonus }}" data-position="bottom right">{{ r_feb }}</td>
-                            <td class="right aligned disabled">{{ q3 }}</td>
-                            <td class="right aligned" data-inverted="" data-tooltip="Logos: {{ row.mar_logo }} | ARR: {{ row.mar_arr }} | Bonus: {{ row.mar_bonus }}" data-position="bottom right">{{ r_mar }}</td>
-                            <td class="right aligned" data-inverted="" data-tooltip="Logos: {{ row.apr_logo }} | ARR: {{ row.apr_arr }} | Bonus: {{ row.apr_bonus }}" data-position="bottom right">{{ r_apr }}</td>
-                            <td class="right aligned" data-inverted="" data-tooltip="Logos: {{ row.may_logo }} | ARR: {{ row.may_arr }} | Bonus: {{ row.may_bonus }}" data-position="bottom right">{{ r_may }}</td>
-                            <td class="right aligned disabled">{{ q4 }}</td>
-                            <td class="right aligned">{{ btd }}</td>
+                            <td class="right aligned">{{ q1 }}</td>
+                            <td class="right aligned">{{ q2 }}</td>
+                            <td class="right aligned">{{ q3 }}</td>
+                            <td class="right aligned">{{ q4 }}</td>
+                            <td class="right aligned">{{ ach }}</td>
                             <td class="right aligned"> {{ ytd }}</td>
                         </tr>
 
-                        {% assign t_jun = t_jun | plus: r_jun %}
-                        {% assign t_jul = t_jul | plus: r_jul %}
-                        {% assign t_aug = t_aug | plus: r_aug %}
-                        {% assign t_sep = t_sep | plus: r_sep %}
-                        {% assign t_oct = t_oct | plus: r_oct %}
-                        {% assign t_nov = t_nov | plus: r_nov %}
-                        {% assign t_dec = t_dec | plus: r_dec %}
-                        {% assign t_jan = t_jan | plus: r_jan %}
-                        {% assign t_feb = t_feb | plus: r_feb %}
-                        {% assign t_mar = t_mar | plus: r_mar %}
-                        {% assign t_apr = t_apr | plus: r_apr %}
-                        {% assign t_may = t_may | plus: r_may %}
-                        {% assign t_b1 = bon_q1 | plus: b1 %}
-                        {% assign t_b2 = bon_q2 | plus: b2 %}
-                        {% assign t_b3 = bon_q3 | plus: b3 %}
-                        {% assign t_b4 = bon_q4 | plus: b4 %}
                         {% assign t_q1 = t_q1 | plus: q1 %}
                         {% assign t_q2 = t_q2 | plus: q2 %}
                         {% assign t_q3 = t_q3 | plus: q3 %}
                         {% assign t_q4 = t_q4 | plus: q4 %}
-                        {% assign t_btd = t_btd | plus: btd %}
+                        {% assign t_ach = t_ach | plus: ach %}
                         {% assign t_ytd = t_ytd | plus: ytd %}
 
                         {% endfor %}
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <th class="left aligned">Total</th>
-                            <th class="right aligned">{{ t_jun }}</th>
-                            <th class="right aligned">{{ t_jul }}</th>
-                            <th class="right aligned">{{ t_aug }}</th>
-                            <th class="right aligned disabled">{{ t_q1 }}</th>
-                            <th class="right aligned">{{ t_sep }}</th>
-                            <th class="right aligned">{{ t_oct }}</th>
-                            <th class="right aligned">{{ t_nov }}</th>
-                            <th class="right aligned disabled">{{ t_q2 }}</th>
-                            <th class="right aligned">{{ t_dec }}</th>
-                            <th class="right aligned">{{ t_jan }}</th>
-                            <th class="right aligned">{{ t_feb }}</th>
-                            <th class="right aligned disabled">{{ t_q3 }}</th>
-                            <th class="right aligned">{{ t_mar }}</th>
-                            <th class="right aligned">{{ t_apr }}</th>
-                            <th class="right aligned">{{ t_may }}</th>
-                            <th class="right aligned disabled">{{ t_q4 }}</th>
-                            <th class="right aligned">{{ t_btd }}</th>
-                            <th class="right aligned">{{ t_ytd }}</th>
-                        </tr>
-                    </tfoot>
                 </table>
-
-                {% assign current_month = site.time | date: '%m' %}
-                {% assign percent_complete = "0" %}
-                {% case current_month %}
-                    {% when "06" %}
-                        {% assign percent_complete = "8" %}
-                    {% when "07" %}
-                        {% assign percent_complete = "17" %}
-                    {% when "08" %}
-                        {% assign percent_complete = "25" %}
-                    {% when "09" %}
-                        {% assign percent_complete = "33" %}
-                    {% when "10" %}
-                        {% assign percent_complete = "42" %}
-                    {% when "11" %}
-                        {% assign percent_complete = "50" %}
-                    {% when "12" %}
-                        {% assign percent_complete = "58" %}
-                    {% when "01" %}
-                        {% assign percent_complete = "67" %}
-                    {% when "02" %}
-                        {% assign percent_complete = "75" %}
-                    {% when "03" %}
-                        {% assign percent_complete = "83" %}
-                    {% when "04" %}
-                        {% assign percent_complete = "92" %}
-                    {% when "05" %}
-                        {% assign percent_complete = "100" %}
-                {% endcase %}
-                <div class="ui bottom attached inverted segment">
-                    <div data-percent="{{ percent_complete }}" class="ui large grey active inverted progress" style="margin-bottom:0;">
-                        <div class="bar" style="transition-duration: 300ms; width: {{ percent_complete }}%;">
-                            <div class="progress flip-text-h" style="font-size:2.2em;">🏎</div>
-                        </div>
-                    </div>
+                <div class="ui bottom attached secondary inverted red segment">
+                    <p></p>
                 </div>
             </div>
 
-            <!-- Mobile only -->
-            <div class="sixteen wide column mobile only centered">
-                <h2 class="ui top attached center aligned header">
-                  🏎 Current Constructors' Summary <span class="flip-text-h">🏎</span>
-                </h2>
-                <table class="ui sortable selectable unstackable celled padded attached table">
-                    <thead>
-                        <tr>
-                            <th class="left aligned">Name</th>
-                            <th class="right aligned">🏁</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% comment %}
-                        Create variables for quarters and summary columns
-                        {% endcomment %}
-
-
-                        {% assign t_jun = 0 %}
-                        {% assign t_jul = 0 %}
-                        {% assign t_aug = 0 %}
-                        {% assign t_sep = 0 %}
-                        {% assign t_oct = 0 %}
-                        {% assign t_nov = 0 %}
-                        {% assign t_dec = 0 %}
-                        {% assign t_jan = 0 %}
-                        {% assign t_feb = 0 %}
-                        {% assign t_mar = 0 %}
-                        {% assign t_apr = 0 %}
-                        {% assign t_may = 0 %}
-                        {% assign t_q1 = 0 %}
-                        {% assign t_q2 = 0 %}
-                        {% assign t_q3 = 0 %}
-                        {% assign t_q4 = 0 %}
-                        {% assign t_ytd = 0 %}
-
-                        {% for row in site.data.current_points %}
-
-                        {% assign r_jun = row.jun_logo | plus: row.jun_arr %}
-                        {% assign r_jul = row.jul_logo | plus: row.jul_arr %}
-                        {% assign r_aug = row.aug_logo | plus: row.aug_arr %}
-                        {% assign r_sep = row.sep_logo | plus: row.sep_arr %}
-                        {% assign r_oct = row.oct_logo | plus: row.oct_arr %}
-                        {% assign r_nov = row.nov_logo | plus: row.nov_arr %}
-                        {% assign r_dec = row.dec_logo | plus: row.dec_arr %}
-                        {% assign r_jan = row.jan_logo | plus: row.jan_arr %}
-                        {% assign r_feb = row.feb_logo | plus: row.feb_arr %}
-                        {% assign r_mar = row.mar_logo | plus: row.mar_arr %}
-                        {% assign r_apr = row.apr_logo | plus: row.apr_arr %}
-                        {% assign r_may = row.may_logo | plus: row.may_arr %}
-
-                        {% assign q1 = r_jun | plus: r_jul | plus: r_aug | plus: row.bonus_q1 %}
-                        {% assign q2 = r_sep | plus: r_oct | plus: r_nov | plus: row.bonus_q2 %}
-                        {% assign q3 = r_dec | plus: r_jan | plus: r_feb | plus: row.bonus_q3 %}
-                        {% assign q4 = r_mar | plus: r_apr | plus: r_may | plus: row.bonus_q4 %}
-                        {% assign ytd = q1 | plus: q2 | plus: q3 | plus: q4 %}
-
-                        <tr>
-                            <td class="left aligned">{{ row.name | capitalize }}</td>
-                            <td class="right aligned"> {{ ytd }}</td>
-                        </tr>
-
-                        {% assign t_jun = t_jun | plus: r_jun %}
-                        {% assign t_jul = t_jul | plus: r_jul %}
-                        {% assign t_aug = t_aug | plus: r_aug %}
-                        {% assign t_sep = t_sep | plus: r_sep %}
-                        {% assign t_oct = t_oct | plus: r_oct %}
-                        {% assign t_nov = t_nov | plus: r_nov %}
-                        {% assign t_dec = t_dec | plus: r_dec %}
-                        {% assign t_jan = t_jan | plus: r_jan %}
-                        {% assign t_feb = t_feb | plus: r_feb %}
-                        {% assign t_mar = t_mar | plus: r_mar %}
-                        {% assign t_apr = t_apr | plus: r_apr %}
-                        {% assign t_may = t_may | plus: r_may %}
-                        {% assign t_q1 = t_q1 | plus: q1 %}
-                        {% assign t_q2 = t_q2 | plus: q2 %}
-                        {% assign t_q3 = t_q3 | plus: q3 %}
-                        {% assign t_q4 = t_q4 | plus: q4 %}
-                        {% assign t_ytd = t_ytd | plus: ytd %}
-
-                        {% endfor %}
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th class="left aligned">Total</th>
-                            <th data-sort="int" class="right aligned">{{ t_ytd }}</th>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
         </div>
     </div>
 </div>

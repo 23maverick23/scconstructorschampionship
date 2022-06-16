@@ -14,12 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: SC Constructors' Championship
-email: rmorrissey@netsuite.com
+email: ryan.morrissey@oracle.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Just like 'Drive to Survive' - we're back for Season 3.
+  Just like 'Drive to Survive' - we're back for Season 4.
 baseurl: "/scconstructorschampionship" # the subpath of your site, e.g. /blog
 url: "https://ryancmorrissey.com" # the base hostname & protocol for your site, e.g. http://example.com
-current_fiscal: FY2022
+current_fiscal: FY2023
 icon: https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/racing-car_1f3ce.png
 github_username:  23maverick23
 g_tag: G-1L9JFVQSP5

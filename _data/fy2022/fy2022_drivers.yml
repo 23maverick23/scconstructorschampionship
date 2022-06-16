@@ -4,18 +4,33 @@
   ln: https://www.linkedin.com/in/john-szabo-85054b14/
   image: assets/images/headshots/john.jpg
   archive:
-    - year: 2022
-      place: 1st
-      color: yellow
-      points: 272
     - year: 2021
       place: 5th-T
       color: 
       points: 121
     - year: 2020
       place: 2nd
-      color: grey
+      color: gray
       points: 125
+
+- name: Laura
+  team: Danny Ric
+  flag: de
+  ln: https://www.linkedin.com/in/laura-van-lenten-cpa-71b85922/
+  image: assets/images/headshots/laura.jpg
+  archive:
+    - year: 2022
+      place: DNF
+      color: 
+      points: 84
+    - year: 2021
+      place: 2nd
+      color: gray
+      points: 167
+    - year: 2020
+      place: 1st
+      color: yellow
+      points: 142
 
 - name: Kim
   team: Wonder Bread
@@ -23,10 +38,6 @@
   ln: https://www.linkedin.com/in/kimberlyalawton/
   image: assets/images/headshots/kim.jpg
   archive:
-    - year: 2022
-      place: 6th
-      color: 
-      points: 122
     - year: 2021
       place: 4th
       color: 
@@ -42,10 +53,6 @@
   ln: https://www.linkedin.com/in/murphyryanp/
   image: assets/images/headshots/murph.jpg
   archive:
-    - year: 2022
-      place: 4th
-      color: 
-      points: 223
     - year: 2021
       place: 5th-T
       color: 
@@ -61,10 +68,6 @@
   ln: https://www.linkedin.com/in/trevor-rancourt-2b999b65/
   image: assets/images/headshots/trevor.jpg
   archive:
-    - year: 2022
-      place: 3rd
-      color: brown
-      points: 229
     - year: 2021
       place: 1st
       color: yellow
@@ -80,10 +83,6 @@
   ln: https://www.linkedin.com/in/hellen-mwangoka-netsuiteexpert/
   image: assets/images/headshots/hellen_twodotoh.jpg
   archive:
-    - year: 2022
-      place: 5th
-      color: 
-      points: 132
     - year: 2021
       place: 9th
       color: 
@@ -93,16 +92,27 @@
       color:
       points: 41
 
+- name: Dean
+  team: Canada, Eh
+  flag: ca
+  ln: https://www.linkedin.com/in/deanherback/
+  image: assets/images/headshots/dean.jpg
+  archive:
+    - year: 2021
+      place: DNF
+      color: 
+      points: 129
+    - year: 2020
+      place: 4th
+      color: 
+      points: 107
+
 - name: Vince
   team: Toro Rosso
   flag: cl
   ln: https://www.linkedin.com/in/vince-kroll-cpa-54102677/
   image: assets/images/headshots/vince.jpg
   archive:
-    - year: 2022
-      place: 2nd
-      color: grey
-      points: 257
     - year: 2021
       place: 3rd
       color: brown
@@ -118,10 +128,6 @@
   ln: https://www.linkedin.com/in/bobby-shores-111a4a13/
   image: assets/images/headshots/bobby.jpg
   archive:
-    - year: 2022
-      place: 8th
-      color: 
-      points: 90
     - year: 2021
       place: 7th
       color: 
@@ -137,7 +143,11 @@
   ln: https://www.linkedin.com/in/dougstepina/
   image: assets/images/headshots/doug.jpg
   archive:
-    - year: 2022
-      place: 9th
+    - year: 2021
+      place: n/a
       color: 
-      points: 37
+      points: 
+    - year: 2020
+      place: n/a
+      color: 
+      points: 
